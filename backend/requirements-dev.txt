@@ -1,0 +1,12 @@
+# Include base application dependencies
+-r requirements.txt
+
+# Testing framework
+pytest>=8.3.3
+
+# HTTP client for API testing
+httpx>=0.28.1
+
+# Mock data generation for tests and seeding
+faker>=33.1.0
+

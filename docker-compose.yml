@@ -1,0 +1,65 @@
+services:
+  # PostgreSQL database service
+  db:
+    image: postgres:16-alpine
+    container_name: buybright_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    # Bind only to 127.0.0.1 (localhost loopback) so database is not exposed to the public network
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      # Named volume to keep database data safe even when container is stopped or removed
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      # Healthcheck runs pg_isready to verify PostgreSQL is accepting client connections
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Redis in-memory cache and session store
+  redis:
+    image: redis:7-alpine
+    container_name: buybright_redis
+    restart: unless-stopped
+    # Redis port is not published to host for security; accessible inside docker network only
+    healthcheck:
+      # Pings Redis to check if it responds with PONG
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI application backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: buybright_backend
+    restart: unless-stopped
+    # Development command: reload restarts the server automatically when Python code is saved
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      # Forward port 8000 on host to port 8000 inside container
+      - "8000:8000"
+    env_file:
+      # Load environment variables from .env file at project root
+      - .env
+    depends_on:
+      # Wait for database and redis healthchecks to report healthy before starting backend
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      # Mount backend directory from Windows into container for live code reloading
+      - ./backend:/app
+
+volumes:
+  # Persistent storage for PostgreSQL data
+  postgres_data:
+
