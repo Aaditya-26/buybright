@@ -47,3 +47,8 @@ dist/
 Thumbs.db
 .vscode/
 .idea/
+
+# Office, backup, and temporary files
+~$*.docx
+*.bak
+*.tmp

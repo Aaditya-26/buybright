@@ -20,9 +20,9 @@ class Settings(BaseSettings):
     # Allowed origins for CORS as a comma-separated string (e.g. "http://localhost:5173")
     cors_origins: str = "http://localhost:5173"
 
-    # Pydantic configuration: reads .env file and ignores any extra variables not defined above
+    # Pydantic configuration: searches current directory, then parent directory for .env
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=(".env", "../.env"),
         env_file_encoding="utf-8",
         extra="ignore",
     )
@@ -35,4 +35,3 @@ class Settings(BaseSettings):
 
 # Global settings singleton instance loaded when the module is imported
 settings = Settings()
-

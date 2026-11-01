@@ -13,7 +13,11 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Initialize FastAPI application with name from settings
-app = FastAPI(title=settings.app_name)
+app = FastAPI(
+    title=settings.app_name,
+    description="Multi-seller e-commerce marketplace API built with FastAPI, PostgreSQL, and Redis.",
+    version="0.1.0",
+)
 
 # Enable CORS middleware so our frontend (e.g. React on Vite) can call the API
 app.add_middleware(
@@ -23,6 +27,20 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/", tags=["Root"])
+def root():
+    """
+    Root welcome endpoint.
+    Provides quick links to Swagger UI documentation and the health check probe.
+    """
+    return {
+        "message": f"Welcome to the {settings.app_name} API",
+        "docs": "/docs",
+        "health": "/health",
+        "status": "running",
+    }
 
 
 @app.get("/health", tags=["Health"])
@@ -69,4 +87,3 @@ def health_check():
         )
 
     return payload
-
