@@ -10,7 +10,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     # Bind only to 127.0.0.1 (localhost loopback) so database is not exposed to the public network
     ports:
-      - "127.0.0.1:5432:5432"
+      - "127.0.0.1:5433:5432"
     volumes:
       # Named volume to keep database data safe even when container is stopped or removed
       - postgres_data:/var/lib/postgresql/data
