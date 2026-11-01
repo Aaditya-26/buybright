@@ -7,6 +7,7 @@ from sqlalchemy import text
 from app.core.config import settings
 from app.core.database import engine
 from app.core.redis_client import redis_client
+from app.routers import auth
 
 # Configure standard logging to output errors and status messages
 logging.basicConfig(level=logging.INFO)
@@ -27,6 +28,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include Authentication & Authorization Router
+app.include_router(auth.router)
 
 
 @app.get("/", tags=["Root"])
