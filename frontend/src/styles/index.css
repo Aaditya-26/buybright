@@ -1,0 +1,21 @@
+/* ==========================================================================
+   PRESTODENTAL FORM VALIDATION & UI UTILITIES
+   Reusable validation state classes and micro-animations
+   ========================================================================== */
+
+.has-error {
+  border-color: #cf4032 !important;
+  background-color: #fff8f8 !important;
+  box-shadow: 0 0 0 3px rgba(207, 64, 50, 0.15) !important;
+}
+
+.contact-field-error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #cf4032;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 5px;
+  animation: fadeIn 0.2s ease-in-out;
+}

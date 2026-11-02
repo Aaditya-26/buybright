@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrestoDental Platform - API Explorer</title>
+  
+  <!-- PrestoDental Unified Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  
+  <!-- Swagger UI CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui.css" />
+  <link rel="icon" type="image/webp" href="/images/logo.webp" />
+  
+  <style>
+    :root {
+      --color-teal-blue: #3f788c;
+      --color-cyan-teal: #32a7b9;
+      --color-coral-red: #cf4032;
+      --color-golden-yellow: #edb13f;
+      --color-dark-navy: #2a3537;
+      --color-bg-page: #f8fafc;
+      --color-border: #e2e8f0;
+      --color-card: #ffffff;
+      --font-family: 'Poppins', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    body {
+      margin: 0;
+      background: var(--color-bg-page);
+      font-family: var(--font-family);
+      color: var(--color-dark-navy);
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .topbar {
+      display: none !important;
+    }
+    
+    /* Top Decorative Brand Gradient Stripe */
+    .brand-top-stripe {
+      height: 3.5px;
+      background: linear-gradient(90deg, #cf4032 0%, #edb13f 30%, #3f788c 70%, #32a7b9 100%);
+      width: 100%;
+    }
+    
+    /* Main Website Header Container */
+    .app-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: 0 2px 12px rgba(42, 53, 55, 0.05);
+      padding: 16px 0;
+    }
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    
+    /* Top Row: Brand & Actions */
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .brand-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-logo-img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+    .brand-titles h1 {
+      margin: 0;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--color-dark-navy);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: -0.3px;
+    }
+    .brand-titles p {
+      margin: 2px 0 0 0;
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 400;
+    }
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-brand-primary {
+      background: #ffffff;
+      border: 1.5px solid var(--color-teal-blue);
+      color: var(--color-teal-blue);
+      padding: 7px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-brand-primary:hover {
+      background: var(--color-teal-blue);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(63, 120, 140, 0.25);
+    }
+    .btn-brand-outline {
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      color: #475569;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-brand-outline:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+      color: var(--color-dark-navy);
+    }
+    
+    /* PrestoDental Styled Sub-Controls Bar */
+    .sub-controls-bar {
+      background: #f8fafc;
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-teal-blue);
+      border-radius: 10px;
+      padding: 10px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    
+    /* Dynamic Server Status */
+    .server-status-group {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13px;
+    }
+    .server-status-label {
+      font-weight: 600;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .server-status-badge {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-dark-navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .pulse-dot {
+      width: 7.5px;
+      height: 7.5px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 5px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    
+    /* PROMINENT HIGH-CONTRAST BIFURCATION TABS */
+    .bifurcate-control-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .bifurcate-label {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #1e293b;
+      letter-spacing: -0.2px;
+    }
+    .bifurcate-tabs {
+      display: flex;
+      background: #f1f5f9;
+      border: 1.5px solid #cbd5e1;
+      padding: 4px;
+      border-radius: 9px;
+      gap: 4px;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .bifurcate-tab {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      font-family: var(--font-family);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .bifurcate-tab:hover {
+      background: #f8fafc;
+      color: var(--color-dark-navy);
+      border-color: #cbd5e1;
+    }
+    
+    /* Active State: All APIs (Dark Navy High-Contrast) */
+    .bifurcate-tab.tab-all.active {
+      background: #2a3537 !important;
+      color: #ffffff !important;
+      border-color: #2a3537 !important;
+      box-shadow: 0 2px 8px rgba(42, 53, 55, 0.3) !important;
+    }
+    .bifurcate-tab.tab-all.active .badge-count {
+      background: rgba(255, 255, 255, 0.25) !important;
+      color: #ffffff !important;
+    }
+    
+    /* Active State: Storefront (Vibrant Presto Teal) */
+    .bifurcate-tab.tab-storefront.active {
+      background: #3f788c !important;
+      color: #ffffff !important;
+      border-color: #3f788c !important;
+      box-shadow: 0 2px 8px rgba(63, 120, 140, 0.35) !important;
+    }
+    .bifurcate-tab.tab-storefront.active .badge-count {
+      background: rgba(255, 255, 255, 0.25) !important;
+      color: #ffffff !important;
+    }
+    
+    /* Active State: Admin Panel (Presto Coral Red) */
+    .bifurcate-tab.tab-admin.active {
+      background: #cf4032 !important;
+      color: #ffffff !important;
+      border-color: #cf4032 !important;
+      box-shadow: 0 2px 8px rgba(207, 64, 50, 0.35) !important;
+    }
+    .bifurcate-tab.tab-admin.active .badge-count {
+      background: rgba(255, 255, 255, 0.25) !important;
+      color: #ffffff !important;
+    }
+    
+    .bifurcate-tab .badge-count {
+      background: #e2e8f0;
+      color: #64748b;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+    }
+    
+    /* Swagger UI Container & Layout */
+    .swagger-ui {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px 60px 24px !important;
+      box-sizing: border-box;
+      font-family: var(--font-family) !important;
+    }
+    .swagger-ui .wrapper {
+      padding: 0 !important;
+      max-width: 100% !important;
+    }
+    .swagger-ui .info {
+      margin: 22px 0 14px 0 !important;
+    }
+    .swagger-ui .info .title {
+      font-family: var(--font-family) !important;
+      font-size: 24px !important;
+      font-weight: 800 !important;
+      color: var(--color-dark-navy) !important;
+      letter-spacing: -0.4px;
+    }
+    
+    /* COMPLETELY REMOVE SERVERS BOX AND EMPTY WHITE SPACE */
+    .swagger-ui .scheme-container,
+    .swagger-ui .servers-container,
+    .swagger-ui .servers {
+      display: none !important;
+      height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    /* COMPLETELY REMOVE [/openapi.json] TEXT LINK UNDER TITLE */
+    .swagger-ui .info hgroup.main a,
+    .swagger-ui .info a.link,
+    .swagger-ui .info .url,
+    .swagger-ui .info a[href*="openapi.json"] {
+      display: none !important;
+    }
+    
+    /* Filter Alignment & Modern Search Look */
+    .swagger-ui .filter {
+      max-width: 100% !important;
+      margin: 18px 0 20px 0 !important;
+      padding: 0 !important;
+    }
+    .swagger-ui .filter .operation-filter-input {
+      width: 100% !important;
+      max-width: 400px !important;
+      margin: 0 !important;
+    }
+    .swagger-ui .filter input {
+      width: 100% !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 8px !important;
+      padding: 9px 14px !important;
+      font-family: var(--font-family) !important;
+      font-size: 13.5px !important;
+      color: var(--color-dark-navy) !important;
+      background: #ffffff !important;
+      outline: none !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03) !important;
+      transition: all 0.2s ease !important;
+    }
+    .swagger-ui .filter input:focus {
+      border-color: var(--color-teal-blue) !important;
+      box-shadow: 0 0 0 3px rgba(63, 120, 140, 0.15) !important;
+    }
+    
+    /* Section Tag Styling */
+    .swagger-ui .opblock-tag {
+      font-family: var(--font-family) !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: var(--color-dark-navy) !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+      border-left: 3.5px solid var(--color-teal-blue) !important;
+      padding: 10px 0 8px 12px !important;
+      margin-top: 18px !important;
+    }
+    .swagger-ui .opblock {
+      border-radius: 8px !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03) !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Brand Top Color Stripe -->
+  <div class="brand-top-stripe"></div>
+
+  <!-- Main Website Styled Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="header-top">
+        <div class="brand-area">
+          <img src="/images/logo.webp" alt="PrestoDental Logo" class="brand-logo-img" onerror="this.style.display='none'" />
+          <div class="brand-titles">
+            <h1>
+              <i class="fa-solid fa-tooth" style="color: var(--color-teal-blue); font-size: 20px;"></i>
+              PrestoDental API Explorer
+            </h1>
+            <p>Interactive platform API documentation matching the PrestoDental storefront & clinical procurement design system.</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <a class="btn-brand-primary" href="/prestodental_postman_collection.json" download="prestodental_postman_collection.json">
+            <i class="fa-solid fa-download"></i> Postman Collection
+          </a>
+          <a class="btn-brand-outline" href="/openapi.json" target="_blank">
+            <i class="fa-solid fa-code"></i> OpenAPI JSON
+          </a>
+        </div>
+      </div>
+
+      <!-- Controls Sub-bar -->
+      <div class="sub-controls-bar">
+        <!-- Dynamic Auto-detected Server Badge -->
+        <div class="server-status-group">
+          <span class="server-status-label">
+            <i class="fa-solid fa-server" style="color: var(--color-teal-blue);"></i>
+            Server:
+          </span>
+          <div class="server-status-badge">
+            <span class="pulse-dot"></span>
+            <span id="detectedHost">Detecting...</span>
+          </div>
+        </div>
+
+        <!-- High-Contrast Prominent Bifurcation Tabs -->
+        <div class="bifurcate-control-group">
+          <span class="bifurcate-label">Bifurcation:</span>
+          <div class="bifurcate-tabs">
+            <button class="bifurcate-tab tab-all active" id="tabAll" onclick="setBifurcation('all')">
+              <i class="fa-solid fa-layer-group"></i> All APIs <span class="badge-count">235</span>
+            </button>
+            <button class="bifurcate-tab tab-storefront" id="tabStorefront" onclick="setBifurcation('storefront')">
+              <i class="fa-solid fa-bag-shopping"></i> Storefront APIs <span class="badge-count">83</span>
+            </button>
+            <button class="bifurcate-tab tab-admin" id="tabAdmin" onclick="setBifurcation('admin')">
+              <i class="fa-solid fa-shield-halved"></i> Admin Panel APIs <span class="badge-count">152</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Swagger UI Mount Container -->
+  <div id="swagger-ui"></div>
+
+  <script src="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui-bundle.js" charset="UTF-8"></script>
+  <script src="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui-standalone-preset.js" charset="UTF-8"></script>
+  <script>
+    // 1. Auto-detect current running host
+    const currentHost = window.location.origin;
+    document.getElementById('detectedHost').textContent = currentHost;
+
+    // 2. Native Swagger UI Bifurcation Filter Trigger
+    function setBifurcation(mode) {
+      document.getElementById('tabAll').classList.toggle('active', mode === 'all');
+      document.getElementById('tabStorefront').classList.toggle('active', mode === 'storefront');
+      document.getElementById('tabAdmin').classList.toggle('active', mode === 'admin');
+
+      let query = '';
+      if (mode === 'storefront') query = 'Storefront';
+      if (mode === 'admin') query = 'Admin';
+
+      const filterInput = document.querySelector('.swagger-ui .filter input');
+      if (filterInput) {
+        const nativeSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+        nativeSetter.call(filterInput, query);
+        filterInput.dispatchEvent(new Event('input', { bubbles: true }));
+        filterInput.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    }
+
+    // 3. Mount Swagger UI
+    window.onload = function() {
+      window.ui = SwaggerUIBundle({
+        url: '/openapi.json',
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        layout: "BaseLayout",
+        defaultModelsExpandDepth: -1,
+        docExpansion: "list",
+        filter: true,
+        showRequestHeaders: true
+      });
+    };
+  </script>
+</body>
+</html>

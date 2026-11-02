@@ -1,0 +1,401 @@
+/* ==========================================================================
+   PrestoDental Admin — Products Module Responsive Stylesheet
+   Ensures seamless responsive experience across 320px Mobile, Tablet & Desktop
+   while maintaining exact visual aesthetic, color palette, and formatting.
+   ========================================================================== */
+
+.products-admin-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* ── KPI Stat Cards Grid ── */
+.product-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+/* ── Products List Toolbar ── */
+.product-toolbar-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+
+  .product-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .product-search-item {
+      width: 240px;
+      flex: 0 0 240px;
+    }
+
+    .table-filter-select {
+      width: auto;
+      max-width: 165px;
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #334155;
+      cursor: pointer;
+    }
+
+    .product-export-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .product-add-btn {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 14px;
+    flex-direction: column;
+    align-items: stretch;
+
+    .product-toolbar-left {
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+
+      .product-search-item {
+        width: 100%;
+        flex: 1 1 auto;
+      }
+
+      .table-filter-select {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .product-export-group {
+        width: 100%;
+        display: flex;
+
+        .btn-export-csv,
+        .btn-export-pdf {
+          flex: 1;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .product-add-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+/* ── Product Form Page Grid Layout ── */
+.product-form-layout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) 360px;
+  gap: 22px;
+  align-items: start;
+
+  @media (max-width: 1080px) {
+    grid-template-columns: 1fr;
+
+    .product-form-preview-sticky {
+      position: static !important;
+      top: auto !important;
+    }
+  }
+}
+
+/* ── Sub-row Grids for 2-column & 3-column input pairs ── */
+.product-form-g2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 14px;
+}
+
+.product-form-g3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 14px;
+}
+
+/* ── Product Form Action Footer ── */
+.product-form-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: stretch;
+
+    .product-status-picker {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .product-form-btn-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 10px;
+
+      button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+/* ── §2.5 & §4 Product Variants Responsive Styles ── */
+.product-variants-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .product-variants-toggle-select {
+    flex: 0 0 260px;
+
+    @media (max-width: 640px) {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+  }
+
+  .product-variants-toggle-note {
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 240px;
+
+    @media (max-width: 640px) {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+  }
+}
+
+.product-variants-card {
+  border: 2px solid #99f6e4;
+  background: #f8fdfc;
+  border-radius: 12px;
+  padding: 20px;
+
+  @media (max-width: 640px) {
+    padding: 14px 12px;
+  }
+}
+
+.product-variants-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccfbf1;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .product-variants-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+
+    .product-variants-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #0d9488, #0891b2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      i {
+        color: #ffffff;
+        font-size: 0.85rem;
+      }
+    }
+
+    .product-variants-text {
+      min-width: 0;
+
+      .product-variants-title-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        h3 {
+          margin: 0;
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: #0f172a;
+        }
+      }
+
+      p {
+        margin: 2px 0 0 0;
+        font-size: 0.74rem;
+        color: #64748b;
+        line-height: 1.35;
+      }
+    }
+  }
+
+  .product-variants-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    @media (max-width: 576px) {
+      width: 100%;
+
+      button {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+/* Desktop Table View (>= 769px) */
+.product-variants-table-wrap {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  width: 100%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+/* Mobile Responsive Cards View (<= 768px) */
+.product-variants-mobile-list {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  .product-variant-item-card {
+    background: #ffffff;
+    border: 1.5px solid #ccfbf1;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .variant-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f1f5f9;
+
+      .variant-card-number {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #0f766e;
+
+        .variant-badge-pill {
+          background: #f0fdfa;
+          border: 1px solid #99f6e4;
+          padding: 2px 7px;
+          border-radius: 6px;
+          font-size: 0.72rem;
+        }
+      }
+
+      .variant-card-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+
+    .variant-card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+
+      @media (max-width: 440px) {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .variant-field-group {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        &.span-full {
+          grid-column: 1 / -1;
+        }
+
+        label {
+          font-size: 0.72rem;
+          font-weight: 700;
+          color: #475569;
+          margin: 0;
+
+          .req-star {
+            color: #ef4444;
+          }
+        }
+
+        .form-control {
+          font-size: 0.82rem;
+          padding: 7px 10px;
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}

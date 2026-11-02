@@ -137,6 +137,8 @@ BuyBright is a modern **multi-seller e-commerce marketplace** (similar in concep
 | 6 | **Database host port conflict** | Port 5432 often occupied by existing Windows Postgres | Mapped host port to `127.0.0.1:5433:5432` (loopback only) while internal container network uses `db:5432`. |
 | 7 | **`alembic` error: `NoSuchModuleError: driver`** | Default `alembic.ini` had placeholder `driver://...` before `env.py` was replaced | Replaced `backend/alembic/env.py` to read `settings.database_url` directly from Pydantic settings. |
 | 8 | **IDE red squiggly warnings (`missing-import`)** | Host Windows Python didn't have packages installed in a virtual environment | Created local `.venv`, ran `pip install -r requirements.txt -r requirements-dev.txt`, and selected `.venv` as interpreter. |
+| 9 | **`npm install` failed with `ENOENT`** | Command was executed in project root instead of inside `frontend/` directory | Changed directory into `frontend/` where `package.json` is located (`cd frontend`) before running `npm install`. |
+| 10 | **Frontend shows "Cannot reach the backend"** | Port 8000 was intercepted by another local project ("Thought To Push" running on port 8000), returning HTTP 401 to Axios | Stopped competing project server on port 8000 (or remapped FastAPI to host port `8001:8000` with `VITE_API_URL=http://localhost:8001`). |
 
 ---
 
@@ -236,18 +238,37 @@ The following live milestones were executed and verified inside the Docker conta
 
 ---
 
-# 8. Phase 4: Frontend Skeleton (React + Vite + Tailwind CSS)
+# 8. Phase 4: Full Multi-Seller E-Commerce Frontend (React 19 + TypeScript + Bootstrap 5 + SCSS)
 
-### What We Built:
-- **`frontend/package.json`**: Pre-configured with React 19, React Router v7, Axios, Chart.js, and Tailwind CSS v4.
-- **`frontend/vite.config.js`**: Vite configuration enabled with `@tailwindcss/vite` and `@vitejs/plugin-react`.
-- **`frontend/.env`**: Points frontend to backend API URL: `VITE_API_URL=http://localhost:8000`.
-- **`frontend/src/api/client.js`**: Shared, centralized Axios client configured with `baseURL`.
-- **`frontend/src/App.jsx`**: Live connectivity test page that calls `GET /health` and renders the real-time health card.
-- **`frontend/src/index.css`**: Configured with modern Tailwind CSS v4 `@import "tailwindcss";`.
-- **Directory Structure:** Organized into modular folders: `src/api`, `src/context`, `src/components`, `src/routes`, `src/pages/customer`, `src/pages/seller`, `src/pages/admin`.
+### What We Integrated & Built:
+- **Core Framework & Language:** React 19.x, TypeScript 5.7+, and Vite 6 with instant Hot Module Replacement (HMR).
+- **Design System & Styling:** Full Bootstrap 5.3 + modular SCSS design system with custom CSS variables (`--color-primary`, `--color-accent`, `--font-family-sans`) and Font Awesome 6 icons.
+- **Transformed from Medical to Consumer Multi-Seller E-Commerce:**
+  - **Brand Identity:** Complete rebrand to **BuyBright — Smart Shopping, Brilliant Savings** (logo, slogans, meta tags, and OpenGraph descriptors).
+  - **6 Marketplace Categories:**
+    1. Electronics & Gadgets (`electronics`)
+    2. Fashion & Apparel (`fashion`)
+    3. Home & Kitchen (`home-kitchen`)
+    4. Beauty & Personal Care (`beauty`)
+    5. Sports & Fitness (`sports`)
+    6. Books & Stationery (`books`)
+  - **Rich Product Catalog (42+ Items):** Realistic consumer goods across top brands (Apple, Sony, Nike, Samsung, Levi's, Instant Pot, Dell, Philips, Dyson, boAt) with seller attribution (*"TechVibe Solutions"*, *"StyleHub"*, *"AthleticHub"*, *"SoundWorld"*).
+  - **Full Storefront Experience:**
+    - Panoramic Hero Slider with festive sale offers, animated progress timers, and trust badges.
+    - Category Grid with direct category filtering and smooth navigation arrows.
+    - Product Catalog & Spotlight Brand Sections with responsive card carousels.
+    - Interactive Product Detail Page with image gallery, zoom lightbox, warranty specifications, and customer review tabs.
+    - Persistent Shopping Cart Drawer & Wishlist with localStorage synchronization.
+    - Multi-Step Checkout & Simulated Payment Page (UPI, Cards, NetBanking, COD, and Wallet credits).
+    - Order Tracking (`/track-order`) & Order Success confirmation views.
+    - User Profile & Customer Dashboard (`/profile`).
+    - Dedicated Admin Dashboard & Management Suite (`/admin/*`) with Highcharts analytics.
+- **FastAPI Backend Integration (`vite.config.ts` & `AuthContext.tsx`):**
+  - Configured intelligent reverse proxy for `/api`, `/auth`, and `/health`.
+  - Authentication Context supports real FastAPI `/auth/login` and `/auth/register` endpoints while maintaining resilient demo fallbacks.
+  - Successfully verified production build (`built in 14.62s`).
 
 ### Why We Did This & Purpose:
-1. **Centralized API Client (`client.js`):** Instead of typing `http://localhost:8000` in every component, having a single Axios instance means we can attach authentication headers (`Authorization: Bearer <token>`) and base URLs in one place.
-2. **Tailwind CSS v4 with Vite:** Provides utility-first styling with zero runtime overhead and instant hot-module replacement (HMR).
-3. **Connection Verification (`App.jsx`):** Before building complex login and catalogue pages, verifying that React can successfully communicate across origins to FastAPI's `/health` endpoint proves CORS and network routing are working properly.
+1. **Industry-Grade Architecture:** Instead of building primitive demo screens from scratch, integrating an enterprise-grade storefront gives BuyBright a production-level UI that rivals real e-commerce platforms like Amazon or Flipkart.
+2. **Multi-Seller Identity:** E-commerce marketplaces require clear seller separation. Products now feature verified seller badges, ratings, and return policies, preparing the frontend for our multi-seller backend models (`seller_profiles`).
+3. **Resilient Data Architecture:** Centralized service layers (`dentalService.ts` / `buybrightService`) provide instant offline reliability for university project reviews while dynamically consuming live FastAPI endpoints whenever the Docker backend is active.

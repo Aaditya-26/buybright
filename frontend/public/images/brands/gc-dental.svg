@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <g transform="translate(15, 14)">
+    <rect x="0" y="4" width="34" height="34" rx="17" fill="#d97706"/>
+    <text x="17" y="27" font-family="'Poppins', sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">GC</text>
+    <text x="44" y="24" font-family="'Poppins', sans-serif" font-weight="900" font-size="15" fill="#0f172a" letter-spacing="0.5">GC DENTAL</text>
+    <text x="45" y="36" font-family="'Poppins', sans-serif" font-weight="700" font-size="8" fill="#64748b" letter-spacing="1.5">JAPAN CLINICAL</text>
+  </g>
+</svg>

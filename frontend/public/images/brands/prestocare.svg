@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <g transform="translate(15, 14)">
+    <circle cx="15" cy="18" r="14" fill="#f0fdfa"/>
+    <path d="M15 8 L15 28 M8 18 L22 18" stroke="#008080" stroke-width="3" stroke-linecap="round"/>
+    <text x="38" y="24" font-family="'Poppins', sans-serif" font-weight="900" font-size="18" fill="#0f172a" letter-spacing="0.5">Presto<tspan fill="#008080">Care</tspan></text>
+    <text x="40" y="36" font-family="'Poppins', sans-serif" font-weight="700" font-size="8" fill="#64748b" letter-spacing="1.5">CLINICAL CONSUMABLES</text>
+  </g>
+</svg>

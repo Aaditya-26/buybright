@@ -1,0 +1,13 @@
+# PrestoDental Robots Configuration
+# https://prestodental.com
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /admin-panel
+Disallow: /checkout/payment
+Disallow: /profile
+
+# Sitemaps
+Sitemap: https://prestodental.com/sitemap.xml

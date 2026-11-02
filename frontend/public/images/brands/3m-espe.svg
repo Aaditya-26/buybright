@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <g transform="translate(15, 12)">
+    <text x="0" y="32" font-family="'Poppins', sans-serif" font-weight="900" font-size="34" fill="#cf4032" letter-spacing="-1">3M</text>
+    <rect x="68" y="8" width="2" height="28" fill="#e2e8f0"/>
+    <text x="78" y="24" font-family="'Poppins', sans-serif" font-weight="800" font-size="16" fill="#334155" letter-spacing="1.5">ESPE</text>
+    <text x="78" y="36" font-family="'Poppins', sans-serif" font-weight="600" font-size="8" fill="#64748b" letter-spacing="1">ORAL CARE SOLUTIONS</text>
+  </g>
+</svg>

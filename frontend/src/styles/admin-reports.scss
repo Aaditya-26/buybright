@@ -1,0 +1,140 @@
+/* ==========================================================================
+   PRESTODENTAL ADMIN — REPORTS MODULE VISUALIZATIONS & GRAPHS STYLES
+   Fully Responsive Highcharts Grid, Chart Cards, & Mobile Optimization
+   ========================================================================== */
+
+/* ── 1. Reports Charts Responsive Grid ── */
+.reports-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 26px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  /* Tablet and mobile: Stack into 1 clean column */
+  @media (max-width: 1024px) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+/* ── 2. Report Chart Card ── */
+.report-chart-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.04);
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    box-shadow: 0 6px 18px -4px rgba(15, 23, 42, 0.08);
+    border-color: #cbd5e1;
+  }
+
+  /* Screen <= 640px: Reduce card padding to maximize usable chart width */
+  @media (max-width: 640px) {
+    padding: 14px 12px;
+    border-radius: 12px;
+  }
+}
+
+/* ── 3. Chart Card Header ── */
+.report-chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 10px;
+
+  .report-chart-title-wrap {
+    min-width: 0;
+    flex: 1;
+
+    .report-chart-title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      word-break: break-word;
+
+      i {
+        font-size: 0.95rem;
+        flex-shrink: 0;
+      }
+    }
+
+    .report-chart-desc {
+      margin: 3px 0 0 0;
+      font-size: 0.77rem;
+      color: #64748b;
+      line-height: 1.4;
+    }
+  }
+
+  .report-chart-badge {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #0d9488;
+    background: #f0fdfa;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccfbf1;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Screen <= 480px: Allow badge to sit cleanly under title if needed */
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    .report-chart-badge {
+      align-self: flex-start;
+    }
+  }
+}
+
+/* ── 4. Highcharts Chart Wrapper & Responsiveness ── */
+.report-chart-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+
+  /* Highcharts SVG container constraints */
+  .highcharts-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .highcharts-root {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+/* ── 5. Global Highcharts Mobile Constraints ── */
+.highcharts-container,
+.highcharts-container svg.highcharts-root {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
