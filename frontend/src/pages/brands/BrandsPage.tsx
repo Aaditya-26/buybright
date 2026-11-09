@@ -1,12 +1,12 @@
 /**
  * BuyBright Official Brands Directory & Showcase Page.
- * Modern, high-end design matching the BuyBright design system.
+ * Modern, high-end marketplace design matching the BuyBright design system.
  * Features:
  * - ShopHeaderBanner with official manufacturer trust metrics
  * - Top Featured Brand Spotlight Carousel
  * - Interactive Specialty Tabs & A-Z Quick Jump Bar
  * - Live Search Filter
- * - Modern Luxury Brand Cards with crisp logo images, country origins, and product counts
+ * - Modern Brand Cards with crisp logo images, country origins, and product counts
  * - Bottom Trust Features
  * - Full SEO and JSON-LD schema
  */
@@ -27,230 +27,217 @@ export interface BrandItem {
   isFeatured?: boolean;
   isTopBrand?: boolean;
   isNewlyAdded?: boolean;
-  isPrestodentalSuggests?: boolean;
+  isBuyBrightSuggests?: boolean;
 }
 
 export const BRAND_LIST: BrandItem[] = [
   {
-    name: 'SUPERENDO',
-    slug: 'superendo',
-    logoUrl: '/images/brands/superendo.svg',
+    name: 'Apple',
+    slug: 'apple',
+    logoUrl: '/images/brands/apple.svg',
+    country: 'USA',
+    countryFlag: '🇺🇸',
+    specialty: 'Smartphones, MacBooks & Wearables',
+    brandColor: '#0f172a',
+    isFeatured: true,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: true,
+  },
+  {
+    name: 'Sony',
+    slug: 'sony',
+    logoUrl: '/images/brands/sony.svg',
+    country: 'Japan',
+    countryFlag: '🇯🇵',
+    specialty: 'Wireless Audio, Cameras & Gaming',
+    brandColor: '#000000',
+    isFeatured: true,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: true,
+  },
+  {
+    name: 'Samsung',
+    slug: 'samsung',
+    logoUrl: '/images/brands/samsung.svg',
+    country: 'South Korea',
+    countryFlag: '🇰🇷',
+    specialty: 'Galaxy Smart Devices & Displays',
+    brandColor: '#034ea2',
+    isFeatured: true,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: true,
+  },
+  {
+    name: 'Dell',
+    slug: 'dell',
+    logoUrl: '/images/brands/dell.svg',
+    country: 'USA',
+    countryFlag: '🇺🇸',
+    specialty: 'Laptops, Monitors & Workstations',
+    brandColor: '#007db8',
+    isFeatured: true,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: true,
+  },
+  {
+    name: 'boAt',
+    slug: 'boat',
+    logoUrl: '/images/brands/boat.svg',
     country: 'India',
     countryFlag: '🇮🇳',
-    specialty: 'Rotary NiTi Files & Bioceramics',
-    brandColor: '#008080',
-    isFeatured: true,
-    isTopBrand: true,
-    isNewlyAdded: false,
-    isPrestodentalSuggests: true,
-  },
-  {
-    name: '3M ESPE',
-    slug: '3m-espe',
-    logoUrl: '/images/brands/3m-espe.svg',
-    country: 'USA',
-    countryFlag: '🇺🇸',
-    specialty: 'Composites & Universal Adhesives',
-    brandColor: '#cf4032',
-    isFeatured: true,
-    isTopBrand: true,
-    isNewlyAdded: false,
-    isPrestodentalSuggests: true,
-  },
-  {
-    name: 'Dentsply Sirona',
-    slug: 'dentsply-sirona',
-    logoUrl: '/images/brands/dentsply-sirona.svg',
-    country: 'Germany / USA',
-    countryFlag: '🇩🇪',
-    specialty: 'ProTaper Gold & Imaging Systems',
-    brandColor: '#0284c7',
-    isFeatured: true,
-    isTopBrand: true,
-    isNewlyAdded: false,
-    isPrestodentalSuggests: true,
-  },
-  {
-    name: 'Woodpecker',
-    slug: 'woodpecker',
-    logoUrl: '/images/brands/woodpecker.svg',
-    country: 'Global',
-    countryFlag: '🌏',
-    specialty: 'LED Curing Lights & Piezo Scalers',
-    brandColor: '#059669',
-    isFeatured: true,
-    isTopBrand: true,
-    isNewlyAdded: false,
-    isPrestodentalSuggests: true,
-  },
-  {
-    name: 'Ivoclar Vivadent',
-    slug: 'ivoclar-vivadent',
-    logoUrl: '/images/brands/ivoclar-vivadent.svg',
-    country: 'Liechtenstein',
-    countryFlag: '🇱🇮',
-    specialty: 'Tetric N-Ceram & IPS e.max',
-    brandColor: '#4f46e5',
-    isFeatured: true,
-    isTopBrand: true,
-    isNewlyAdded: false,
-    isPrestodentalSuggests: true,
-  },
-  {
-    name: 'GC Dental',
-    slug: 'gc-dental',
-    logoUrl: '/images/brands/gc-dental.svg',
-    country: 'Japan',
-    countryFlag: '🇯🇵',
-    specialty: 'Fuji Glass Ionomer Cements',
-    brandColor: '#d97706',
-    isFeatured: true,
-    isTopBrand: true,
-    isNewlyAdded: false,
-    isPrestodentalSuggests: true,
-  },
-  {
-    name: 'Waldent',
-    slug: 'waldent',
-    logoUrl: '/images/brands/waldent.svg',
-    country: 'India',
-    countryFlag: '🇮🇳',
-    specialty: 'Air Rotors & Dental Devices',
-    brandColor: '#0369a1',
-    isFeatured: true,
-    isTopBrand: true,
-    isNewlyAdded: false,
-    isPrestodentalSuggests: true,
-  },
-  {
-    name: 'Mani Japan',
-    slug: 'mani-japan',
-    logoUrl: '/images/brands/mani-japan.svg',
-    country: 'Japan',
-    countryFlag: '🇯🇵',
-    specialty: 'Diamond Burs & Hand K-Files',
-    brandColor: '#dc2626',
-    isFeatured: true,
-    isTopBrand: true,
-    isNewlyAdded: false,
-    isPrestodentalSuggests: true,
-  },
-  {
-    name: 'Kerr Dental',
-    slug: 'kerr-dental',
-    logoUrl: '/images/brands/kerr-dental.svg',
-    country: 'USA',
-    countryFlag: '🇺🇸',
-    specialty: 'OptiBond Universal Adhesives',
-    brandColor: '#7c3aed',
-    isFeatured: true,
-    isTopBrand: true,
-    isNewlyAdded: false,
-    isPrestodentalSuggests: false,
-  },
-  {
-    name: 'Coltene',
-    slug: 'coltene',
-    logoUrl: '/images/brands/coltene.svg',
-    country: 'Switzerland',
-    countryFlag: '🇨🇭',
-    specialty: 'HyFlex CM Files & Silicones',
-    brandColor: '#0d9488',
-    isFeatured: false,
-    isTopBrand: false,
-    isNewlyAdded: true,
-    isPrestodentalSuggests: true,
-  },
-  {
-    name: 'Ultradent',
-    slug: 'ultradent',
-    logoUrl: '/images/brands/ultradent.svg',
-    country: 'USA',
-    countryFlag: '🇺🇸',
-    specialty: 'Opalescence & Ultra-Etch 35%',
-    brandColor: '#ea580c',
-    isFeatured: true,
-    isTopBrand: true,
-    isNewlyAdded: false,
-    isPrestodentalSuggests: true,
-  },
-  {
-    name: 'Shofu Dental',
-    slug: 'shofu-dental',
-    logoUrl: '/images/brands/shofu-dental.svg',
-    country: 'Japan',
-    countryFlag: '🇯🇵',
-    specialty: 'Beautifil Giomer & Super-Snap',
+    specialty: 'TWS Earbuds & Smartwatches',
     brandColor: '#e11d48',
-    isFeatured: false,
-    isTopBrand: false,
-    isNewlyAdded: true,
-    isPrestodentalSuggests: true,
+    isFeatured: true,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: true,
   },
   {
-    name: 'VDW Dental',
-    slug: 'vdw-dental',
-    logoUrl: '/images/brands/vdw-dental.svg',
+    name: 'Nike',
+    slug: 'nike',
+    logoUrl: '/images/brands/nike.svg',
+    country: 'USA',
+    countryFlag: '🇺🇸',
+    specialty: 'Athletic Footwear & Activewear',
+    brandColor: '#111827',
+    isFeatured: true,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: true,
+  },
+  {
+    name: 'Adidas',
+    slug: 'adidas',
+    logoUrl: '/images/brands/adidas.svg',
     country: 'Germany',
     countryFlag: '🇩🇪',
-    specialty: 'RECIPROC Blue & Endo Motors',
-    brandColor: '#2563eb',
+    specialty: 'Performance Sportswear & Running Shoes',
+    brandColor: '#000000',
     isFeatured: true,
-    isTopBrand: false,
-    isNewlyAdded: true,
-    isPrestodentalSuggests: true,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: true,
   },
   {
-    name: 'Hu-Friedy',
-    slug: 'hu-friedy',
-    logoUrl: '/images/brands/hu-friedy.svg',
+    name: "Levi's",
+    slug: 'levis',
+    logoUrl: '/images/brands/levis.svg',
     country: 'USA',
     countryFlag: '🇺🇸',
-    specialty: 'Immunity Steel Surgical Forceps',
-    brandColor: '#475569',
-    isFeatured: false,
+    specialty: 'Original Denim & Casual Wear',
+    brandColor: '#c41230',
+    isFeatured: true,
     isTopBrand: true,
     isNewlyAdded: false,
-    isPrestodentalSuggests: true,
+    isBuyBrightSuggests: true,
   },
   {
-    name: 'Septodont',
-    slug: 'septodont',
-    logoUrl: '/images/brands/septodont.svg',
+    name: 'Philips',
+    slug: 'philips',
+    logoUrl: '/images/brands/philips.svg',
+    country: 'Netherlands',
+    countryFlag: '🇳🇱',
+    specialty: 'Personal Grooming & Kitchen Appliances',
+    brandColor: '#0b5ed7',
+    isFeatured: true,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: false,
+  },
+  {
+    name: 'Dyson',
+    slug: 'dyson',
+    logoUrl: '/images/brands/dyson.svg',
+    country: 'UK',
+    countryFlag: '🇬🇧',
+    specialty: 'Cordless Vacuums & Air Purifiers',
+    brandColor: '#581c87',
+    isFeatured: true,
+    isTopBrand: true,
+    isNewlyAdded: true,
+    isBuyBrightSuggests: true,
+  },
+  {
+    name: 'Instant Pot',
+    slug: 'instant-pot',
+    logoUrl: '/images/brands/instant-pot.svg',
+    country: 'Canada',
+    countryFlag: '🇨🇦',
+    specialty: 'Smart Multi-Cookers & Air Fryers',
+    brandColor: '#ea580c',
+    isFeatured: true,
+    isTopBrand: false,
+    isNewlyAdded: true,
+    isBuyBrightSuggests: true,
+  },
+  {
+    name: "L'Oréal Paris",
+    slug: 'loreal',
+    logoUrl: '/images/brands/loreal.svg',
     country: 'France',
     countryFlag: '🇫🇷',
-    specialty: 'Anesthetics & Biodentine XP',
-    brandColor: '#0284c7',
+    specialty: 'Advanced Skincare & Hair Treatments',
+    brandColor: '#0f172a',
     isFeatured: true,
     isTopBrand: true,
     isNewlyAdded: false,
-    isPrestodentalSuggests: true,
+    isBuyBrightSuggests: true,
   },
   {
-    name: 'Medicept',
-    slug: 'medicept',
-    logoUrl: '/images/brands/medicept.svg',
-    country: 'UK / Global',
+    name: 'Nivea',
+    slug: 'nivea',
+    logoUrl: '/images/brands/nivea.svg',
+    country: 'Germany',
+    countryFlag: '🇩🇪',
+    specialty: 'Dermatological Body Care & Moisturizers',
+    brandColor: '#003399',
+    isFeatured: false,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: true,
+  },
+  {
+    name: 'Decathlon',
+    slug: 'decathlon',
+    logoUrl: '/images/brands/decathlon.svg',
+    country: 'France',
+    countryFlag: '🇫🇷',
+    specialty: 'Outdoor Adventure & Gym Equipment',
+    brandColor: '#0082c3',
+    isFeatured: true,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: true,
+  },
+  {
+    name: 'Penguin Books',
+    slug: 'penguin',
+    logoUrl: '/images/brands/penguin.svg',
+    country: 'UK',
     countryFlag: '🇬🇧',
-    specialty: 'Impression Putty & Liners',
-    brandColor: '#0891b2',
+    specialty: 'Bestseller Fiction & World Literature',
+    brandColor: '#ff6600',
+    isFeatured: true,
+    isTopBrand: true,
+    isNewlyAdded: false,
+    isBuyBrightSuggests: true,
+  },
+  {
+    name: 'HarperCollins',
+    slug: 'harpercollins',
+    logoUrl: '/images/brands/harpercollins.svg',
+    country: 'USA',
+    countryFlag: '🇺🇸',
+    specialty: 'Educational, Non-Fiction & Academic Texts',
+    brandColor: '#dc2626',
     isFeatured: false,
     isTopBrand: false,
     isNewlyAdded: true,
-    isPrestodentalSuggests: false,
-  },
-  {
-    name: 'PrestoCare',
-    slug: 'prestocare',
-    logoUrl: '/images/brands/prestocare.svg',
-    country: 'India',
-    countryFlag: '🇮🇳',
-    specialty: 'Nitrile Gloves & Sterilization',
-    brandColor: '#3f788c',
-    isFeatured: true,
-    isTopBrand: false,
-    isNewlyAdded: true,
-    isPrestodentalSuggests: true,
+    isBuyBrightSuggests: true,
   },
 ];
 
@@ -261,7 +248,7 @@ export const BRAND_CATEGORY_TABS: { id: BrandTabId; label: string; icon: string 
   { id: 'top', label: 'Top Brands', icon: 'fa-solid fa-crown' },
   { id: 'new', label: 'Newly Added Brands', icon: 'fa-solid fa-sparkles' },
   { id: 'featured', label: 'Featured Brands', icon: 'fa-solid fa-star' },
-  { id: 'suggested', label: 'Prestodental Suggests', icon: 'fa-solid fa-thumbs-up' },
+  { id: 'suggested', label: 'BuyBright Recommends', icon: 'fa-solid fa-thumbs-up' },
 ];
 
 export const BrandsPage: React.FC = () => {
@@ -275,7 +262,7 @@ export const BrandsPage: React.FC = () => {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.title = 'Official Authorized Dental Brands | BuyBright';
+    document.title = 'Official Authorized Brands Directory | BuyBright';
   }, []);
 
   // Alphabet list from available brands
@@ -313,7 +300,7 @@ export const BrandsPage: React.FC = () => {
       if (selectedBrandTab === 'top' && !b.isTopBrand) return false;
       if (selectedBrandTab === 'new' && !b.isNewlyAdded) return false;
       if (selectedBrandTab === 'featured' && !b.isFeatured) return false;
-      if (selectedBrandTab === 'suggested' && !b.isPrestodentalSuggests) return false;
+      if (selectedBrandTab === 'suggested' && !b.isBuyBrightSuggests) return false;
 
       if (selectedLetter !== 'ALL') {
         const first = b.name.charAt(0).toUpperCase();
@@ -337,16 +324,16 @@ export const BrandsPage: React.FC = () => {
   return (
     <div className="pd-brands-page-wrapper shop-page-wrapper">
       <SEO
-        title="Authorized Dental Brands Directory | BuyBright"
-        description="Explore 17+ certified dental brand logos and shop genuine dental supplies from SUPERENDO, 3M ESPE, Dentsply Sirona, Woodpecker, Ivoclar, GC, Mani, and Kerr."
+        title="Authorized Marketplace Brands Directory | BuyBright"
+        description="Explore 16+ verified consumer brand partners and shop genuine products with manufacturer warranty from Apple, Sony, Samsung, Nike, Dyson, Philips, and more."
         canonicalUrl="https://buybright.com/brands"
-        keywords="dental brands, dental brand logos, superendo, 3m ESPE, dentsply sirona, ivoclar vivadent, gc dental, mani japan"
+        keywords="marketplace brands, verified brands, apple, sony, samsung, nike, adidas, levis, dyson, philips, decathlon"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Authorized Dental Brands Directory",
+          "name": "Authorized Marketplace Brands Directory",
           "url": "https://buybright.com/brands",
-          "description": "BuyBright Official Brands Directory featuring certified dental manufacturers.",
+          "description": "BuyBright Official Brands Directory featuring certified brand manufacturers and authorized sellers.",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             itemListElement: [
@@ -359,31 +346,31 @@ export const BrandsPage: React.FC = () => {
 
       {/* 1. Official Standardized Shop Header Banner */}
       <ShopHeaderBanner
-        totalProductsCount={1200}
-        badgeText="100% FACTORY DIRECT • 17+ VERIFIED DENTAL PARTNERS"
+        totalProductsCount={2400}
+        badgeText="100% BRAND AUTHORIZED • 16+ VERIFIED GLOBAL PARTNERS"
         badgeIcon="fa-solid fa-certificate"
         title="Authorized Global & National "
-        highlightText="Dental Brands"
-        description="Shop directly from certified dental manufacturers. Enjoy guaranteed 100% genuine inventory with full GST input tax invoices, cold-chain assurance, and direct replacement warranties."
+        highlightText="Marketplace Brands"
+        description="Shop directly from certified manufacturers and verified authorized sellers. Enjoy guaranteed 100% genuine inventory with official GST input tax invoices and direct manufacturer replacement warranties."
         breadcrumbLabel="Authorized Brands"
         metrics={[
           {
             icon: 'fa-solid fa-shield-check',
             iconColorClass: 'text-teal',
-            title: '17+ Verified Partners',
-            subtitle: 'Direct Manufacturer Stock',
+            title: '16+ Verified Partners',
+            subtitle: 'Direct Brand Stock',
           },
           {
             icon: 'fa-solid fa-truck-fast',
             iconColorClass: 'text-coral',
             title: '24-48h Dispatch',
-            subtitle: 'Pan-India Transit',
+            subtitle: 'Express Pan-India Transit',
           },
           {
             icon: 'fa-solid fa-award',
             iconColorClass: 'text-yellow',
-            title: 'Direct Warranty',
-            subtitle: 'Replacement Assured',
+            title: 'Brand Warranty',
+            subtitle: 'Official Manufacturer Coverage',
           },
         ]}
       />
@@ -394,11 +381,11 @@ export const BrandsPage: React.FC = () => {
           <div className="spotlight-header">
             <div className="spotlight-header-left">
               <span className="spotlight-eyebrow">
-                <i className="fa-solid fa-crown" /> NATIONAL DENTAL LEADERS
+                <i className="fa-solid fa-crown" /> MARKETPLACE LEADERS
               </span>
               <h2 className="spotlight-title">Featured Partner Spotlight</h2>
             </div>
-            <span className="spotlight-count-badge">Top 8 Dentist Choices</span>
+            <span className="spotlight-count-badge">Top Verified Brands</span>
           </div>
 
           <div className="spotlight-cards-track">
@@ -420,7 +407,7 @@ export const BrandsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. Search & Interactive Specialty Filters Bar */}
+      {/* 3. Search & Interactive Category Filters Bar */}
       <section className="brands-filters-sticky-bar">
         <div className="filters-bar-container">
           {/* Search Row */}
@@ -429,10 +416,10 @@ export const BrandsPage: React.FC = () => {
               <i className="fa-solid fa-magnifying-glass search-icon" />
               <input
                 type="text"
-                placeholder="Search brand logos by name, country, or dental specialty..."
+                placeholder="Search brand logos by name, country, or category..."
                 value={brandSearch}
                 onChange={(e) => setBrandSearch(e.target.value)}
-                aria-label="Search dental brand logos"
+                aria-label="Search brand logos"
               />
               {brandSearch && (
                 <button
@@ -454,7 +441,7 @@ export const BrandsPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Brand Category Tabs (All Brands, Top Brands, Newly Added Brands, Featured Brands, Prestodental Suggests) */}
+          {/* Brand Category Tabs (All Brands, Top Brands, Newly Added Brands, Featured Brands, BuyBright Recommends) */}
           <div className="specialty-pills-row">
             <div className="specialty-pills-scroll">
               {BRAND_CATEGORY_TABS.map((tab) => {
@@ -463,7 +450,7 @@ export const BrandsPage: React.FC = () => {
                 if (tab.id === 'top') tabCount = BRAND_LIST.filter((b) => b.isTopBrand).length;
                 else if (tab.id === 'new') tabCount = BRAND_LIST.filter((b) => b.isNewlyAdded).length;
                 else if (tab.id === 'featured') tabCount = BRAND_LIST.filter((b) => b.isFeatured).length;
-                else if (tab.id === 'suggested') tabCount = BRAND_LIST.filter((b) => b.isPrestodentalSuggests).length;
+                else if (tab.id === 'suggested') tabCount = BRAND_LIST.filter((b) => b.isBuyBrightSuggests).length;
 
                 return (
                   <button
@@ -509,7 +496,7 @@ export const BrandsPage: React.FC = () => {
                 <i className="fa-solid fa-box-open" />
               </div>
               <h3>No Brand Found</h3>
-              <p>No dental brand matches your active filter or search query "{brandSearch}".</p>
+              <p>No brand matches your active filter or search query "{brandSearch}".</p>
               <button
                 type="button"
                 className="btn-reset-brands-filter"

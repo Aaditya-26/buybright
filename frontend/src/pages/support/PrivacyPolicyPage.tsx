@@ -73,7 +73,7 @@ export const PrivacyPolicyPage: React.FC = () => {
     <div className="pd-privacy-policy-page">
       <SEO
         title="Privacy Policy — BuyBright"
-        description="Learn how BuyBright gathers, utilizes, and safeguards yourprocurement data and personal information in accordance with highest security standards."
+        description="Learn how BuyBright gathers, utilizes, and safeguards your marketplace orders and personal information in accordance with highest security standards."
         canonicalUrl="/privacy-policy"
       />
 
@@ -108,7 +108,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               </div>
               <div className="meta-item">
                 <i className="fa-solid fa-globe" />
-                <span>Applicable to: <strong>prestodental.store</strong></span>
+                <span>Applicable to: <strong>buybright.com</strong></span>
               </div>
             </div>
           </div>
@@ -146,9 +146,9 @@ export const PrivacyPolicyPage: React.FC = () => {
                 </div>
                 <div className="help-text">
                   <strong>Have Privacy Questions?</strong>
-                  <p>Our Data Protection desk is here to assist dental professionals.</p>
+                  <p>Our Data Protection desk is here to assist our valued customers and sellers.</p>
                 </div>
-                <a href="mailto:support@prestodental.in" className="btn-toc-help">
+                <a href="mailto:support@buybright.com" className="btn-toc-help">
                   <i className="fa-solid fa-envelope" /> Contact Privacy Desk
                 </a>
               </div>
@@ -184,7 +184,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               </div>
               <ul className="note-list">
                 <li>
-                  By visiting <strong>prestodental.store</strong> you agree to be bound by the terms and conditions of this Privacy Policy. If you do not agree please do not use or access our Website.
+                  By visiting <strong>buybright.com</strong> you agree to be bound by the terms and conditions of this Privacy Policy. If you do not agree please do not use or access our Website.
                 </li>
                 <li>
                   By mere use of the Website, you expressly consent to our use and disclosure of your personal information in accordance with this Privacy Policy. This Privacy Policy is incorporated into and subject to the Terms of Use.
@@ -205,7 +205,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               </div>
               <div className="section-card-body">
                 <p>
-                  When You visit BuyBright website or send emails to us, You are communicating with us electronically. We communicate with You by email, SMS, RCS, whatsapp or by posting notices on the website.
+                  When You visit BuyBright website or send emails to us, You are communicating with us electronically. We communicate with You by email, SMS, RCS, WhatsApp or by posting notices on the website.
                 </p>
                 <p>
                   For contractual purposes, You consent to receive communications from us electronically and You agree that all agreements, notices, disclosures and other communications that we provide to You electronically satisfy any legal requirement that those communications be in writing. This condition does not affect Your statutory rights.
@@ -289,7 +289,7 @@ export const PrivacyPolicyPage: React.FC = () => {
                     <div className="point-icon"><i className="fa-solid fa-id-card" /></div>
                     <div>
                       <strong>Account Registration:</strong>
-                      <span>We collect name, email, phone number, andcredentials when you set up your free account with us.</span>
+                      <span>We collect name, email, phone number, and credentials when you set up your free account with us.</span>
                     </div>
                   </div>
                 </div>
@@ -379,7 +379,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               </div>
               <div className="section-card-body">
                 <p>
-                  Our Website links to other websites that may collect personally identifiable information about you. <strong>BuyBright.store</strong> is not responsible for the privacy practices or the content of those linked websites.
+                  Our Website links to other websites that may collect personally identifiable information about you. <strong>buybright.com</strong> is not responsible for the privacy practices or the content of those linked websites.
                 </p>
               </div>
             </article>
@@ -442,7 +442,7 @@ export const PrivacyPolicyPage: React.FC = () => {
                   <div>
                     <strong>Unsubscribe Instructions:</strong>
                     <p>
-                      If you want to remove your contact information from all BuyBright.store lists and newsletters, please visit the unsubscribe link provided at the bottom of our emails or contact our support team.
+                      If you want to remove your contact information from all buybright.com lists and newsletters, please visit the unsubscribe link provided at the bottom of our emails or contact our support team.
                     </p>
                   </div>
                 </div>
@@ -457,7 +457,7 @@ export const PrivacyPolicyPage: React.FC = () => {
                   <div className="section-icon-badge">
                     <i className="fa-solid fa-rectangle-ad" />
                   </div>
-                  <h2> ADVERTISEMENTS ON BuyBright.store</h2>
+                  <h2> ADVERTISEMENTS ON buybright.com</h2>
                 </div>
               </div>
               <div className="section-card-body">
@@ -508,11 +508,11 @@ export const PrivacyPolicyPage: React.FC = () => {
                 </p>
 
                 <div className="privacy-contact-grid">
-                  <a href="mailto:support@prestodental.in" className="privacy-contact-item">
+                  <a href="mailto:support@buybright.com" className="privacy-contact-item">
                     <div className="c-icon"><i className="fa-solid fa-envelope" /></div>
                     <div className="c-info">
                       <span className="c-lbl">Email Privacy Desk</span>
-                      <strong className="c-val">support@prestodental.in</strong>
+                      <strong className="c-val">support@buybright.com</strong>
                     </div>
                   </a>
 

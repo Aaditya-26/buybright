@@ -23,14 +23,14 @@ interface CompareContextType {
 
 const CompareContext = createContext<CompareContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'prestodental_compare_items';
+const STORAGE_KEY = 'buybright_compare_items_v2';
 const MAX_COMPARE_ITEMS = 4;
 
 export const CompareProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { showToast } = useToast();
   const [compareItems, setCompareItems] = useState<Product[]>(() => {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
+      const saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('prestodental_compare_items');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];

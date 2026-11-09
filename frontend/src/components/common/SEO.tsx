@@ -10,12 +10,12 @@ export interface SEOProps {
   jsonLd?: Record<string, any> | Array<Record<string, any>>;
 }
 
-const DEFAULT_TITLE = "BuyBright — India's Trusted Dental Supply Platform";
+const DEFAULT_TITLE = "BuyBright — India's Premier Multi-Seller E-Commerce Marketplace";
 const DEFAULT_DESCRIPTION =
-  "Order authentic dental supplies, rotary endodontic files, composite materials, dental equipment, and consumables direct from authorized brand distributors across India.";
+  "Discover genuine consumer products across electronics, fashion, home appliances, beauty, sports, and books direct from verified sellers and authorized brand distributors across India.";
 const DEFAULT_KEYWORDS =
-  "dental supply india, dentalproducts, superendo rotary files, composite restorative, 3m ESPE composite, dental equipment, dental instruments, b2b dental procurement";
-const DEFAULT_OG_IMAGE = "https://buybright.com/images/banner.webp";
+  "multi seller marketplace, online shopping, electronics, smart gadgets, fashion, home appliances, beauty skincare, sports fitness, books, buybright marketplace";
+const DEFAULT_OG_IMAGE = "https://buybright.com/images/logo.svg";
 const BASE_URL = "https://buybright.com";
 
 export const SEO: React.FC<SEOProps> = ({

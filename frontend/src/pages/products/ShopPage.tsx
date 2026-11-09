@@ -51,7 +51,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({ initialSearchQuery = '' }) =
   // Scroll to top and set page title on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.title = 'Dental Shop & Supplies | BuyBright';
+    document.title = 'Shop All Marketplace Products | BuyBright';
   }, []);
 
   // Open Drawer with optional jump to specific section
@@ -379,16 +379,16 @@ export const ShopPage: React.FC<ShopPageProps> = ({ initialSearchQuery = '' }) =
   return (
     <div className="shop-page-wrapper">
       <SEO
-        title="Dental Shop & Dental Supplies"
-        description="Browse authentic dental supplies, endodontic rotary files, restorative composites, instruments, and equipment with tier pricing and GST invoicing."
+        title="Marketplace Shop &amp; Verified Products"
+        description="Browse authentic products across electronics, fashion, home essentials, beauty, sports, and books with verified seller warranties and GST invoicing."
         canonicalUrl="https://buybright.com/shop"
-        keywords="dental supplies, buy dental materials online, rotary files, dental equipment, dental instruments india"
+        keywords="marketplace shopping, buy electronics online, fashion clothes, home kitchen, beauty skincare, buybright shop"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Dental Shop & Dental Supplies",
+          "name": "Marketplace Shop & Verified Products",
           "url": "https://buybright.com/shop",
-          "description": "BuyBright Catalog of authentic dental supplies and equipment.",
+          "description": "BuyBright Catalog of authentic products from verified sellers.",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [

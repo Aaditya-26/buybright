@@ -94,7 +94,7 @@ export interface ShopFilterState {
   viewMode: ViewMode;
 }
 
-export type UserRole = 'dentist' | 'clinic' | 'hospital' | 'distributor' | 'admin';
+export type UserRole = 'customer' | 'seller' | 'admin' | 'dentist' | 'clinic' | 'hospital' | 'distributor';
 
 export interface AuthUser {
   id: string;
@@ -102,6 +102,7 @@ export interface AuthUser {
   email: string;
   phone: string;
   role: UserRole;
+  businessName?: string;
   clinicName?: string;
   dciNumber?: string;
   gstin?: string;
@@ -123,6 +124,7 @@ export interface RegisterData {
   phone: string;
   password: string;
   role?: UserRole;
+  businessName?: string;
   clinicName?: string;
   dciNumber?: string;
   gstin?: string;

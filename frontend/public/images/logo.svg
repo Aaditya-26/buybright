@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 64" width="250" height="64" fill="none">
+  <defs>
+    <!-- Brand Primary Gradient: Deep Teal to Vibrant Emerald Cyan -->
+    <linearGradient id="bb-teal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006d6d" />
+      <stop offset="50%" stop-color="#008080" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+
+    <!-- Brilliant Sunburst Gradient: Radiant Gold to Energetic Amber -->
+    <linearGradient id="bb-gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="45%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <!-- Emblem Subtle Drop Shadow -->
+    <filter id="bb-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#008080" flood-opacity="0.25" />
+    </filter>
+    <filter id="bb-sparkle-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#f59e0b" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- ==================== LEFT ICON EMBLEM (48x48) ==================== -->
+  <g transform="translate(6, 8)" filter="url(#bb-shadow)">
+    <!-- Squircle Shield Container -->
+    <rect x="0" y="0" width="48" height="48" rx="14" fill="url(#bb-teal-grad)" />
+
+    <!-- Shopping Bag Handle Arc -->
+    <path d="M18 16 C18 10, 30 10, 30 16" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" fill="none" opacity="0.9" />
+
+    <!-- Stylized Modern 'B' Monogram / Shopping Bag Contour -->
+    <path
+      d="M14 16 H27 C31.5 16, 34 18.5, 34 22 C34 24.8, 32.2 26.6, 29.5 27.3 C33 28.2, 35 30.5, 35 34.5 C35 38.8, 31.8 41.5, 26.5 41.5 H14 Z"
+      fill="#ffffff"
+      fill-rule="evenodd"
+    />
+
+    <!-- Inner Loops of 'B' creating cutouts -->
+    <path
+      d="M19 20.5 H25.5 C27.5 20.5, 29 21.2, 29 23 C29 24.8, 27.5 25.5, 25.5 25.5 H19 Z"
+      fill="#008080"
+    />
+    <path
+      d="M19 30 H26.5 C28.8 30, 30.2 31, 30.2 33 C30.2 35, 28.8 36.5, 26.5 36.5 H19 Z"
+      fill="#008080"
+    />
+
+    <!-- Brilliant 4-Point Radiant Star / Sparkle in Top-Right -->
+    <g transform="translate(33, 9)" filter="url(#bb-sparkle-glow)">
+      <path
+        d="M6 0 C6 3.5, 8.5 6, 12 6 C8.5 6, 6 8.5, 6 12 C6 8.5, 3.5 6, 0 6 C3.5 6, 6 3.5, 6 0 Z"
+        fill="url(#bb-gold-grad)"
+      />
+      <circle cx="6" cy="6" r="1.5" fill="#ffffff" />
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT WORDMARK & SUBTITLE ==================== -->
+  <g transform="translate(66, 0)">
+    <!-- Main Brand Name: 'Buy' in Dark Navy + 'Bright' in Teal with Golden Glow -->
+    <text x="0" y="36" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="900" font-size="28" letter-spacing="-0.5">
+      <tspan fill="#0f172a">Buy</tspan><tspan fill="url(#bb-teal-grad)">Bright</tspan>
+    </text>
+
+    <!-- Star Sparkle Accent Over the 'i' of Bright -->
+    <g transform="translate(133, 13)">
+      <path
+        d="M4 0 C4 2.2, 5.8 4, 8 4 C5.8 4, 4 5.8, 4 8 C4 5.8, 2.2 4, 0 4 C2.2 4, 4 2.2, 4 0 Z"
+        fill="url(#bb-gold-grad)"
+      />
+    </g>
+
+    <!-- Dynamic Marketplace Subtitle Pill / Tagline -->
+    <text x="1" y="49" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="700" font-size="8" fill="#64748b" letter-spacing="2.2">
+      MULTI-SELLER MARKETPLACE
+    </text>
+  </g>
+</svg>

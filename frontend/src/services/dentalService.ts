@@ -410,9 +410,16 @@ const FALLBACK_SHOWCASE: ShowcaseItem[] = [
 /**
  * Service methods with API integration and resilient offline fallback
  */
+// Whether to fetch from live backend endpoints.
+// Defaults to false for instant 0ms mock rendering until backend catalog endpoints are deployed.
+const USE_LIVE_API = import.meta.env?.VITE_USE_LIVE_API === 'true';
+
 export const dentalService = {
   /** Fetch all categories */
   async getCategories(): Promise<Category[]> {
+    if (!USE_LIVE_API) {
+      return FALLBACK_CATEGORIES;
+    }
     try {
       const res = await apiClient.get<ApiResponse<Category[]>>('/categories/');
       return res.data?.data && res.data.data.length > 0 ? res.data.data : FALLBACK_CATEGORIES;
@@ -423,6 +430,17 @@ export const dentalService = {
 
   /** Fetch featured products with optional category and search filters */
   async getFeaturedProducts(category?: string, search?: string): Promise<Product[]> {
+    if (!USE_LIVE_API) {
+      let filtered = [...FALLBACK_PRODUCTS];
+      if (category && category !== 'all') {
+        filtered = filtered.filter((p) => p.category.toLowerCase() === category.toLowerCase());
+      }
+      if (search) {
+        const q = search.toLowerCase();
+        filtered = filtered.filter((p) => p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q));
+      }
+      return filtered.length > 0 ? filtered : FALLBACK_PRODUCTS;
+    }
     try {
       const params: Record<string, string> = { spotlight: 'false' };
       if (category && category !== 'all') params.category = category;
@@ -444,6 +462,9 @@ export const dentalService = {
 
   /** Fetch spotlight / top seller products */
   async getSuperendoProducts(): Promise<Product[]> {
+    if (!USE_LIVE_API) {
+      return FALLBACK_SUPERENDO;
+    }
     try {
       const res = await apiClient.get<ApiResponse<Product[]>>('/products/', {
         params: { spotlight: 'true' },
@@ -456,6 +477,9 @@ export const dentalService = {
 
   /** Fetch promotional showcase banners */
   async getShowcaseItems(): Promise<ShowcaseItem[]> {
+    if (!USE_LIVE_API) {
+      return FALLBACK_SHOWCASE;
+    }
     try {
       const res = await apiClient.get<ApiResponse<ShowcaseItem[]>>('/showcase/');
       return res.data?.data && res.data.data.length > 0 ? res.data.data : FALLBACK_SHOWCASE;
@@ -466,6 +490,11 @@ export const dentalService = {
 
   /** Fetch product detail by ID */
   async getProductById(id: string): Promise<Product | null> {
+    if (!USE_LIVE_API) {
+      const all = [...FALLBACK_PRODUCTS, ...FALLBACK_SUPERENDO];
+      const found = all.find((p) => p.id === id || p.id.toLowerCase() === id.toLowerCase());
+      return found || all[0];
+    }
     try {
       const res = await apiClient.get<ApiResponse<Product>>(`/products/${id}/`);
       return res.data?.data || null;
@@ -479,6 +508,16 @@ export const dentalService = {
   /** Fetch related products for product details page */
   async getRelatedProducts(category: string, currentId: string): Promise<Product[]> {
     const all = [...FALLBACK_PRODUCTS, ...FALLBACK_SUPERENDO];
+    if (!USE_LIVE_API) {
+      const related = all.filter(
+        (p) => p.id !== currentId && p.category.toLowerCase() === category.toLowerCase()
+      );
+      if (related.length < 4) {
+        const others = all.filter((p) => p.id !== currentId && !related.some((r) => r.id === p.id));
+        return [...related, ...others].slice(0, 8);
+      }
+      return related.slice(0, 8);
+    }
     try {
       const res = await apiClient.get<ApiResponse<Product[]> | Product[]>('/products/', {
         params: { category, exclude: currentId },
@@ -546,6 +585,7 @@ export const dentalService = {
 };
 
 // Aliases for modern idiomatic imports
+export const catalogService = dentalService;
 export const buybrightService = dentalService;
 export const ecommerceService = dentalService;
 export default dentalService;

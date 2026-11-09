@@ -13,7 +13,7 @@ interface FloatingWhatsAppProps {
 
 export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
   phoneNumber = '918806488054',
-  defaultMessage = 'Hello BuyBright, I would like to inquire about dental supplies.',
+  defaultMessage = 'Hello BuyBright, I would like to inquire about marketplace products.',
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 

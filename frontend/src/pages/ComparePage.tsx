@@ -36,7 +36,7 @@ export const ComparePage: React.FC = () => {
     if (product.size) return product.size;
     if (product.volume_ml) return `${product.volume_ml} Bottle / Dispenser`;
     
-    // Derived realistic dental packaging
+    // Derived realistic marketplace packaging
     const name = product.name.toLowerCase();
     if (name.includes('pack of 6') || name.includes('pack of 12') || name.includes('pack of 100')) {
       const match = product.name.match(/pack of \d+/i);
@@ -47,27 +47,29 @@ export const ComparePage: React.FC = () => {
       if (match) return match[0];
     }
 
-    switch (product.category.toLowerCase()) {
-      case 'endodontics':
-        return 'Pack of 6 NiTi Files (Sterile)';
-      case 'consumables':
-        return 'Box of 100 Pcs (Nitrile / Latex)';
-      case 'materials':
-        return '1x 50ml Auto-mix Cartridge + 6 Mixing Tips';
-      case 'instruments':
-        return '1 Pc Surgical Grade Autoclavable Unit';
-      case 'equipment':
-        return '1 Complete Unit with Power Supply & Acc.';
+    switch ((product.category || '').toLowerCase()) {
+      case 'electronics':
+        return 'Standard Retail Box (1 Unit)';
+      case 'fashion':
+        return 'Single Pack / Garment Bag';
+      case 'home-kitchen':
+        return '1 Unit Complete Set with Accessories';
+      case 'beauty':
+        return '1 Bottle / Dispenser Pack';
+      case 'sports':
+        return '1 Standard Sports Equipment Unit';
+      case 'books':
+        return 'Single Edition (Paperback / Hardcover)';
       default:
-        return 'Standard Dental Pack (1 Unit)';
+        return 'Standard Marketplace Pack (1 Unit)';
     }
   };
 
   return (
     <div className="compare-page-wrapper">
       <SEO
-        title="Compare Dental Supplies &amp; Equipment"
-        description="Compare specifications, pack sizes, prices, ratings, and product attributes of dental instruments, rotary files, and composite restorative materials."
+        title="Compare Marketplace Products"
+        description="Compare specifications, pack sizes, prices, ratings, and product attributes across electronics, fashion, home, and lifestyle products."
         canonicalUrl="https://buybright.com/compare"
       />
       <div className="compare-page-container">
@@ -82,7 +84,7 @@ export const ComparePage: React.FC = () => {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '14px' }}>
             <div>
               <h1 style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--color-dark-navy, #2a3537)', margin: 0, display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <i className="fa-solid fa-code-compare text-teal" /> Dental Product Comparison
+                <i className="fa-solid fa-code-compare text-teal" /> Marketplace Product Comparison
               </h1>
               <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '4px 0 0' }}>
                 Compare key specifications, ratings, prices, and pack sizes side-by-side.
@@ -122,14 +124,14 @@ export const ComparePage: React.FC = () => {
             </div>
             <h2>No Products Added for Comparison</h2>
             <p>
-              Click the comparison icon <i className="fa-solid fa-code-compare" style={{ color: '#3f788c', margin: '0 4px' }} /> on any product card in the catalog to compare up to 4 dental items side-by-side.
+              Click the comparison icon <i className="fa-solid fa-code-compare" style={{ color: '#3f788c', margin: '0 4px' }} /> on any product card in the catalog to compare up to 4 items side-by-side.
             </p>
             <button
               type="button"
               className="btn-browse-compare-cta"
               onClick={() => navigate('/shop')}
             >
-              <i className="fa-solid fa-bag-shopping" /> Browse Dental Catalog
+              <i className="fa-solid fa-bag-shopping" /> Browse Marketplace Catalog
             </button>
           </div>
         ) : (
@@ -295,7 +297,7 @@ export const ComparePage: React.FC = () => {
                     <i className="fa-regular fa-calendar-check text-success" />
                     <strong>Batch Expiry Date</strong>
                   </div>
-                  <span className="label-subtext">Clinical freshness warranty</span>
+                  <span className="label-subtext">Verified merchant quality warranty</span>
                 </div>
                 {compareItems.map((product) => (
                   <div key={product.id} className="compare-cell">

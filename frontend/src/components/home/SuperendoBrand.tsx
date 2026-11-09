@@ -96,7 +96,7 @@ export const SuperendoBrand: React.FC<SuperendoBrandProps> = ({ products }) => {
               className={`product-nav-btn btn-prev ${!canScrollLeft ? 'is-disabled' : ''}`}
               onClick={() => handleScroll('left')}
               disabled={!canScrollLeft}
-              aria-label="Scroll Superendo products left"
+              aria-label="Scroll products left"
               title="Previous Products"
             >
               <i className="fa-solid fa-chevron-left" />
@@ -106,14 +106,14 @@ export const SuperendoBrand: React.FC<SuperendoBrandProps> = ({ products }) => {
               className={`product-nav-btn btn-next ${!canScrollRight ? 'is-disabled' : ''}`}
               onClick={() => handleScroll('right')}
               disabled={!canScrollRight}
-              aria-label="Scroll Superendo products right"
+              aria-label="Scroll products right"
               title="Next Products"
             >
               <i className="fa-solid fa-chevron-right" />
             </button>
           </div>
 
-          <Link to="/shop?brand=Superendo" className="btn-cat-view-all brand-superendo">
+          <Link to="/shop" className="btn-cat-view-all brand-superendo">
             <span>Explore All Brands</span>
             <div className="btn-icon-circle" style={{ background: 'var(--color-coral-red)' }}>
               <i className="fa-solid fa-arrow-right" />

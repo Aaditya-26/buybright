@@ -28,100 +28,52 @@ interface CategoryItem {
 
 const CATEGORY_ITEMS: CategoryItem[] = [
   {
-    id: 'cat-diag',
+    id: 'cat-electronics',
     title: 'Electronics & Gadgets',
     slug: 'electronics',
-    itemCount: '120+ Products',
-    image: '/images/cat_electronics_1787401889850.jpg',
-    icon: 'fa-solid fa-stethoscope',
+    itemCount: '1,250+ Products',
+    image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&auto=format&fit=crop&q=80',
+    icon: 'fa-solid fa-laptop',
   },
   {
-    id: 'cat-consum',
+    id: 'cat-fashion',
     title: 'Fashion & Apparel',
     slug: 'fashion',
-    itemCount: '450+ Products',
-    image: '/images/cat_fashion_1787401910059.jpg',
-    icon: 'fa-solid fa-box-tissue',
+    itemCount: '3,400+ Products',
+    image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&auto=format&fit=crop&q=80',
+    icon: 'fa-solid fa-shirt',
   },
   {
-    id: 'cat-endo',
+    id: 'cat-home-kitchen',
     title: 'Home & Kitchen',
     slug: 'home-kitchen',
-    itemCount: '280+ Products',
-    image: '/images/cat_endodontic_1787401934680.jpg',
-    icon: 'fa-solid fa-tooth',
+    itemCount: '2,100+ Products',
+    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&auto=format&fit=crop&q=80',
+    icon: 'fa-solid fa-kitchen-set',
   },
   {
-    id: 'cat-inst',
+    id: 'cat-beauty',
     title: 'Beauty & Personal Care',
     slug: 'beauty',
-    itemCount: '320+ Products',
-    image: '/images/cat_beauty_1787401955005.jpg',
-    icon: 'fa-solid fa-scissors',
+    itemCount: '1,580+ Products',
+    image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&auto=format&fit=crop&q=80',
+    icon: 'fa-solid fa-wand-magic-sparkles',
   },
   {
-    id: 'cat-hand',
+    id: 'cat-sports',
     title: 'Sports & Fitness',
     slug: 'sports',
-    itemCount: '190+ Products',
-    image: '/images/cat_handpieces_1787401976899.jpg',
-    icon: 'fa-solid fa-gears',
+    itemCount: '890+ Products',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80',
+    icon: 'fa-solid fa-dumbbell',
   },
   {
-    id: 'cat-mat',
+    id: 'cat-books',
     title: 'Books & Stationery',
     slug: 'books',
-    itemCount: '260+ Products',
-    image: '/images/cat_books_1787401998270.jpg',
-    icon: 'fa-solid fa-flask-vial',
-  },
-  {
-    id: 'cat-ortho',
-    title: 'Orthodontics',
-    slug: 'books',
-    itemCount: '175+ Products',
-    image: '/images/banner.webp',
-    icon: 'fa-solid fa-teeth',
-  },
-  {
-    id: 'cat-prostho',
-    title: 'Prosthodontics',
-    slug: 'books',
-    itemCount: '210+ Products',
-    image: '/images/banner1.webp',
-    icon: 'fa-solid fa-teeth-open',
-  },
-  {
-    id: 'cat-surg',
-    title: 'Oral Surgery',
-    slug: 'beauty',
-    itemCount: '145+ Products',
-    image: '/images/hero.webp',
-    icon: 'fa-solid fa-syringe',
-  },
-  {
-    id: 'cat-steril',
-    title: 'Sterilization & Hygiene',
-    slug: 'fashion',
-    itemCount: '310+ Products',
-    image: '/images/cat_fashion_1787401910059.jpg',
-    icon: 'fa-solid fa-pump-soap',
-  },
-  {
-    id: 'cat-implant',
-    title: 'Implantology',
-    slug: 'sports',
-    itemCount: '160+ Products',
-    image: '/images/cat_endodontic_1787401934680.jpg',
-    icon: 'fa-solid fa-screwdriver-wrench',
-  },
-  {
-    id: 'cat-pedio',
-    title: 'Pediatric Dentistry',
-    slug: 'electronics',
-    itemCount: '95+ Products',
-    image: '/images/cat_electronics_1787401889850.jpg',
-    icon: 'fa-solid fa-face-smile',
+    itemCount: '1,450+ Products',
+    image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&auto=format&fit=crop&q=80',
+    icon: 'fa-solid fa-book-open',
   },
 ];
 
@@ -182,7 +134,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({ onSelectCategory }) 
           <div className="header-text-col">
             <span className="cat-eyebrow-tag">
               <span className="festive-sparkle-star">✨</span>
-              DENTAL SPECIALTIES
+              POPULAR CATEGORIES
               <span className="festive-sparkle-star">✨</span>
             </span>
             <div className="categories-title-festive-row">

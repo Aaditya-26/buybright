@@ -99,7 +99,7 @@ export const CartDrawer: React.FC = () => {
                 <i className="fa-solid fa-basket-shopping" />
               </div>
               <h4>Your cart is currently empty</h4>
-              <p>Explore our catalog of certified dental supplies and equipment.</p>
+              <p>Explore our catalog of verified products and deals across India.</p>
               <button
                 type="button"
                 className="btn-continue-shopping"

@@ -103,8 +103,8 @@ export const SimilarProductsModal: React.FC<SimilarProductsModalProps> = ({
               <i className="fa-solid fa-wand-magic-sparkles" />
             </div>
             <div>
-              <h2 id="similar-modal-heading">Similar &amp; Alternative Dental Supplies</h2>
-              <p>Certified dental alternatives and complementary consumables</p>
+              <h2 id="similar-modal-heading">Similar &amp; Alternative Products</h2>
+              <p>Verified marketplace alternatives and complementary selections</p>
             </div>
           </div>
 
@@ -146,7 +146,7 @@ export const SimilarProductsModal: React.FC<SimilarProductsModalProps> = ({
             onClick={() => setActiveFilter('all')}
           >
             <i className="fa-solid fa-layer-group" />
-            All Certified Matches ({similarProducts.length})
+            All Verified Matches ({similarProducts.length})
           </button>
 
           <button
@@ -184,13 +184,13 @@ export const SimilarProductsModal: React.FC<SimilarProductsModalProps> = ({
               <div className="similar-spinner">
                 <i className="fa-solid fa-circle-notch fa-spin" />
               </div>
-              <p>Scanning active dental inventory for matching formulations &amp; instruments...</p>
+              <p>Scanning active catalog for matching products and verified sellers...</p>
             </div>
           ) : filteredProducts.length === 0 ? (
             <div className="similar-empty-state">
               <i className="fa-solid fa-box-open" />
               <h3>No exact alternative matches in this filter</h3>
-              <p>Try switching to "All Certified Matches" to view alternative dental solutions.</p>
+              <p>Try switching to "All Verified Matches" to view alternative recommendations.</p>
               <button
                 type="button"
                 className="btn-reset-filter"
@@ -212,7 +212,7 @@ export const SimilarProductsModal: React.FC<SimilarProductsModalProps> = ({
         <div className="similar-modal-footer">
           <div className="footer-trust-notes">
             <span className="trust-item">
-              <i className="fa-solid fa-shield-halved" /> 100% Certified Dental Genuine
+              <i className="fa-solid fa-shield-halved" /> 100% Genuine Marketplace Guarantee
             </span>
             <span className="trust-item">
               <i className="fa-solid fa-truck-fast" /> Fast 24-48h Delivery

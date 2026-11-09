@@ -39,7 +39,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, brandColor, v
   const [isVariantDrawerOpen, setIsVariantDrawerOpen] = useState(false);
   const [isSimilarModalOpen, setIsSimilarModalOpen] = useState(false);
 
-  // Stock & Options count for dental variants (e.g. 2 options, 3 options, 4 options)
+  // Stock & Options count for marketplace product variants (e.g. 2 options, 3 options, 4 options)
   const numId = parseInt(String(product.id).replace(/\D/g, ''), 10) || 3;
   const optionsCount = (numId % 3 === 0) ? 2 : (numId % 2 === 0) ? 3 : 4;
   const stockCount = (numId % 4 === 0) ? 2 : (numId % 3 === 0) ? 5 : 8;
@@ -47,7 +47,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, brandColor, v
   // Bright Points Loyalty Rewards (e.g. 10, 20, 30, 50 points based on product value)
   const brightPoints = product.price >= 2500 ? 50 : product.price >= 1500 ? 30 : product.price >= 700 ? 20 : 10;
 
-  // Distinct realistic dental delivery speeds based on product characteristics
+  // Distinct realistic delivery speeds based on product characteristics
   const getDeliveryEstimate = () => {
     const rawId = String(product.id || '');
     let charSum = 0;
@@ -230,10 +230,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, brandColor, v
               </Link>
             </h3>
 
-            {/* Dental Delivery Speed Badge */}
+            {/* Delivery Speed Badge */}
             <div
               className={`product-delivery-badge ${deliveryEst.colorClass}`}
-              title={`Guaranteed Dental Dispatch & Delivery (${deliveryEst.tag})`}
+              title={`Guaranteed Express Dispatch & Delivery (${deliveryEst.tag})`}
             >
               <i className={deliveryEst.icon} />
               <span>
@@ -241,10 +241,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, brandColor, v
               </span>
             </div>
 
-            {/* Dental Clinical Expiry Date Badge */}
+            {/* Batch & Warranty Expiry Date Badge */}
             <div
               className="product-expiry-badge"
-              title={`Certified Fresh Batch • Expiry Date: ${expiryDate}`}
+              title={`Verified Genuine Batch • Expiry/Warranty: ${expiryDate}`}
             >
               <span className="expiry-icon-wrap">
                 <i className="fa-regular fa-calendar-check" />
@@ -255,14 +255,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, brandColor, v
 
             {/* Bright Points Loyalty Rewards Badge */}
             <div
-              className="product-presto-points-badge"
-              title={`Earn ${brightPoints} Bright Points on this dental order`}
+              className="product-bright-points-badge product-presto-points-badge"
+              title={`Earn ${brightPoints} Bright Points on this purchase`}
             >
-              <span className="presto-points-coin-wrap">
+              <span className="bright-points-coin-wrap presto-points-coin-wrap">
                 <i className="fa-solid fa-coins" />
               </span>
-              <span className="presto-points-text">Bright Points:</span>
-              <span className="presto-points-val">{brightPoints}</span>
+              <span className="bright-points-text presto-points-text">Bright Points:</span>
+              <span className="bright-points-val presto-points-val">{brightPoints}</span>
             </div>
           </div>
 
@@ -293,7 +293,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, brandColor, v
               type="button"
               className="btn-view-similar-blinking"
               onClick={handleOpenSimilarModal}
-              title={`View similar & alternative dental products for ${product.name}`}
+              title={`View similar & alternative marketplace products for ${product.name}`}
               aria-label={`View similar products for ${product.name}`}
             >
               <span className="live-blink-orb" />

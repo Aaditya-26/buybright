@@ -53,7 +53,7 @@ export const BestsellersPage: React.FC = () => {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.title = 'Top Dental Bestsellers & Doctor Favorites | BuyBright';
+    document.title = 'Top Marketplace Bestsellers & Customer Favorites | BuyBright';
   }, []);
 
   // Open Drawer with optional jump to specific section
@@ -302,16 +302,16 @@ export const BestsellersPage: React.FC = () => {
   return (
     <div className="shop-page-wrapper">
       <SEO
-        title="Top Dental Bestsellers & Doctor Favorites"
-        description="Discover India's top-ordered dental supplies, rotary NiTi files, restorative composites, and dental equipment trusted by 10,000+ dentists."
+        title="Top Marketplace Bestsellers & Customer Favorites"
+        description="Discover India's top-ordered electronics, apparel, home appliances, beauty products, and books rated 4.5+ by thousands of shoppers."
         canonicalUrl="https://buybright.com/bestsellers"
-        keywords="bestselling dental products, top dental supplies india, dentist favorite materials, top endodontic files"
+        keywords="bestselling products, marketplace bestsellers, top electronics, top fashion, bestselling books"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Top Dental Bestsellers & Doctor Favorites",
+          "name": "Top Marketplace Bestsellers & Customer Favorites",
           "url": "https://buybright.com/bestsellers",
-          "description": "BuyBright Bestsellers featuring India's top dental supplies and instruments.",
+          "description": "BuyBright Bestsellers featuring top customer-rated electronics, fashion, and home essentials.",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -336,11 +336,11 @@ export const BestsellersPage: React.FC = () => {
       <ShopHeaderBanner
         totalProductsCount={allProducts.length}
         breadcrumbLabel="Bestsellers"
-        badgeText="PRESTODENTAL HALL OF FAME"
+        badgeText="BUYBRIGHT HALL OF FAME"
         badgeIcon="fa-solid fa-crown"
-        title="Top Dental "
-        highlightText="Bestsellers & Doctor Favorites"
-        description="Explore India's most trusted dental supplies, precision handpieces, composite resins, and endodontic rotary systems chosen by over 10,000+ verified dental practitioners."
+        title="Top Marketplace "
+        highlightText="Bestsellers & Customer Favorites"
+        description="Explore India's most popular consumer electronics, smart fashion, home essentials, and bestselling books chosen by thousands of verified marketplace shoppers."
         metrics={[
           {
             icon: 'fa-solid fa-trophy',

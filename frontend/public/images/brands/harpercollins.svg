@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <rect width="100%" height="100%" fill="transparent"/>
+  <g transform="translate(15, 18)">
+    <path d="M8 30 C12 18, 16 10, 24 4 C22 14, 26 22, 32 30 C24 30, 16 30, 8 30 Z" fill="#dc2626"/>
+    <text x="40" y="20" font-family="'Georgia', serif" font-weight="900" font-size="17" fill="#0f172a" letter-spacing="1">HarperCollins</text>
+    <text x="41" y="32" font-family="'Inter', sans-serif" font-weight="600" font-size="8" fill="#64748b" letter-spacing="2">PUBLISHERS</text>
+  </g>
+</svg>

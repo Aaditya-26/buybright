@@ -60,8 +60,8 @@ export const DeliveryLocationModal: React.FC<DeliveryLocationModalProps> = ({
     const matchedCity = POPULAR_CITIES.find((c) => c.pincode === cleanPin);
     const locString = matchedCity ? `${matchedCity.city} - ${cleanPin}` : `Pincode - ${cleanPin}`;
     
-    localStorage.setItem('prestodental_pincode', cleanPin);
-    localStorage.setItem('prestodental_location', locString);
+    localStorage.setItem('buybright_pincode', cleanPin);
+    localStorage.setItem('buybright_location', locString);
     onLocationSelect(locString);
     setErrorMsg('');
     setPincode('');
@@ -78,7 +78,7 @@ export const DeliveryLocationModal: React.FC<DeliveryLocationModalProps> = ({
           setIsLocating(false);
           // In actual production, this can call reverse geocoding API.
           const locString = 'Current Location (Detected)';
-          localStorage.setItem('prestodental_location', locString);
+          localStorage.setItem('buybright_location', locString);
           onLocationSelect(locString);
           onClose();
         },
@@ -86,7 +86,7 @@ export const DeliveryLocationModal: React.FC<DeliveryLocationModalProps> = ({
           setIsLocating(false);
           // Fallback to default major metro
           const fallback = 'Pune - 411001';
-          localStorage.setItem('prestodental_location', fallback);
+          localStorage.setItem('buybright_location', fallback);
           onLocationSelect(fallback);
           onClose();
         },
@@ -100,8 +100,8 @@ export const DeliveryLocationModal: React.FC<DeliveryLocationModalProps> = ({
 
   const handleSelectCity = (city: string, pin: string) => {
     const locString = `${city} - ${pin}`;
-    localStorage.setItem('prestodental_pincode', pin);
-    localStorage.setItem('prestodental_location', locString);
+    localStorage.setItem('buybright_pincode', pin);
+    localStorage.setItem('buybright_location', locString);
     onLocationSelect(locString);
     onClose();
   };

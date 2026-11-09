@@ -28,44 +28,44 @@ const FAQS_DATA: FAQItem[] = [
   {
     id: 'faq-1',
     category: 'delivery',
-    question: 'How fast does BuyBright dispatch dental orders?',
+    question: 'How fast does BuyBright dispatch customer orders?',
     answer:
-      'All verified orders placed before 3:00 PM IST on working days (Mon–Sat) are dispatched the same day via express   (Bluedart / Delhivery Medical Express). Major metro clinics receive delivery in 24 to 48 hours, while Tier-2 and Tier-3 cities receive shipments in 48 to 72 hours.',
+      'All verified orders placed before 3:00 PM IST on working days (Mon–Sat) are dispatched the same day via express logistics partners (BlueDart / Delhivery / Ekart). Major metro cities receive delivery in 24 to 48 hours, while Tier-2 and Tier-3 cities receive shipments in 48 to 72 hours.',
   },
   {
     id: 'faq-2',
     category: 'delivery',
-    question: 'How are temperature-sensitive items (Composites, Silicones, Cements) transported?',
+    question: 'How are fragile electronics and luxury items packaged for transit?',
     answer:
-      'We use medical-grade thermal packaging with reusable frozen gel packs and active temperature-monitoring strips. This prevents viscosity changes and polymer breakdown in transit, guaranteeing factory-fresh performance in your operatory.',
+      'We enforce tamper-evident, multi-layer shockproof bubble packaging with tamper-evident security tape. All high-value items require OTP verification upon doorstep delivery to ensure absolute transit safety.',
   },
   {
     id: 'faq-3',
     category: 'bulk',
-    question: 'Do you provide institutional pricing for multi-chair dental hospitals and colleges?',
+    question: 'Do you provide bulk purchase discounts for corporate and wholesale buyers?',
     answer:
-      'Yes! We offer tiered volume matrix discounts (up to 15% automatic checkout savings) and dedicated institutional bulk contracts with net-credit terms for multispecialty hospitals, chains, and dental institutions. Contact our B2B desk directly for custom annual quotes.',
+      'Yes! We offer tiered volume matrix discounts (up to 15% automatic checkout savings) and dedicated institutional bulk contracts with net-credit terms for enterprise procurement. Contact our corporate desk directly for custom quotes.',
   },
   {
     id: 'faq-4',
     category: 'gst',
-    question: 'Can I claim 100% GST Input Tax Credit (ITC) on all dental purchases?',
+    question: 'Can I claim GST Input Tax Credit (ITC) on business purchases?',
     answer:
-      'Absolutely. Every purchase through BuyBright comes with a GST-compliant tax invoice featuring your Clinic/Hospital GSTIN and standard HSN codes. You can claim full ITC (typically 12% to 18% depending on medical device classification).',
+      'Absolutely. Every purchase on BuyBright comes with a GST-compliant tax invoice featuring your verified business GSTIN and standard HSN codes. You can claim full ITC (typically 12% to 18% depending on product classification).',
   },
   {
     id: 'faq-5',
     category: 'quality',
-    question: 'How do you guarantee 100% authenticity against counterfeit dental supplies?',
+    question: 'How do you guarantee 100% authenticity against counterfeit products?',
     answer:
-      'BuyBright procures exclusively from authorized brand direct manufacturer channels (such as 3M ESPE, Dentsply Sirona, Superendo, GC India, and Waldent). Each box carries tamper-proof manufacturer holograms, authentic serial batch codes, and standard factory warranties.',
+      'BuyBright onboarded sellers are verified against strict manufacturer authorization agreements (Apple, Sony, Samsung, Nike, Dyson, Philips, etc.). Each item carries tamper-evident brand holograms, verifiable serial numbers, and standard manufacturer warranties.',
   },
   {
     id: 'faq-6',
     category: 'quality',
-    question: 'What is your return policy for broken transit seals or batch variance?',
+    question: 'What is your return policy for broken transit seals or defective products?',
     answer:
-      'We provide a hassle-free 7-day Replacement Guarantee. If any shipment arrives with damaged packaging, broken manufacturer seal, or batch discrepancy, we initiate a reverse pickup and issue an immediate replacement at zero extra cost.',
+      'We provide a hassle-free 7-day Replacement & Return Guarantee. If any shipment arrives damaged or with broken seals, we initiate an immediate reverse pickup and dispatch a replacement or full refund at zero extra cost.',
   },
 ];
 
@@ -73,22 +73,22 @@ const HUB_LOCATIONS = [
   {
     city: 'Mumbai Central Logistics Hub',
     state: 'Maharashtra',
-    address: 'Unit 402, Presto Heights, MIDC Central Road, Andheri East, Mumbai 400069',
+    address: 'Unit 402, BuyBright Headquarters, MIDC Central Road, Andheri East, Mumbai 400069',
     phone: '+91 88064 88054',
-    email: 'mumbai.hub@prestodental.in',
+    email: 'mumbai.hub@buybright.com',
     timing: 'Mon – Sat: 8:30 AM – 8:00 PM',
-    tag: 'Primary Cold-Chain Depot',
+    tag: 'Primary Fulfillment Center',
     icon: 'fa-solid fa-warehouse',
     isPrimary: true,
   },
   {
-    city: 'Pune Air Express Logistics Center',
+    city: 'Pune Express Logistics Center',
     state: 'Maharashtra',
     address: 'Plot 18, Phase 1 Commercial Spine, Rajiv Gandhi Infotech Park, Hinjewadi, Pune 411057',
     phone: '+91 88064 88054',
-    email: 'pune.desk@prestodental.in',
+    email: 'pune.desk@buybright.com',
     timing: 'Mon – Sat: 9:00 AM – 7:30 PM',
-    tag: '  Express Terminal',
+    tag: 'Express Air Hub',
     icon: 'fa-solid fa-truck-fast',
     isPrimary: false,
   },
@@ -279,19 +279,19 @@ export const ContactPage: React.FC = () => {
     return (
       <div className="contact-page-wrapper">
         <SEO
-          title="Contact Support &amp;Procurement Desk"
-          description="Contact BuyBrightsupport team for bulk quotes, institutional orders, order status, cold-chain delivery questions, and GST invoicing."
+          title="Contact Customer Support &amp; Seller Desk"
+          description="Contact BuyBright support team for customer orders, seller onboarding, order status, express delivery queries, and GST invoicing."
           canonicalUrl="https://buybright.com/contact"
-          keywords="contact prestodental, dental supply helpline, bulk dental supplies quote, dental equipment support"
+          keywords="contact buybright, customer support, seller onboarding, marketplace help, track order"
           jsonLd={{
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "name": "BuyBright Support Desk",
             "url": "https://buybright.com/contact",
-            "description": "Customer andsupport desk for BuyBright.",
+            "description": "Customer and seller support desk for BuyBright.",
             "mainEntity": {
-              "@type": "MedicalOrganization",
-              "name": "BuyBright",
+              "@type": "Organization",
+              "name": "BuyBright Marketplace",
               "telephone": "+91 88064 88054",
               "contactPoint": {
                 "@type": "ContactPoint",
@@ -327,21 +327,21 @@ export const ContactPage: React.FC = () => {
             <div className="contact-hero-content">
               <div className="contact-hero-badge">
                 <span className="live-pulse-dot" />
-                <span>{contactSettings.heroBadge || 'PRESTODENTAL DENTAL CONCIERGE • RESPONSE TIME < 15 MINS'}</span>
+                <span>{contactSettings.heroBadge || 'BUYBRIGHT CUSTOMER SUPPORT • RESPONSE TIME < 15 MINS'}</span>
               </div>
 
               <h1 className="contact-hero-title">
                 {contactSettings.heroTitle || (
                   <>
-                    We're Here to Power Your Dental Practice with{' '}
-                    <span className="text-gradient">Genuine Supplies &amp; Expert Support</span>
+                    We're Here to Help Your Shopping &amp; Selling Journey with{' '}
+                    <span className="text-gradient">Genuine Products &amp; Fast Support</span>
                   </>
                 )}
               </h1>
 
               <p className="contact-hero-lead">
                 {contactSettings.heroSubtitle ||
-                  'Direct access for hospital bulk quotes, batch quality certifications, cold-chain shipment tracking, and GST tax invoicing. Connect directly with our team of dental product specialists.'}
+                  'Direct access for order assistance, seller onboarding, shipment tracking, and GST tax invoicing. Connect directly with our marketplace team.'}
               </p>
 
               {/* Quick Channel Cards Matrix */}
@@ -352,7 +352,7 @@ export const ContactPage: React.FC = () => {
                     <i className="fa-solid fa-phone-volume" />
                   </div>
                   <div className="channel-card-body">
-                    <span className="channel-tag">{contactSettings.phoneTag || 'Direct Doctor Helpline'}</span>
+                    <span className="channel-tag">{contactSettings.phoneTag || 'Customer & Seller Helpline'}</span>
                     <strong className="channel-title">{contactSettings.phoneNumber || '+91 88064 88054'}</strong>
                     <span className="channel-timing">{contactSettings.phoneTiming || 'Mon – Sat: 8:30 AM – 8:00 PM'}</span>
                   </div>
@@ -384,14 +384,14 @@ export const ContactPage: React.FC = () => {
                 </a>
 
                 {/* Channel 3: Email */}
-                <a href={`mailto:${contactSettings.emailAddress || 'support@prestodental.in'}`} className="channel-card">
+                <a href={`mailto:${contactSettings.emailAddress || 'support@buybright.com'}`} className="channel-card">
                   <div className="channel-icon-wrap email-icon">
                     <i className="fa-solid fa-envelope-open-text" />
                   </div>
                   <div className="channel-card-body">
-                    <span className="channel-tag">{contactSettings.emailTag || 'Official Inquiries & Orders'}</span>
-                    <strong className="channel-title">{contactSettings.emailAddress || 'support@prestodental.in'}</strong>
-                    <span className="channel-timing">{contactSettings.emailTiming || 'GST Billing & Institutional RFQs'}</span>
+                    <span className="channel-tag">{contactSettings.emailTag || 'Official Inquiries & Support'}</span>
+                    <strong className="channel-title">{contactSettings.emailAddress || 'support@buybright.com'}</strong>
+                    <span className="channel-timing">{contactSettings.emailTiming || 'GST Billing & Seller Inquiries'}</span>
                   </div>
                   <div className="channel-action-btn">
                     <span>Send Email</span>
@@ -402,7 +402,7 @@ export const ContactPage: React.FC = () => {
                 {/* Channel 4: Fulfillment Hubs */}
                 <div className="channel-card">
                   <div className="channel-icon-wrap hub-icon">
-                    <i className="fa-solid fa-hospital" />
+                    <i className="fa-solid fa-building" />
                   </div>
                   <div className="channel-card-body">
                     <span className="channel-tag">{contactSettings.hubsTag || 'Fulfillment Network'}</span>
@@ -542,7 +542,7 @@ export const ContactPage: React.FC = () => {
                             type="email"
                             id="email"
                             name="email"
-                            placeholder="doctor@dentalclinic.com"
+                            placeholder="customer@example.com"
                             value={formData.email}
                             onChange={handleInputChange}
                             onBlur={() => handleBlur('email')}
@@ -799,8 +799,8 @@ export const ContactPage: React.FC = () => {
                   <span className="map-badge">
                     <i className="fa-solid fa-map-location-dot" /> {contactSettings.mapBadge || 'PRIMARY FULFILLMENT HEADQUARTERS'}
                   </span>
-                  <h3>{contactSettings.mapHeading || 'Visit BuyBright Western Hub or Schedule Operatory Demo'}</h3>
-                  <p>{contactSettings.mapAddress || 'Unit 402, Presto Heights, MIDC Central Road, Andheri East, Mumbai 400069, Maharashtra'}</p>
+                  <h3>{contactSettings.mapHeading || 'Visit BuyBright Western Hub or Contact Our Corporate Team'}</h3>
+                  <p>{contactSettings.mapAddress || 'Unit 402, BuyBright Headquarters, MIDC Central Road, Andheri East, Mumbai 400069, Maharashtra'}</p>
                 </div>
                 <div className="map-header-right">
                   <a
@@ -839,11 +839,11 @@ export const ContactPage: React.FC = () => {
           <div className="contact-container">
             <div className="bottom-cta-banner">
               <div className="cta-content-col">
-                <span className="cta-pill">{contactSettings.ctaPill || 'UPGRADE YOUR OPERATORY SUPPLY CHAIN'}</span>
-                <h2>{contactSettings.ctaTitle || 'Ready to Procure 100% Genuine Supplies with Batch Guarantees?'}</h2>
+                <span className="cta-pill">{contactSettings.ctaPill || 'START SHOPPING ON BUYBRIGHT'}</span>
+                <h2>{contactSettings.ctaTitle || 'Ready to Experience 100% Genuine Marketplace Shopping?'}</h2>
                 <p>
                   {contactSettings.ctaSubtitle ||
-                    'Join over 1,420+ verified solo clinics, multispecialty dental hospitals, and academic institutions across India.'}
+                    'Join over 50,000+ satisfied customers and 1,200+ verified sellers across India.'}
                 </p>
               </div>
               <div className="cta-actions-col">

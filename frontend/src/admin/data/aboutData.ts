@@ -1,6 +1,6 @@
 /**
- * About Page Module Mock Data & Persistence Helpers.
- * Pre-populated with authentic dental content from BuyBright's About Us page.
+ * About Page Module Data & Persistence Helpers.
+ * Pre-populated with authentic marketplace content for BuyBright.
  */
 
 import type { AboutPageData } from '../types/about';
@@ -8,37 +8,37 @@ export type { AboutPageData };
 
 export const initialAboutData: AboutPageData = {
   hero: {
-    badgeText: "ABOUT PRESTODENTAL • INDIA'S TRUSTED DENTAL NETWORK",
-    title: 'Your Trusted Partner for 100% Genuine Dental Supplies & Cold-Chain Logistics',
-    highlightText: '100% Genuine Dental Supplies',
+    badgeText: "ABOUT BUYBRIGHT • INDIA'S SMART MULTI-SELLER MARKETPLACE",
+    title: 'Your Trusted Destination for 100% Genuine Products & Fast Delivery',
+    highlightText: '100% Genuine Products',
     leadText:
-      "BuyBright is India's leading specialized e-commerce platform dedicated exclusively to dental surgeons, implantologists, and dental hospitals. We streamline dental procurement by connecting practitioners directly with 40+ authorized global dental manufacturers.",
-    primaryBtnText: 'Explore Dental Catalog',
+      "BuyBright is India's premier multi-seller e-commerce marketplace connecting verified independent merchants, direct brand distributors, and modern shoppers. We deliver excellence across Electronics, Fashion, Home & Kitchen, Beauty, Sports, and Books with transparent pricing.",
+    primaryBtnText: 'Explore Marketplace Catalog',
     primaryBtnUrl: '/shop',
     secondaryBtnText: 'Discover Our Story',
     secondaryBtnUrl: '#who-we-are',
     metrics: [
       {
         id: 'metric-1',
-        number: '10,000+',
-        label: 'Dental Clinics Served',
-        description: 'Trusted by dentists across 500+ Indian cities and dental hubs.',
-        icon: 'fa-solid fa-hospital-user',
+        number: '500,000+',
+        label: 'Happy Shoppers Served',
+        description: 'Trusted by customers across 500+ Indian cities and metro corridors.',
+        icon: 'fa-solid fa-users',
         accentColor: '#008080',
       },
       {
         id: 'metric-2',
-        number: '40+',
-        label: 'Authorized Global Brands',
-        description: 'Direct tie-ups with 3M, Dentsply, Superendo, Ivoclar, GC & Mani.',
-        icon: 'fa-solid fa-shield-halved',
+        number: '1,200+',
+        label: 'Verified Merchant Partners',
+        description: 'Direct manufacturer partnerships and vetted independent merchants.',
+        icon: 'fa-solid fa-store',
         accentColor: '#cf4032',
       },
       {
         id: 'metric-3',
         number: '24 - 48 Hrs',
         label: 'Express Safe Dispatch',
-        description: 'Temperature-safe packaging for sensitive VPS & composite resins.',
+        description: 'Automated fulfillment centers and express pan-India delivery.',
         icon: 'fa-solid fa-truck-fast',
         accentColor: '#f59e0b',
       },
@@ -46,7 +46,7 @@ export const initialAboutData: AboutPageData = {
         id: 'metric-4',
         number: '100%',
         label: 'Verified GST Invoicing',
-        description: 'Instant input tax credit invoices on all institutional dental orders.',
+        description: 'Instant tax compliant invoices on all consumer and business orders.',
         icon: 'fa-solid fa-file-invoice-dollar',
         accentColor: '#3b82f6',
       },
@@ -54,34 +54,34 @@ export const initialAboutData: AboutPageData = {
   },
   whoWeAre: {
     eyebrow: 'WHO WE ARE',
-    title: 'Practitioners & Innovators Revolutionizing Dental Procurement',
+    title: 'Builders & Innovators Powering India’s Next-Gen Marketplace',
     paragraph1:
-      'We are a team of practicing dental surgeons, biomedical specialists, and healthcare logistics leaders who experienced the real-world frustrations of dental supply procurement — counterfeit rotary files, expired composite batches, and erratic shipping delays that disrupt dailyschedules.',
+      'We are a passionate team of e-commerce builders, engineers, and supply chain specialists on a mission to revolutionize online commerce for independent sellers and everyday consumers.',
     paragraph2:
-      'BuyBright was built to eliminate these risks. We operate state-of-the-art cold-storage fulfillment centers, partner exclusively with authorized direct manufacturers, and enforce strict lot number traceability so that every instrument and material in your operatory is guaranteed original and factory fresh.',
+      'BuyBright was engineered to provide transparent pricing, rapid automated fulfillment, and verified product authenticity across every category. Every seller is vetted, and every product is backed by customer-first return protection.',
     mainImage:
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=900&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=900&auto=format&fit=crop',
     experienceBadgeNum: '100%',
-    experienceBadgeText: 'Authentic Batch QC Verified',
+    experienceBadgeText: 'Verified Genuine Quality',
     secondaryImage:
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=900&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=900&auto=format&fit=crop',
     highlights: [
       {
         id: 'high-1',
-        title: 'Clinician-Curated Selection',
-        description: 'Every product is evaluated by our dental advisory board before entering our catalog.',
-        icon: 'fa-solid fa-user-doctor',
+        title: 'Curated Marketplace Selection',
+        description: 'Every product and brand partner undergoes thorough quality and authenticity checks.',
+        icon: 'fa-solid fa-award',
       },
       {
         id: 'high-2',
-        title: 'Cold-Chain Integrity',
-        description: 'Thermal insulated packing protects adhesives, impression silicones, and bioceramics.',
-        icon: 'fa-solid fa-temperature-snowflake',
+        title: 'Pan-India Express Logistics',
+        description: 'Advanced fulfillment hubs ensure swift 24-48h dispatch across tier-1, tier-2, and tier-3 cities.',
+        icon: 'fa-solid fa-truck-fast',
       },
       {
         id: 'high-3',
         title: 'Direct Brand Warranties',
-        description: 'Zero gray-market goods; 100% manufacturer warranties and genuine serial tracking.',
+        description: 'Zero gray-market goods; 100% manufacturer warranty protection and genuine serialized tracking.',
         icon: 'fa-solid fa-certificate',
       },
     ],
@@ -90,45 +90,45 @@ export const initialAboutData: AboutPageData = {
     eyebrow: 'GUIDING PRINCIPLES',
     title: 'Our Mission & Vision',
     subtitle:
-      'The fundamental core values that drive every shipment, every brand partnership, and every customer relationship.',
+      'The core values that guide our marketplace operations, seller relationships, and customer service.',
     missionStatement:
-      '"To empower dental practitioners across India with guaranteed authentic, batch-inspected supplies, delivered with uncompromising speed, transparent pricing, and dedicated customer support — enabling exceptional patient outcomes in every procedure."',
+      '"To empower independent merchants and provide Indian consumers with guaranteed genuine products, transparent pricing, and lightning-fast fulfillment — creating a vibrant, fair, and frictionless marketplace for all."',
     missionPoints: [
-      'Zero Counterfeit Tolerance: Rigorous manufacturer batch inspection & tamper-proof sealing.',
-      'Accessible Pricing: Fair wholesale discounts with full GST input tax credit for clinics.',
-      'Practitioner First: 24/7 dedicated support desk staffed by dental knowledgeable personnel.',
+      'Zero Counterfeit Tolerance: Strict seller onboarding verification & tamper-evident packaging.',
+      'Transparent Value: Competitive everyday pricing, fair commissions, and instant GST invoices.',
+      'Customer-Centric Service: 24/7 dedicated support desk with frictionless 7-day returns.',
     ],
     visionStatement:
-      '"To become India\'s most trusted, technologically-advanced dental procurement ecosystem — seamlessly connecting global dental innovators with dental operatories to elevate the standard of oral healthcare nationwide."',
+      '"To become India\'s most trusted and beloved digital shopping platform — seamlessly connecting millions of shoppers with premier brands and exceptional local businesses."',
     visionPoints: [
-      'Nationwide 24-Hour Reach: Expanding smart fulfillment hubs into all Tier-2 and Tier-3 cities.',
-      'Sustainable Packaging: 100% recyclable, temperature-stable eco-friendly packaging materials.',
-      'SmartAutomation: One-click variant reordering and automatedstock replenishment.',
+      'Nationwide Express Reach: Expanding automated fulfillment nodes across all 28 states and territories.',
+      'Sustainable Packaging: 100% recyclable, eco-conscious packaging materials for all orders.',
+      'Smart Marketplace Tech: AI-driven personalized recommendations and real-time inventory tracking.',
     ],
   },
   journey: {
     eyebrow: 'MILESTONES & EVOLUTION',
-    title: 'Our Journey of Innovation & Trust',
+    title: 'Our Journey of Growth & Trust',
     subtitle:
-      "From a small initiative by practicing doctors to India's premier authorized dental supply network.",
+      "From an ambitious vision to India's fastest-growing multi-seller marketplace.",
     milestones: [
       {
         id: 'mile-1',
         year: '2020',
         tag: 'THE INCEPTION',
-        title: 'Born Out of Dental Need',
+        title: 'A Vision for Fair Commerce',
         description:
-          'Founded by practicing dental surgeons to eradicate counterfeit supplies, stale batch composites, and unpredictable supply chain delays for dental clinics.',
+          'Founded to create a transparent, reliable marketplace platform where independent sellers could reach consumers directly without predatory fees.',
         icon: 'fa-solid fa-lightbulb',
         accentColor: '#008080',
       },
       {
         id: 'mile-2',
         year: '2022',
-        tag: 'BRAND ALLIANCES',
-        title: 'Direct Manufacturer Partnerships',
+        tag: 'MERCHANT EXPANSION',
+        title: 'Onboarding 500+ Verified Sellers',
         description:
-          'Secured direct authorized procurement channels with 25+ global leaders including 3M, Dentsply Sirona, and Superendo with genuine factory warranties.',
+          'Expanded catalog coverage across Electronics, Fashion, and Home essentials with direct brand authorized distribution agreements.',
         icon: 'fa-solid fa-handshake-angle',
         accentColor: '#cf4032',
       },
@@ -136,79 +136,79 @@ export const initialAboutData: AboutPageData = {
         id: 'mile-3',
         year: '2024',
         tag: 'INFRASTRUCTURE',
-        title: 'Smart Cold-Chain Fulfillment Hubs',
+        title: 'Automated Fulfillment & Express Delivery',
         description:
-          'Engineered temperature-controlled fulfillment vaults and thermal packaging across major transit hubs to safeguard sensitive polymers and impression silicones.',
-        icon: 'fa-solid fa-temperature-arrow-down',
+          'Rolled out centralized warehouse automation and partnered with premier courier networks for 24-48h pan-India delivery.',
+        icon: 'fa-solid fa-boxes-packing',
         accentColor: '#f59e0b',
       },
       {
         id: 'mile-4',
         year: '2026 & Beyond',
         tag: 'NATIONWIDE SCALE',
-        title: '10,000+ Clinics & Smart Reordering',
+        title: '500,000+ Customers & Next-Gen Commerce',
         description:
-          'Empowering 10,000+ dental operatories across 500+ Indian cities with 24-48h express dispatch, instant GST invoicing, and 1-click variant ordering.',
+          'Serving hundreds of thousands of satisfied buyers nationwide with instant checkout, live tracking, and dedicated buyer guarantees.',
         icon: 'fa-solid fa-rocket',
         accentColor: '#3b82f6',
       },
     ],
   },
   pillars: {
-    eyebrow: 'THE PRESTODENTAL STANDARD',
-    title: 'The 4 Pillars of Dental Trust',
+    eyebrow: 'THE BUYBRIGHT STANDARD',
+    title: 'The 4 Pillars of Marketplace Trust',
     subtitle:
-      'Every product and package adheres to strict international dental distribution standards.',
+      'Every product, seller, and order adheres to strict quality and transparency benchmarks.',
     pillars: [
       {
         id: 'pil-1',
-        title: 'Batch-Inspected Warehousing',
+        title: 'Quality-Inspected Warehousing',
         description:
-          'Physical verification, lot number logging, and expiry validation ensuring at least 18-24 months shelf life on all materials.',
+          'Systematic quality verification, barcode intake, and packaging checks before every dispatch.',
         icon: 'fa-solid fa-boxes-packing',
         themeColor: '#008080',
       },
       {
         id: 'pil-2',
-        title: 'Transparent Bulk Pricing',
+        title: 'Transparent Everyday Pricing',
         description:
-          'Tiered volume pricing with recurring scheduled dispatches and immediate GST invoices for maximum tax savings.',
+          'Zero hidden fees, authentic promotional discounts, and compliant GST invoices with every purchase.',
         icon: 'fa-solid fa-hand-holding-dollar',
         themeColor: '#cf4032',
       },
       {
         id: 'pil-3',
-        title: 'Cold-Chain Temperature Control',
+        title: 'Express Doorstep Delivery',
         description:
-          'Insulated cooling packs prevent heat degradation during transit for light-cured resins, VPS putties, and bioceramic sealers.',
-        icon: 'fa-solid fa-temperature-arrow-down',
+          'Real-time tracking, reliable courier partners, and priority handling across metro and non-metro corridors.',
+        icon: 'fa-solid fa-truck-fast',
         themeColor: '#f59e0b',
       },
       {
         id: 'pil-4',
         title: 'Hassle-Free 7-Day Returns',
         description:
-          'Received an incorrect size variant or damaged transit box? Our automated returns portal initiates immediate replacements.',
+          'Enjoy complete peace of mind with simple 1-click returns, quick doorstep pickups, and fast refunds.',
         icon: 'fa-solid fa-rotate-left',
         themeColor: '#3b82f6',
       },
     ],
-    ctaTag: 'EXPERIENCE THE PRESTODENTAL ADVANTAGE',
-    ctaTitle: 'Ready to Upgrade YourProcurement?',
+    ctaTag: 'EXPERIENCE THE BUYBRIGHT ADVANTAGE',
+    ctaTitle: 'Ready to Upgrade Your Shopping Experience?',
     ctaSubtitle:
-      'Join 10,000+ dental surgeons and hospitals enjoying genuine products, transparent pricing, and 24-48h safe dispatch.',
+      'Join 500,000+ happy shoppers enjoying authentic products, verified sellers, and fast doorstep delivery.',
     ctaBtnText: 'Browse Full Catalog',
     ctaBtnUrl: '/shop',
-    ctaPhone: '+91 88064 88054',
+    ctaPhone: '+91 98765 43210',
   },
-  lastUpdated: '26 Sep 2026',
+  lastUpdated: '10 Nov 2026',
 };
 
-const ABOUT_STORAGE_KEY = 'prestodental_admin_about_data_v1';
+const ABOUT_STORAGE_KEY = 'buybright_admin_about_data_v1';
 
 export function getAboutData(): AboutPageData {
   try {
-    const raw = localStorage.getItem(ABOUT_STORAGE_KEY);
+    const raw = localStorage.getItem(ABOUT_STORAGE_KEY) || localStorage.getItem('prestodental_admin_about_data_v1');
     if (raw) {
       const parsed = JSON.parse(raw);
       if (parsed && parsed.hero && parsed.whoWeAre && parsed.missionVision && parsed.journey && parsed.pillars) {

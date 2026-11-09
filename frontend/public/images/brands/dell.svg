@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <rect width="100%" height="100%" fill="transparent"/>
+  <g transform="translate(35, 12)">
+    <circle cx="23" cy="23" r="21" fill="none" stroke="#007db8" stroke-width="3"/>
+    <text x="23" y="30" font-family="'Inter', sans-serif" font-weight="900" font-size="15" fill="#007db8" letter-spacing="1" text-anchor="middle">DELL</text>
+    <text x="56" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="18" fill="#0f172a" letter-spacing="1">Technologies</text>
+    <text x="57" y="38" font-family="'Inter', sans-serif" font-weight="600" font-size="8" fill="#64748b" letter-spacing="2">OFFICIAL RESELLER</text>
+  </g>
+</svg>

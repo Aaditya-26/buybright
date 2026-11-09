@@ -117,7 +117,7 @@ export const Footer: React.FC = () => {
               <Link to="/" className="footer-brand-header" onClick={scrollToTop}>
                 {/* Official Brand Logo */}
                 <img
-                  src="/images/logo.webp"
+                  src="/images/logo.svg"
                   alt="BuyBright"
                   className="footer-brand-official-logo"
                 />

@@ -13,7 +13,7 @@ import { SEO } from '../../components/common/SEO';
 
 interface SavedAddress {
   id: string;
-  tag: 'Clinic / Practice' | 'Branch Hospital' | 'Home / Residence';
+  tag: 'Home / Residence' | 'Office / Work' | 'Commercial / Other';
   doctorName: string;
   country: string;
   clinicName?: string;
@@ -94,12 +94,12 @@ export const CheckoutPage: React.FC = () => {
   const [savedAddresses, setSavedAddresses] = useState<SavedAddress[]>([
     {
       id: 'addr-1',
-      tag: 'Clinic / Practice',
-      doctorName: '  John Doe',
+      tag: 'Home / Residence',
+      doctorName: 'John Doe',
       country: 'India',
       mobile: '9820123456',
-      email: ' johndoe@buybright.com',
-      street: 'Shop 4 & 5, Presto Commercial Hub, Central MIDC Road',
+      email: 'johndoe@buybright.com',
+      street: 'Flat 402, Skyline Residency, Central Road',
       locality: 'Andheri East',
       city: 'Mumbai',
       state: 'Maharashtra',
@@ -108,12 +108,12 @@ export const CheckoutPage: React.FC = () => {
     },
     {
       id: 'addr-2',
-      tag: 'Branch Hospital',
-      doctorName: '  John Doe',
+      tag: 'Office / Work',
+      doctorName: 'John Doe',
       country: 'India',
       mobile: '9820123456',
-      email: ' johndoe@buybright.com',
-      street: 'Ground Floor, Medico Tower, Opposite Civil Hospital',
+      email: 'johndoe@buybright.com',
+      street: 'Suite 104, Tech Park, Shivaji Nagar',
       locality: 'Shivaji Nagar',
       city: 'Pune',
       state: 'Maharashtra',
@@ -126,7 +126,7 @@ export const CheckoutPage: React.FC = () => {
 
   // New Address Form State
   const [newAddress, setNewAddress] = useState({
-    tag: 'Clinic / Practice' as 'Clinic / Practice' | 'Branch Hospital' | 'Home / Residence',
+    tag: 'Home / Residence' as 'Home / Residence' | 'Office / Work' | 'Commercial / Other',
     doctorName: '',
     country: 'India',
     mobile: '',
@@ -178,7 +178,7 @@ export const CheckoutPage: React.FC = () => {
         pincode: trimmed,
         etaText: '24-48 Hours (Guaranteed Overnight Dispatch)',
         courierName: 'Express Priority  ',
-        zone: 'Western Region Medical Hub (Overnight Air)',
+        zone: 'Western Region Logistics Hub (Overnight Express)',
         isExpress: true,
       });
       showToast(`✓ Express Priority Delivery available for PIN ${trimmed}! Arriving within 24-48 Hours.`, 'success');
@@ -192,8 +192,8 @@ export const CheckoutPage: React.FC = () => {
     ) {
       setDeliveryInfo({
         pincode: trimmed,
-        etaText: '24-48 Hours (Direct  )',
-        courierName: 'Express Priority  ',
+        etaText: '24-48 Hours (Direct Express)',
+        courierName: 'Express Priority',
         zone: 'Tier-1 Metro Air Corridor (48h Direct)',
         isExpress: true,
       });
@@ -202,8 +202,8 @@ export const CheckoutPage: React.FC = () => {
       setDeliveryInfo({
         pincode: trimmed,
         etaText: '24-48 Hours (Express Dispatch)',
-        courierName: 'Express Priority  ',
-        zone: 'National Healthcare Distribution Network',
+        courierName: 'Express Priority',
+        zone: 'National Fulfillment & Delivery Network',
         isExpress: true,
       });
       showToast(`✓ Express Priority Delivery scheduled for PIN ${trimmed} (24-48 Hours).`, 'info');
@@ -218,8 +218,8 @@ export const CheckoutPage: React.FC = () => {
       setDeliveryInfo({
         pincode: active.pincode,
         etaText: '24-48 Hours (Next-Day Dispatch)',
-        courierName: 'Express Priority  ',
-        zone: 'Western Region Medical Hub (Overnight Air)',
+        courierName: 'Express Priority',
+        zone: 'Western Region Logistics Hub (Overnight Express)',
         isExpress: true,
       });
     }
@@ -249,13 +249,13 @@ export const CheckoutPage: React.FC = () => {
     if (!couponCode.trim()) return;
 
     const code = couponCode.trim().toUpperCase();
-    if (code === 'DENTAL10') {
+    if (code === 'BUYBRIGHT10') {
       setAppliedCoupon({ code, discount: 0.1 });
       showToast(`✓ Coupon "${code}" applied! 10% discount added.`, 'success');
       setCouponCode('');
-    } else if (code === 'CLINIC20') {
+    } else if (code === 'SAVEMORE20') {
       setAppliedCoupon({ code, discount: 0.2 });
-      showToast('✓ Coupon "CLINIC20" applied! 20% discount added.', 'success');
+      showToast('✓ Coupon "SAVEMORE20" applied! 20% discount added.', 'success');
       setCouponCode('');
     } else {
       showToast('Invalid or expired coupon code.', 'danger');
@@ -368,7 +368,7 @@ export const CheckoutPage: React.FC = () => {
         shippingCharge,
         selectedShippingMethod: 'Express Priority',
         shippingMethodName: 'Express Priority',
-        shippingMethodDesc: 'Priority cold-chain   corridor with next-day dispatch.',
+        shippingMethodDesc: 'Express pan-India delivery network with next-day dispatch.',
         shippingEta: '24-48 Hours',
         grandTotal,
         appliedCoupon: appliedCoupon?.code,
@@ -382,7 +382,7 @@ export const CheckoutPage: React.FC = () => {
       deliveryDate: deliveryInfo.etaText,
     };
 
-    sessionStorage.setItem('prestodental_checkout_session', JSON.stringify(checkoutSession));
+    sessionStorage.setItem('buybright_checkout_session', JSON.stringify(checkoutSession));
     navigate('/payment');
   };
 
@@ -390,10 +390,10 @@ export const CheckoutPage: React.FC = () => {
     <div className="checkout-page-container">
       <SEO
         title="Secure Checkout — Delivery Address"
-        description="Secure checkout for authentic dental supplies. Enter shipping details and select express dispatch."
+        description="Secure checkout for BuyBright marketplace. Enter shipping details and select express dispatch."
         canonicalUrl="https://buybright.com/checkout"
       />
-      <h1 className="visually-hidden">Secure Dental Supplies Checkout &amp; Delivery</h1>
+      <h1 className="visually-hidden">Secure Marketplace Checkout &amp; Delivery</h1>
       <div className="checkout-wrapper">
         {/* Top Back Navigation Bar */}
         <div className="checkout-top-nav-bar">
@@ -435,7 +435,7 @@ export const CheckoutPage: React.FC = () => {
             <i className="fa-solid fa-cart-shopping" style={{ fontSize: '3.5rem', color: '#cbd5e1', marginBottom: '16px' }} />
             <h2>Your Shopping Cart is Empty</h2>
             <p style={{ color: '#64748b', marginBottom: '24px' }}>
-              Select dental consumables, instruments, or materials before checking out.
+              Select electronics, fashion, or home essentials before checking out.
             </p>
             <Link to="/shop" className="btn-proceed-cta" style={{ maxWidth: '240px', margin: '0 auto' }}>
               <i className="fa-solid fa-bag-shopping" /> Browse Catalog
@@ -530,7 +530,7 @@ export const CheckoutPage: React.FC = () => {
                         Address Type Tag:
                       </label>
                       <div className="address-tag-buttons">
-                        {(['Clinic / Practice', 'Branch Hospital', 'Home / Residence'] as const).map((t) => (
+                        {(['Home / Residence', 'Office / Work', 'Commercial / Other'] as const).map((t) => (
                           <button
                             key={t}
                             type="button"

@@ -30,7 +30,7 @@ export const PaymentPage: React.FC = () => {
 
   useEffect(() => {
     try {
-      const saved = sessionStorage.getItem('prestodental_checkout_session');
+      const saved = sessionStorage.getItem('buybright_checkout_session') || sessionStorage.getItem('prestodental_checkout_session');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (
@@ -39,8 +39,8 @@ export const PaymentPage: React.FC = () => {
             parsed.formData.doctorName.toLowerCase().includes('potghan') ||
             parsed.formData.doctorName.toLowerCase().includes('rajesh'))
         ) {
-          parsed.formData.doctorName = '  John Doe';
-          parsed.formData.email = ' johndoe@buybright.com';
+          parsed.formData.doctorName = 'John Doe';
+          parsed.formData.email = 'johndoe@buybright.com';
         }
         // Remove PRESTO10 if stored
         if (parsed.pricing?.appliedCoupon === 'PRESTO10') {
@@ -53,15 +53,15 @@ export const PaymentPage: React.FC = () => {
         // Default session fallback without PRESTO10
         setSession({
           formData: {
-            doctorName: '  John Doe',
-            clinicName: 'Apex Dental Care',
+            doctorName: 'John Doe',
+            clinicName: 'Prime Enterprise',
             mobile: '9820123456',
-            email: ' johndoe@buybright.com',
-            street: 'Shop 4 & 5, Presto Commercial Hub, Central Road',
+            email: 'johndoe@buybright.com',
+            street: 'Flat 402, Skyline Residency, Central Road',
             city: 'Mumbai',
             state: 'Maharashtra',
             pincode: '400069',
-            tag: 'Clinic / Practice',
+            tag: 'Home / Residence',
           },
           pricing: {
             totalMrp: 15500,
@@ -177,12 +177,13 @@ export const PaymentPage: React.FC = () => {
       };
 
       // Save order to session for success page & local history
+      sessionStorage.setItem('buybright_last_order', JSON.stringify(completedOrder));
       sessionStorage.setItem('prestodental_last_order', JSON.stringify(completedOrder));
 
       try {
-        const existingOrders = JSON.parse(localStorage.getItem('prestodental_all_orders') || '[]');
+        const existingOrders = JSON.parse(localStorage.getItem('buybright_all_orders') || localStorage.getItem('prestodental_all_orders') || '[]');
         localStorage.setItem(
-          'prestodental_all_orders',
+          'buybright_all_orders',
           JSON.stringify([completedOrder, ...existingOrders])
         );
       } catch (e) {
@@ -275,7 +276,7 @@ export const PaymentPage: React.FC = () => {
         description="Choose your payment method: Online (Razorpay), Wallet + Online, Wallet + Cash on Delivery, or Cash on Delivery."
         canonicalUrl="https://buybright.com/payment"
       />
-      <h1 className="visually-hidden">Secure Dental Payment Gateway &amp; Verification</h1>
+      <h1 className="visually-hidden">Secure Marketplace Payment Gateway &amp; Verification</h1>
       <div className="checkout-wrapper">
         {/* Top Back Navigation Bar */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
@@ -495,7 +496,7 @@ export const PaymentPage: React.FC = () => {
                       />
                       <div className="payment-method-info">
                         <strong>Cash on Delivery</strong>
-                        <span>Pay cash when your order arrives at your clinic</span>
+                        <span>Pay cash when your order arrives at your doorstep</span>
                       </div>
                     </div>
                     <span className="payment-badge" style={{ background: '#f1f5f9', color: '#475569' }}>
@@ -514,7 +515,7 @@ export const PaymentPage: React.FC = () => {
                     >
                       <p style={{ margin: 0, fontSize: '0.85rem', color: '#475569', lineHeight: 1.5 }}>
                         <i className="fa-solid fa-hand-holding-dollar" style={{ color: '#0d9488', marginRight: '6px' }} />
-                        Pay in cash upon doorstep delivery of your order at your clinic.
+                        Pay in cash upon doorstep delivery of your order.
                       </p>
                     </div>
                   )}

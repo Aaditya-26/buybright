@@ -43,13 +43,13 @@ export const CartPage: React.FC = () => {
     const code = couponInput.trim().toUpperCase();
     if (!code) return;
 
-    if (code === 'DENTAL10') {
+    if (code === 'BUYBRIGHT10') {
       setAppliedCoupon({ code, discount: 0.1 });
       showToast(`✓ Coupon "${code}" applied successfully! 10% Discount added.`, 'success');
       setCouponInput('');
-    } else if (code === 'CLINIC20') {
+    } else if (code === 'SAVEMORE20') {
       setAppliedCoupon({ code, discount: 0.2 });
-      showToast('✓ Coupon "CLINIC20" applied! 20% Bulk Discount added.', 'success');
+      showToast('✓ Coupon "SAVEMORE20" applied! 20% Special Discount added.', 'success');
       setCouponInput('');
     } else {
       showToast('Invalid coupon code.', 'danger');
@@ -77,13 +77,13 @@ export const CartPage: React.FC = () => {
       discountAmount: couponDiscount,
       shippingCharge: 149,
       shippingMethodName: 'Express Priority',
-      shippingMethodDesc: 'Priority cold-chain   corridor with next-day dispatch.',
+      shippingMethodDesc: 'Express delivery network with next-day dispatch.',
       shippingEta: '24-48 Hours',
       grandTotal,
       appliedCoupon: appliedCoupon?.code,
       deliveryDate: '24-48 Hours (Next-Day Dispatch)',
     };
-    sessionStorage.setItem('prestodental_cart_summary', JSON.stringify(cartSummary));
+    sessionStorage.setItem('buybright_cart_summary', JSON.stringify(cartSummary));
 
     navigate('/checkout');
   };
@@ -92,7 +92,7 @@ export const CartPage: React.FC = () => {
     <div className="checkout-page-container">
       <SEO
         title="Shopping Cart"
-        description="Review your selected dental supplies, rotary files, and instruments in your BuyBright shopping cart."
+        description="Review your selected products, gadgets, and essentials in your BuyBright shopping cart."
         canonicalUrl="https://buybright.com/cart"
       />
       <div className="checkout-wrapper">
@@ -113,13 +113,13 @@ export const CartPage: React.FC = () => {
           <div className="checkout-main-card text-center" style={{ padding: '70px 20px' }}>
             <i className="fa-solid fa-cart-arrow-down" style={{ fontSize: '4rem', color: '#cbd5e1', marginBottom: '20px' }} />
             <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1e293b', marginBottom: '8px' }}>
-              Your Dental Cart is Currently Empty
+              Your Shopping Cart is Currently Empty
             </h2>
             <p style={{ color: '#64748b', maxWidth: '480px', margin: '0 auto 28px', fontSize: '0.95rem' }}>
-              Explore our comprehensive range of endodontic rotary files, restorative composites, dental equipment, and operatory consumables.
+              Explore our wide marketplace collection of electronics, fashion, home essentials, and lifestyle products.
             </p>
             <Link to="/shop" className="btn-proceed-cta" style={{ maxWidth: '260px', margin: '0 auto' }}>
-              <i className="fa-solid fa-bag-shopping" /> Explore Dental Catalog
+              <i className="fa-solid fa-bag-shopping" /> Explore Marketplace Catalog
             </Link>
           </div>
         ) : (
@@ -151,7 +151,7 @@ export const CartPage: React.FC = () => {
                         Express Priority Dispatch
                       </strong>
                       <span style={{ fontSize: '0.82rem', color: '#115e59' }}>
-                        Priority cold-chain   corridor with next-day dispatch &bull; 24-48 Hours
+                        Pan-India express delivery network with next-day dispatch &bull; 24-48 Hours
                       </span>
                     </div>
                   </div>
@@ -175,7 +175,7 @@ export const CartPage: React.FC = () => {
               <div className="cart-items-table-card">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '16px', borderBottom: '1.5px solid #f1f5f9', marginBottom: '8px' }}>
                   <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#1e293b', margin: 0 }}>
-                    Selected Dental Products
+                    Selected Products
                   </h3>
                   <button
                     type="button"
@@ -195,13 +195,13 @@ export const CartPage: React.FC = () => {
                     />
 
                     <div className="cart-item-info">
-                      <span className="item-brand-pill">{item.product.brand || 'PRESTODENTAL'}</span>
+                      <span className="item-brand-pill">{item.product.brand || 'BUYBRIGHT'}</span>
                       <Link to={`/shop/${item.product.id}`} className="item-title">
                         {item.product.name}
                       </Link>
                       <span className="item-unit-price">
                         Unit Price: ₹{item.product.price.toLocaleString('en-IN')} &bull;{' '}
-                        <span style={{ color: '#16a34a', fontWeight: 600 }}>In Stock (Sterilized Batch)</span>
+                        <span style={{ color: '#16a34a', fontWeight: 600 }}>In Stock (Verified Merchant)</span>
                       </span>
                     </div>
 
@@ -274,7 +274,7 @@ export const CartPage: React.FC = () => {
                   </div>
                   <div className="delivery-text-wrap">
                     <strong>Express Priority</strong>
-                    <span>Priority cold-chain   corridor with next-day dispatch. (24-48 Hours)</span>
+                    <span>Express pan-India delivery network with next-day dispatch. (24-48 Hours)</span>
                   </div>
                 </div>
 

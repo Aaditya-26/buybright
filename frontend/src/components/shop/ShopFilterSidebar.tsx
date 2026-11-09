@@ -8,25 +8,26 @@
 import React, { useState, useMemo } from 'react';
 import type { Category, AvailabilityOption } from '../../types';
 
-export const POPULAR_DENTAL_BRANDS = [
-  'SUPERENDO',
-  '3M ESPE',
-  'Dentsply Sirona',
-  'Woodpecker',
-  'Ivoclar Vivadent',
-  'GC Dental',
-  'Waldent',
-  'Mani Japan',
-  'Kerr Dental',
-  'Coltene',
-  'Ultradent',
-  'Shofu Dental',
-  'VDW Dental',
-  'Hu-Friedy',
-  'Septodont',
-  'Medicept',
-  'PrestoCare',
+export const POPULAR_MARKETPLACE_BRANDS = [
+  'Apple',
+  'Sony',
+  'Samsung',
+  'Dell',
+  'boAt',
+  'Nike',
+  'Adidas',
+  "Levi's",
+  'Philips',
+  'Dyson',
+  'Instant Pot',
+  "L'Oréal Paris",
+  'Nivea',
+  'Decathlon',
+  'Penguin Books',
+  'HarperCollins',
 ];
+
+export const POPULAR_DENTAL_BRANDS = POPULAR_MARKETPLACE_BRANDS;
 
 export const AVAILABLE_SIZES = [
   'All Sizes',
@@ -35,13 +36,14 @@ export const AVAILABLE_SIZES = [
   'Medium (M)',
   'Large (L)',
   'Extra Large (XL)',
-  '21 mm',
-  '25 mm',
-  '31 mm',
-  '0.02 Taper',
-  '0.04 Taper',
-  '0.06 Taper',
-  'Assorted Pack',
+  'UK 7',
+  'UK 8',
+  'UK 9',
+  'UK 10',
+  '128 GB',
+  '256 GB',
+  '512 GB',
+  '1 TB',
 ];
 
 export const AVAILABLE_MILLILITERS = [

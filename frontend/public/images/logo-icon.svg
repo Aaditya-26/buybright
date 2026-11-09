@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="bb-icon-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006d6d" />
+      <stop offset="50%" stop-color="#008080" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+    <linearGradient id="bb-icon-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="45%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <filter id="bb-icon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#008080" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Shield -->
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#bb-icon-teal)" filter="url(#bb-icon-glow)" />
+
+  <!-- Shopping Bag Handle Arc -->
+  <path d="M25 21 C25 15, 39 15, 39 21" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.95" />
+
+  <!-- Stylized Modern 'B' Monogram -->
+  <path
+    d="M20 21 H34 C39.5 21, 42.5 24, 42.5 28 C42.5 31.2, 40.2 33.2, 37 34 C41 35, 43.5 37.8, 43.5 42.5 C43.5 47.5, 39.5 50.5, 33.5 50.5 H20 Z"
+    fill="#ffffff"
+  />
+
+  <!-- Inner Loops -->
+  <path
+    d="M26 26.5 H33 C35.5 26.5, 37 27.2, 37 29.2 C37 31.2, 35.5 32, 33 32 H26 Z"
+    fill="#008080"
+  />
+  <path
+    d="M26 37.5 H34 C36.8 37.5, 38.5 38.8, 38.5 41 C38.5 43.2, 36.8 45, 34 45 H26 Z"
+    fill="#008080"
+  />
+
+  <!-- Brilliant Star Sparkle in Upper Right -->
+  <g transform="translate(42, 6)">
+    <path
+      d="M7 0 C7 4, 10 7, 14 7 C10 7, 7 10, 7 14 C7 10, 4 7, 0 7 C4 7, 7 4, 7 0 Z"
+      fill="url(#bb-icon-gold)"
+    />
+    <circle cx="7" cy="7" r="1.8" fill="#ffffff" />
+  </g>
+</svg>

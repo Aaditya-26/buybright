@@ -214,11 +214,11 @@ export const UserProfilePage: React.FC = () => {
 
   // 1. Profile Overview State
   const [profileOverview, setProfileOverview] = useState({
-    customerName: user?.name || ' abdul Azim',
-    customerType: user?.role === 'clinic' ? 'Dental Practice' : user?.role === 'hospital' ? 'Hospital' : 'Dentist',
-    registrationNo: user?.dciNumber || 'MH-DCI-48291',
-    email: user?.email || 'responsible@prestodental.store',
-    mobile: user?.phone || '9049636447',
+    customerName: user?.name || 'Aaditya Sharma',
+    customerType: user?.role === 'seller' ? 'Seller Account' : user?.role === 'admin' ? 'Administrator' : 'Verified Customer',
+    registrationNo: 'BB-USR-48291',
+    email: user?.email || 'customer@buybright.com',
+    mobile: user?.phone || '9820123456',
     accountStatus: user?.isVerified ? 'Active & Verified' : 'Active & Verified',
   });
   const [isEditingOverview, setIsEditingOverview] = useState(false);
@@ -229,15 +229,15 @@ export const UserProfilePage: React.FC = () => {
       setProfileOverview((prev) => ({
         ...prev,
         customerName: user.name,
-        customerType: user.role === 'clinic' ? 'Dental Practice' : user.role === 'hospital' ? 'Hospital' : 'Dentist',
-        registrationNo: user.dciNumber || prev.registrationNo || 'MH-DCI-48291',
+        customerType: user.role === 'seller' ? 'Seller Account' : user.role === 'admin' ? 'Administrator' : 'Verified Customer',
+        registrationNo: prev.registrationNo || 'BB-USR-48291',
         email: user.email,
         mobile: user.phone,
       }));
-      if (user.clinicName) {
+      if (user.clinicName || (user as any).businessName) {
         setBusinessInfo((prev) => ({
           ...prev,
-          businessName: user.clinicName || prev.businessName,
+          businessName: user.clinicName || (user as any).businessName || prev.businessName,
         }));
       }
     }
@@ -245,31 +245,31 @@ export const UserProfilePage: React.FC = () => {
 
   // 2. Practice & Business Credentials for Invoices & Receipts
   const [businessInfo, setBusinessInfo] = useState({
-    businessName: '  Abdul Azim Dental Practice',
-    customerType: 'Dental Practice',
-    gstin: '27ABGFP0531J1ZA',
-    billingInfo: '755,flate no.102,1st floor c wing fatima complex, dargah road near india hotel, Bhiwandi Thane, maharashtra - 421302',
+    businessName: 'Prime Retail Hub',
+    customerType: 'Retail Business Buyer',
+    gstin: '27AAACD9910Q1ZS',
+    billingInfo: 'Flat 402, Skyline Residency, Central MIDC Road, Andheri East, Mumbai, Maharashtra - 400069',
   });
 
   // 3. Saved Addresses State
   const [addresses, setAddresses] = useState({
     billingAddress: {
-      fullName: ' abdul Azim',
-      clinicName: '  Abdul Azim Dental Practice',
-      street: '755,flate no.102,1st floor c wing fatima complex, dargah road near india hotel',
-      city: 'Bhiwandi Thane',
-      state: 'maharashtra',
-      pincode: '421302',
-      phone: '9049636447',
+      fullName: 'Aaditya Sharma',
+      clinicName: 'Prime Retail Hub',
+      street: 'Flat 402, Skyline Residency, Central MIDC Road, Andheri East',
+      city: 'Mumbai',
+      state: 'Maharashtra',
+      pincode: '400069',
+      phone: '9820123456',
     },
     shippingAddress: {
-      fullName: ' abdul Azim',
-      clinicName: '  Abdul Azim Dental Practice',
-      street: '755,flate no.102,1st floor c wing fatima complex, dargah road near india hotel',
-      city: 'Bhiwandi Thane',
-      state: 'maharashtra',
-      pincode: '421302',
-      phone: '9049636447',
+      fullName: 'Aaditya Sharma',
+      clinicName: 'Prime Retail Hub',
+      street: 'Flat 402, Skyline Residency, Central MIDC Road, Andheri East',
+      city: 'Mumbai',
+      state: 'Maharashtra',
+      pincode: '400069',
+      phone: '9820123456',
     },
   });
   const [isEditingAddresses, setIsEditingAddresses] = useState(false);
@@ -677,8 +677,8 @@ export const UserProfilePage: React.FC = () => {
   return (
     <div className="user-profile-page-wrapper">
       <SEO
-        title="Doctor Profile &amp; Account"
-        description="Manage your BuyBright account, recent supply orders, downloaded tax invoices, and shipping addresses."
+        title="My Profile &amp; Account"
+        description="Manage your BuyBright marketplace account, recent orders, downloaded tax invoices, and shipping addresses."
         canonicalUrl="https://buybright.com/profile"
       />
       {/* Top Breadcrumb Bar */}
@@ -704,7 +704,7 @@ export const UserProfilePage: React.FC = () => {
           <div className="profile-hero-card">
             <div className="doctor-avatar-col">
               <div className="doctor-avatar-circle">
-                <i className="fa-solid fa-user-doctor" />
+                <i className="fa-solid fa-user-circle" />
               </div>
               <span className="tier-badge">
                 <i className="fa-solid fa-circle-check text-teal" /> {profileOverview.accountStatus}
@@ -724,13 +724,13 @@ export const UserProfilePage: React.FC = () => {
                 {profileOverview.registrationNo && (
                   <>
                     <span className="meta-separator">•</span>
-                    <span className="reg-txt"><i className="fa-solid fa-id-card text-teal" /> Reg: {profileOverview.registrationNo}</span>
+                    <span className="reg-txt"><i className="fa-solid fa-id-card text-teal" /> ID: {profileOverview.registrationNo}</span>
                   </>
                 )}
               </div>
 
               <div className="clinic-headline">
-                <i className="fa-solid fa-hospital text-teal" />
+                <i className="fa-solid fa-building text-teal" />
                 <strong>{businessInfo.businessName}</strong>
               </div>
             </div>
@@ -876,12 +876,12 @@ export const UserProfilePage: React.FC = () => {
                     <div className="profile-overview-matrix">
                       <div className="overview-section-card">
                         <div className="overview-card-head">
-                          <i className="fa-solid fa-user-doctor text-teal" />
+                          <i className="fa-solid fa-user-gear text-teal" />
                           <h3>Primary Account Details</h3>
                         </div>
                         <div className="overview-data-grid">
                           <div className="data-item">
-                            <span className="data-label">Registration No (Mandatory):</span>
+                            <span className="data-label">Account / User ID:</span>
                             <strong className="data-val text-teal">
                               <i className="fa-solid fa-id-card" style={{ marginRight: '6px' }} />
                               {profileOverview.registrationNo || 'Not Provided'}
@@ -920,12 +920,12 @@ export const UserProfilePage: React.FC = () => {
                   ) : (
                     <form onSubmit={handleSaveOverview} className="profile-details-form">
                       <div className="form-group">
-                        <label htmlFor="registrationNo">Registration No.*  </label>
+                        <label htmlFor="registrationNo">Account / User ID*</label>
                         <input
                           type="text"
                           id="registrationNo"
                           name="registrationNo"
-                          placeholder="e.g. MH-DCI-48291 or State Dental Council Reg No."
+                          placeholder="e.g. BB-USR-48291 or Business ID"
                           value={profileOverview.registrationNo}
                           onChange={(e) => setProfileOverview({ ...profileOverview, registrationNo: e.target.value })}
                           required
@@ -939,7 +939,7 @@ export const UserProfilePage: React.FC = () => {
                             type="text"
                             id="customerName"
                             name="customerName"
-                            placeholder="e.g.   John Doe"
+                            placeholder="e.g. John Doe"
                             value={profileOverview.customerName}
                             onChange={(e) => setProfileOverview({ ...profileOverview, customerName: e.target.value })}
                           />
@@ -953,10 +953,10 @@ export const UserProfilePage: React.FC = () => {
                             value={profileOverview.customerType}
                             onChange={(e) => setProfileOverview({ ...profileOverview, customerType: e.target.value })}
                           >
-                            <option value="Dentist">Dentist</option>
-                            <option value="Dental Practice">Dental Practice</option>
-                            <option value="Hospital">Hospital</option>
-                            <option value="Distributor">Distributor</option>
+                            <option value="Verified Customer">Verified Customer</option>
+                            <option value="Seller Account">Seller Account</option>
+                            <option value="Business Buyer">Business Buyer</option>
+                            <option value="Administrator">Administrator</option>
                             <option value="Other">Other</option>
                           </select>
                         </div>
@@ -969,7 +969,7 @@ export const UserProfilePage: React.FC = () => {
                             type="email"
                             id="email"
                             name="email"
-                            placeholder="e.g. doctor@prestohealth.com"
+                            placeholder="e.g. user@buybright.com"
                             value={profileOverview.email}
                             onChange={(e) => setProfileOverview({ ...profileOverview, email: e.target.value })}
                           />
@@ -2342,13 +2342,13 @@ export const UserProfilePage: React.FC = () => {
                   </div>
 
                   <div className="psd-inv-header-right">
-                    <img src="/images/logo.webp" alt="BuyBright" className="psd-inv-logo" />
-                    <div className="psd-inv-company-name">BuyBright</div>
+                    <img src="/images/logo.svg" alt="BuyBright" className="psd-inv-logo" />
+                    <div className="psd-inv-company-name">BuyBright Marketplace</div>
                     <div className="psd-inv-company-details">
-                      <div>D-3 PLAZA,104, ABOVE IDBI BANK, BHUMI INDUSTRIAL PARK, BHIWANDI - 421302,</div>
-                      <div>Phone: 8446007457</div>
-                      <div>Email: responsible@prestodental.store</div>
-                      <div>GST: 27ABGFP0531J1ZA</div>
+                      <div>Central MIDC Road, Andheri East, Mumbai - 400069, Maharashtra</div>
+                      <div>Phone: +91 98765 43210</div>
+                      <div>Email: support@buybright.com</div>
+                      <div>GST: 27AAACD9910Q1ZS</div>
                     </div>
                   </div>
                 </div>

@@ -67,7 +67,7 @@ export const ReturnPolicyPage: React.FC = () => {
     <div className="pd-returns-page">
       <SEO
         title="Return & Refund Policy — BuyBright"
-        description="Review the BuyBright Return, Cancellation, and Refund Policy covering 10-day return windows, non-returnable equipment, and 24-48h refund processing."
+        description="Review the BuyBright Return, Cancellation, and Refund Policy covering 10-day return windows, seller verification, and 24-48h refund processing."
         canonicalUrl="/return-policy"
       />
 
@@ -92,7 +92,7 @@ export const ReturnPolicyPage: React.FC = () => {
 
             <h1 className="policy-title">Return Policy</h1>
             <p className="policy-lead-text">
-              Transparent, practitioner-focused guidelines for order cancellations, verified warehouse returns, and fast refund settlements.
+              Transparent, customer-focused guidelines for order cancellations, verified warehouse returns, and fast refund settlements.
             </p>
 
             <div className="policy-meta-bar">
@@ -140,10 +140,10 @@ export const ReturnPolicyPage: React.FC = () => {
                 </div>
                 <div className="c-text">
                   <strong>Need to Cancel or Return?</strong>
-                  <p>Email our designated compliance desk directly:</p>
+                  <p>Email our customer support desk directly:</p>
                 </div>
-                <a href="mailto:responsible@Prestodental.store" className="btn-toc-email">
-                  responsible@Prestodental.store
+                <a href="mailto:support@buybright.com" className="btn-toc-email">
+                  support@buybright.com
                 </a>
               </div>
             </div>
@@ -168,14 +168,14 @@ export const ReturnPolicyPage: React.FC = () => {
                   <div className="step-card">
                     <div className="step-badge">Before Shipment</div>
                     <p>
-                      In order to cancel the order before the shipment of the product/products, customer has to go to <strong>‘My Orders’</strong> and cancel the order or else contact <a href="mailto:responsible@Prestodental.store">responsible@Prestodental.store</a>.
+                      In order to cancel the order before the shipment of the product/products, customer has to go to <strong>‘My Orders’</strong> and cancel the order or else contact <a href="mailto:support@buybright.com">support@buybright.com</a>.
                     </p>
                   </div>
 
                   <div className="step-card">
                     <div className="step-badge after-badge">After Shipment</div>
                     <p>
-                      In order to cancel the order after the shipment of the product/products, customer has to contact <a href="mailto:responsible@Prestodental.store">responsible@Prestodental.store</a>.
+                      In order to cancel the order after the shipment of the product/products, customer has to contact <a href="mailto:support@buybright.com">support@buybright.com</a>.
                     </p>
                   </div>
                 </div>
@@ -206,25 +206,25 @@ export const ReturnPolicyPage: React.FC = () => {
                   <li>
                     <i className="fa-solid fa-circle-check" />
                     <span>
-                      In case of returns, Prestodental.store website/app arranges pick-up of the goods but shipping charges might be applicable. Customers have to bear the shipping charges or else can arrange the return by their own means.
+                      In case of returns, BuyBright arranges doorstep pick-up of the goods. If outside pickup coverage, customers can ship via tracked courier with reimbursement.
                     </span>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle-check" />
                     <span>
-                      The product must be returned in its original packaging with all contents intact as shipped.
+                      The product must be returned in its original packaging with all manuals, accessories, and warranty cards intact.
                     </span>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle-check" />
                     <span>
-                      A part of the order can also be returned if multiple items were ordered. However, all the components of the product must be intact and the product should be unused/altered.
+                      A part of the order can also be returned if multiple items were ordered. Each returned item must be unused and unaltered.
                     </span>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle-check" />
                     <span>
-                      In case of a return/replacement/refund, we process the refund once the products have been received and verified at our warehouse.
+                      In case of a return/replacement/refund, we process the refund once the products have been received and verified at our fulfillment center.
                     </span>
                   </li>
                   <li>
@@ -236,19 +236,13 @@ export const ReturnPolicyPage: React.FC = () => {
                   <li>
                     <i className="fa-solid fa-circle-check" />
                     <span>
-                      In case of cancellation once the shipment has already been dispatched or if it is being returned, we process the refund once the products have been received and verified at our warehouse.
+                      For payments done through credit/debit cards, UPI, or net banking, the refund will be credited to the original payment source within 24-48 business hours.
                     </span>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle-check" />
                     <span>
-                      For payments done through credit/debit cards or net banking, the refund will be processed and credited to the same account from which the payment was made within 24-48 business hours of us receiving the products back. It may take 2-3 additional business days for the amount to process and credit in your account.
-                    </span>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check" />
-                    <span>
-                      For cash on delivery transactions, we will initiate a bank transfer against the refund amount against the billing details shared by you. This process will be completed within 24-48 business hours of us receiving the products back and your bank details on email. It will take an additional 2-3 business days for the amount to process and credit in your account.
+                      For cash on delivery transactions, we will initiate a direct bank transfer (NEFT/IMPS) against the verified bank details shared by you.
                     </span>
                   </li>
                 </ul>
@@ -257,10 +251,10 @@ export const ReturnPolicyPage: React.FC = () => {
                 <div className="non-returnable-banner">
                   <div className="banner-title">
                     <i className="fa-solid fa-triangle-exclamation" />
-                    <h4>Equipment which cannot be returned include:</h4>
+                    <h4>Items which cannot be returned include:</h4>
                   </div>
                   <p>
-                    Dental chairs, Dental compressors, UV chambers, autoclaves, X-ray units, RVG sensor machine, Model trimmers, OPG and CBCT machines, apex locators, endo motors, Ultrasonic scalers, Micromotors, Physio dispenser, Bleaching light and other light curing units, amalgamator etc.
+                    Customized products, personal intimate apparel, opened software packages, and heavy appliances once unboxed and installed with on-site technician demo.
                   </p>
                 </div>
 
@@ -268,10 +262,10 @@ export const ReturnPolicyPage: React.FC = () => {
                 <div className="non-returnable-banner products-banner">
                   <div className="banner-title">
                     <i className="fa-solid fa-ban" />
-                    <h4>Products which are not applicable for returns include:</h4>
+                    <h4>Personal care products not eligible for returns:</h4>
                   </div>
                   <p>
-                    Tooth crème/mousse, MRC/orthodontic trainers, water flossers, chin caps, headgears, face masks or other myo functional appliances.
+                    Opened cosmetic formulations, perfumes, oral hygiene items with broken seals, and consumable skincare products.
                   </p>
                 </div>
               </div>
@@ -284,7 +278,7 @@ export const ReturnPolicyPage: React.FC = () => {
                   <i className="fa-solid fa-shield-xmark" />
                 </div>
                 <div>
-                  <h2>Items which are not applicable for returns:</h2>
+                  <h2>Items Not Applicable for Returns</h2>
                   <span className="card-sub-title">Conditions Voiding Return Eligibility</span>
                 </div>
               </div>
@@ -298,22 +292,22 @@ export const ReturnPolicyPage: React.FC = () => {
 
                   <div className="restriction-item">
                     <div className="r-icon"><i className="fa-solid fa-box-open" /></div>
-                    <p>Returned without original packaging including, price tags, labels, original packing and/or any attachments or if original packaging is damaged</p>
+                    <p>Returned without original packaging including price tags, labels, warranty cards, or original accessories</p>
                   </div>
 
                   <div className="restriction-item">
                     <div className="r-icon"><i className="fa-solid fa-barcode" /></div>
-                    <p>If the Serial Number is tampered.</p>
+                    <p>If the device Serial Number or IMEI is missing or tampered</p>
                   </div>
 
                   <div className="restriction-item">
                     <div className="r-icon"><i className="fa-solid fa-file-excel" /></div>
-                    <p>Defective products that are not covered under Company’s/Manufacturer’s warranty</p>
+                    <p>Physical or liquid damage not covered under manufacturer warranty</p>
                   </div>
 
                   <div className="restriction-item">
                     <div className="r-icon"><i className="fa-solid fa-pen-ruler" /></div>
-                    <p>Product is used or altered</p>
+                    <p>Product is used, altered, or software modified</p>
                   </div>
 
                   <div className="restriction-item time-limit-item">
@@ -323,7 +317,7 @@ export const ReturnPolicyPage: React.FC = () => {
 
                   <div className="restriction-item">
                     <div className="r-icon"><i className="fa-solid fa-gift" /></div>
-                    <p>No returns of free product/products</p>
+                    <p>Free promotional items and gift with purchase products</p>
                   </div>
                 </div>
               </div>
@@ -349,9 +343,9 @@ export const ReturnPolicyPage: React.FC = () => {
                       <i className="fa-solid fa-credit-card" />
                     </div>
                     <div className="channel-text-col">
-                      <h3>Credit / Debit Cards &amp; Net Banking</h3>
+                      <h3>Credit / Debit Cards, UPI &amp; Net Banking</h3>
                       <p>
-                        For payments done through credit/debit cards or net banking, the refund will be processed to the same account from which the payment was made within <strong>24 business hours</strong> of us receiving the products back. It may take <strong>2-3 additional business days</strong> for the amount to reflect in your account.
+                        For payments done through credit/debit cards, UPI, or net banking, the refund will be processed to the same account within <strong>24 business hours</strong> of receiving the return. It may take <strong>2-3 business days</strong> for the bank to credit your account.
                       </p>
                     </div>
                   </div>
@@ -364,7 +358,7 @@ export const ReturnPolicyPage: React.FC = () => {
                     <div className="channel-text-col">
                       <h3>Cash on Delivery (COD) Transactions</h3>
                       <p>
-                        For cash on delivery transactions, we will initiate a bank transfer against the refund amount against the billing details shared by you. This process will be completed within <strong>24-48 business hours</strong> of us receiving the products back and your bank details on email. It might take an additional <strong>2-3 business days (might take 7-10 days in some cases)</strong> for the amount to reflect in your account.
+                        For COD orders, we initiate a direct bank transfer (IMPS/NEFT) against the verified bank details provided by you within <strong>24-48 business hours</strong> of return verification.
                       </p>
                     </div>
                   </div>
@@ -375,9 +369,9 @@ export const ReturnPolicyPage: React.FC = () => {
                       <i className="fa-solid fa-ticket" />
                     </div>
                     <div className="channel-text-col">
-                      <h3>BuyBright Instant Coupon Option</h3>
+                      <h3>BuyBright Instant Wallet / Coupon Option</h3>
                       <p>
-                        We also offer a refund option via <strong>BuyBright coupon</strong> which will be added immediately while bank account refund might take 7-10 days. Both options are available to the buyer as per his/her suitability.
+                        We also offer an instant refund option via <strong>BuyBright store credit / discount voucher</strong> which reflects immediately in your profile for future shopping.
                       </p>
                     </div>
                   </div>
@@ -398,11 +392,11 @@ export const ReturnPolicyPage: React.FC = () => {
               </div>
 
               <div className="support-channel-grid">
-                <a href="mailto:responsible@Prestodental.store" className="support-channel-box">
+                <a href="mailto:support@buybright.com" className="support-channel-box">
                   <i className="fa-solid fa-envelope-open-text" />
                   <div>
                     <span>Designated Support Email</span>
-                    <strong>responsible@Prestodental.store</strong>
+                    <strong>support@buybright.com</strong>
                   </div>
                 </a>
 

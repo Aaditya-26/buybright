@@ -33,8 +33,12 @@ export const FlashDealsSection: React.FC = () => {
         // preserve current
       }
     };
+    window.addEventListener('buybright_flash_sales_updated', handleUpdate);
     window.addEventListener('prestodental_flash_sales_updated', handleUpdate);
-    return () => window.removeEventListener('prestodental_flash_sales_updated', handleUpdate);
+    return () => {
+      window.removeEventListener('buybright_flash_sales_updated', handleUpdate);
+      window.removeEventListener('prestodental_flash_sales_updated', handleUpdate);
+    };
   }, []);
 
   const formatScheduleDate = (dtStr?: string, defaultVal = '06 Oct 2026') => {
@@ -126,12 +130,12 @@ export const FlashDealsSection: React.FC = () => {
 
             {/* Subtitle */}
             <p className="banner-subtitle">
-              {sale1?.shortDescription || 'Modern clinical essentials for a calmer, happier operatory.'}
+              {sale1?.shortDescription || 'Top consumer gadgets and smart tech at steep flash discounts.'}
             </p>
 
             {/* Pill CTA Button */}
-            <Link to="/shop?category=equipment" className="banner-cta-btn btn-dark-forest">
-              <span>{sale1?.buttonName || 'Shop Operatory'}</span>
+            <Link to="/shop?category=electronics" className="banner-cta-btn btn-dark-forest">
+              <span>{sale1?.buttonName || 'Shop Electronics'}</span>
               <i className="fa-solid fa-arrow-right" />
             </Link>
           </div>
@@ -177,11 +181,11 @@ export const FlashDealsSection: React.FC = () => {
 
             {/* Subtitle */}
             <p className="banner-subtitle subtitle-pink">
-              {sale2?.shortDescription || 'Dental restoratives & care that loves every smile back.'}
+              {sale2?.shortDescription || 'Trending beauty, personal care, and lifestyle essentials.'}
             </p>
 
             {/* Pill CTA Button */}
-            <Link to="/shop?category=materials" className="banner-cta-btn btn-deep-plum">
+            <Link to="/shop?category=beauty" className="banner-cta-btn btn-deep-plum">
               <span>{sale2?.buttonName || 'Shop Beauty'}</span>
               <i className="fa-solid fa-arrow-right" />
             </Link>

@@ -35,7 +35,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
   subtitle,
   onSearch,
   searchValue = '',
-  searchPlaceholder = 'Search orders, SKU, clinics...',
+  searchPlaceholder = 'Search orders, SKU, sellers, products...',
   onToggleSidebar,
   isSidebarCollapsed = false,
 }) => {
@@ -51,8 +51,8 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
   const [notifications, setNotifications] = useState<NotificationItem[]>([
     {
       id: 'notif-1',
-      title: 'New Dental Order Placed',
-      message: '  John Doe placed order #PD-892144-IN (₹11,205)',
+      title: 'New Marketplace Order Placed',
+      message: 'John Doe placed order #BB-892144-IN (₹11,205)',
       time: '12m ago',
       icon: 'fa-solid fa-boxes-packing',
       color: '#0d9488',
@@ -62,7 +62,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
     {
       id: 'notif-2',
       title: 'Low Stock Alert',
-      message: 'Woodpecker LED Curing Light has only 9 units remaining',
+      message: 'Wireless Noise-Canceling Earbuds Pro has only 9 units remaining',
       time: '35m ago',
       icon: 'fa-solid fa-triangle-exclamation',
       color: '#f59e0b',
@@ -71,10 +71,10 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
     },
     {
       id: 'notif-3',
-      title: 'Doctor Verification Request',
-      message: '  Rajesh Patel submitted DCI credentials for review',
+      title: 'Seller Verification Request',
+      message: 'TechVibe Solutions submitted merchant credentials for approval',
       time: '2h ago',
-      icon: 'fa-solid fa-user-doctor',
+      icon: 'fa-solid fa-store',
       color: '#3b82f6',
       link: '/admin/users',
       read: false,
@@ -82,7 +82,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
     {
       id: 'notif-4',
       title: 'Logistics Manifest Synced',
-      message: 'BlueDart   confirmed 4 shipments dispatched',
+      message: 'BlueDart Express confirmed 4 shipments dispatched',
       time: '5h ago',
       icon: 'fa-solid fa-truck-fast',
       color: '#10b981',

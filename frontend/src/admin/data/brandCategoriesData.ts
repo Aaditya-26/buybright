@@ -1,6 +1,6 @@
 /**
  * BuyBright Admin — Brand Categories Data & LocalStorage Persistence.
- * Categorization layer for dental and healthcare manufacturer brands.
+ * Categorization layer for verified marketplace manufacturer brands.
  */
 
 import type { AdminBrandCategory } from '../types/product';
@@ -11,17 +11,17 @@ export const initialBrandCategoriesData: AdminBrandCategory[] = [
     name: 'All Brands',
     slug: 'all-brands',
     icon: 'fa-solid fa-border-all',
-    description: 'Complete directory of all 17 certified national and international dental manufacturer partners.',
+    description: 'Complete directory of all 16 certified national and international marketplace brand partners.',
     displayOrder: 1,
     status: 'Active',
-    totalBrands: 17,
+    totalBrands: 16,
   },
   {
     id: 'bcat-2',
     name: 'Top Brands',
     slug: 'top-brands',
     icon: 'fa-solid fa-crown',
-    description: 'Leading 12 high-demand brands trusted by dental professionals and hospitals.',
+    description: 'Leading 12 high-demand consumer brands trusted across India.',
     displayOrder: 2,
     status: 'Active',
     totalBrands: 12,
@@ -31,34 +31,34 @@ export const initialBrandCategoriesData: AdminBrandCategory[] = [
     name: 'Newly Added Brands',
     slug: 'newly-added-brands',
     icon: 'fa-solid fa-sparkles',
-    description: '5 recently onboarded innovative dental product lines and supply manufacturers.',
+    description: '4 recently onboarded innovative consumer electronics, home, and fashion lines.',
     displayOrder: 3,
     status: 'Active',
-    totalBrands: 5,
+    totalBrands: 4,
   },
   {
     id: 'bcat-4',
     name: 'Featured Brands',
     slug: 'featured-brands',
     icon: 'fa-solid fa-star',
-    description: '13 spotlight partner manufacturers with premier inventory and direct warranty.',
+    description: '12 spotlight partner manufacturers with premier inventory and official warranty.',
     displayOrder: 4,
     status: 'Active',
-    totalBrands: 13,
+    totalBrands: 12,
   },
   {
     id: 'bcat-5',
-    name: 'Prestodental Suggests',
-    slug: 'prestodental-suggests',
+    name: 'BuyBright Recommends',
+    slug: 'buybright-recommends',
     icon: 'fa-solid fa-thumbs-up',
-    description: '15 handpicked editor and dentist recommendations for maximum reliability.',
+    description: '14 handpicked marketplace editor recommendations for maximum quality and customer ratings.',
     displayOrder: 5,
     status: 'Active',
-    totalBrands: 15,
+    totalBrands: 14,
   },
 ];
 
-const BRAND_CATEGORIES_STORAGE_KEY = 'prestodental_admin_brand_categories_v2';
+const BRAND_CATEGORIES_STORAGE_KEY = 'buybright_admin_brand_categories_v3';
 
 export function getBrandCategories(): AdminBrandCategory[] {
   try {

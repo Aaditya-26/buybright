@@ -49,424 +49,322 @@ export interface GalleryMediaItem {
 }
 
 /**
- * Generate authentic dental-grade horizontal variants with stock, delivery, and Bright Points
+ * Generate authentic consumer marketplace horizontal variants with stock, delivery, and Bright Points
  */
 const getProductHorizontalVariants = (prod: Product): ProductVariantItem[] => {
   const cat = (prod.category || '').toLowerCase();
   const base = prod.price;
   const baseImg = prod.image;
 
-  if (cat.includes('material') || cat.includes('restorative') || cat.includes('composite')) {
+  if (cat.includes('elect') || cat.includes('gadget') || cat.includes('tech') || cat.includes('phone') || cat.includes('audio')) {
     return [
       {
-        id: `${prod.id}-a2-syr`,
-        sku: `PD-MAT-A2-4G-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Shade A2 Universal)`,
-        variantLabel: 'Shade A2 Universal • 4g Syringe',
+        id: `${prod.id}-128gb-blk`,
+        sku: `BB-ELC-128-BLK-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (128 GB - Midnight Black)`,
+        variantLabel: '128 GB • Midnight Black',
         image: baseImg,
         price: base,
         old_price: Math.round(base * 1.25),
         discount: '20% OFF',
-        brightPoints: 20,
-        deliveryTime: 'Delivered in 24-48 hrs',
+        brightPoints: 50,
+        deliveryTime: 'Delivered by Tomorrow, 2 PM',
         inStock: true,
-        stockCount: 14,
+        stockCount: 18,
         tag: 'Bestseller',
       },
       {
-        id: `${prod.id}-a1-syr`,
-        sku: `PD-MAT-A1-4G-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Shade A1 Enamel Light)`,
-        variantLabel: 'Shade A1 Enamel • 4g Syringe',
-        image: baseImg,
-        price: base,
-        old_price: Math.round(base * 1.22),
-        discount: '18% OFF',
-        brightPoints: 20,
-        deliveryTime: 'Delivered by Tomorrow, 2 PM',
-        inStock: true,
-        stockCount: 8,
-        tag: 'Top Choice',
-      },
-      {
-        id: `${prod.id}-a3-syr`,
-        sku: `PD-MAT-A3-4G-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Shade A3 Medium Dentine)`,
-        variantLabel: 'Shade A3 Medium • 4g Syringe',
-        image: '/images/cat_materials_1787401998270.jpg',
-        price: Math.round(base * 1.05),
-        old_price: Math.round(base * 1.3),
-        discount: '19% OFF',
-        brightPoints: 25,
-        deliveryTime: 'Delivered in 24-48 hrs',
-        inStock: true,
-        stockCount: 2,
-      },
-      {
-        id: `${prod.id}-b1-syr`,
-        sku: `PD-MAT-B1-4G-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Shade B1 Extra Bleach)`,
-        variantLabel: 'Shade B1 Bleach • 4g Syringe',
-        image: '/images/cat_materials_1787401998270.jpg',
-        price: Math.round(base * 1.12),
-        old_price: Math.round(base * 1.38),
-        discount: '19% OFF',
-        brightPoints: 30,
-        deliveryTime: 'Express Cold-Chain Transit',
-        inStock: false,
-        stockCount: 0,
-        tag: 'Out of Stock',
-      },
-      {
-        id: `${prod.id}-triple-pack`,
-        sku: `PD-MAT-3PK-12G-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Triple Pack Kit - 3x 4g)`,
-        variantLabel: 'Value 3-Pack (3x 4g Syringes)',
-        image: baseImg,
-        price: Math.round(base * 2.7),
-        old_price: Math.round(base * 3.5),
-        discount: '23% OFF',
-        brightPoints: 50,
-        deliveryTime: 'Delivered in 24-48 hrs',
-        inStock: true,
-        stockCount: 6,
-        tag: 'Economy Pack',
-      },
-    ];
-  }
-
-  if (cat.includes('endodontic') || cat.includes('rotary') || cat.includes('file')) {
-    return [
-      {
-        id: `${prod.id}-25-06-25mm`,
-        sku: `PD-ENDO-2506-25MM-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (#25 .06 / 25mm)`,
-        variantLabel: '#25 .06 Universal Molar (25mm / 6 Files)',
-        image: baseImg,
-        price: base,
-        old_price: Math.round(base * 1.25),
-        discount: '20% OFF',
-        brightPoints: 20,
-        deliveryTime: 'Delivered by Tomorrow, 2 PM',
-        inStock: true,
-        stockCount: 22,
-        tag: 'Most Popular',
-      },
-      {
-        id: `${prod.id}-20-04-21mm`,
-        sku: `PD-ENDO-2004-21MM-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (#20 .04 / 21mm)`,
-        variantLabel: '#20 .04 Narrow Canal (21mm / 6 Files)',
-        image: baseImg,
-        price: base,
-        old_price: Math.round(base * 1.22),
-        discount: '18% OFF',
-        brightPoints: 20,
-        deliveryTime: 'Delivered in 24-48 hrs',
-        inStock: true,
-        stockCount: 11,
-      },
-      {
-        id: `${prod.id}-30-04-25mm`,
-        sku: `PD-ENDO-3004-25MM-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (#30 .04 / 25mm)`,
-        variantLabel: '#30 .04 Medium Curved (25mm / 6 Files)',
-        image: '/images/cat_endodontic_1787401934680.jpg',
-        price: base,
-        old_price: Math.round(base * 1.22),
-        discount: '18% OFF',
-        brightPoints: 20,
-        deliveryTime: 'Delivered in 24-48 hrs',
-        inStock: true,
-        stockCount: 2,
-      },
-      {
-        id: `${prod.id}-35-06-31mm`,
-        sku: `PD-ENDO-3506-31MM-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (#35 .06 / 31mm Long)`,
-        variantLabel: '#35 .06 Long Canine (31mm / 6 Files)',
-        image: '/images/cat_endodontic_1787401934680.jpg',
-        price: Math.round(base * 1.08),
-        old_price: Math.round(base * 1.3),
-        discount: '17% OFF',
-        brightPoints: 25,
-        deliveryTime: 'Express Transit',
-        inStock: false,
-        stockCount: 0,
-        tag: 'Out of Stock',
-      },
-      {
-        id: `${prod.id}-asst-kit`,
-        sku: `PD-ENDO-ASST-6PK-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Assorted Sequence #15-40)`,
-        variantLabel: 'Assorted Sequence Kit (6 Files #15-40)',
+        id: `${prod.id}-256gb-slv`,
+        sku: `BB-ELC-256-SLV-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (256 GB - Silver Aluminum)`,
+        variantLabel: '256 GB • Silver Aluminum',
         image: baseImg,
         price: Math.round(base * 1.15),
-        old_price: Math.round(base * 1.45),
-        discount: '21% OFF',
-        brightPoints: 30,
-        deliveryTime: 'Delivered in 24-48 hrs',
-        inStock: true,
-        stockCount: 15,
-        tag: 'Full Kit',
-      },
-    ];
-  }
-
-  if (cat.includes('instrument') || cat.includes('surg') || cat.includes('extraction')) {
-    return [
-      {
-        id: `${prod.id}-std-single`,
-        sku: `PD-INS-STD-1PC-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Standard Pattern)`,
-        variantLabel: 'Standard Surgical Pattern (1 Pc)',
-        image: baseImg,
-        price: base,
-        old_price: Math.round(base * 1.2),
-        discount: '16% OFF',
-        brightPoints: 10,
-        deliveryTime: 'Delivered in 24-48 hrs',
-        inStock: true,
-        stockCount: 16,
-        tag: 'Standard',
-      },
-      {
-        id: `${prod.id}-micro-serrated`,
-        sku: `PD-INS-SERR-1PC-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Micro-Serrated Grip)`,
-        variantLabel: 'Micro-Serrated Atraumatic Grip (1 Pc)',
-        image: '/images/cat_instruments_1787401955005.jpg',
-        price: Math.round(base * 1.12),
-        old_price: Math.round(base * 1.35),
+        old_price: Math.round(base * 1.38),
         discount: '17% OFF',
-        brightPoints: 20,
-        deliveryTime: 'Delivered by Tomorrow, 2 PM',
+        brightPoints: 75,
+        deliveryTime: 'Delivered in 24-48 hrs',
         inStock: true,
         stockCount: 9,
-        tag: 'Precision',
+        tag: 'Popular',
       },
       {
-        id: `${prod.id}-tin-gold`,
-        sku: `PD-INS-TIN-1PC-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Titanium Nitride Gold)`,
-        variantLabel: 'Gold Titanium Nitride Coated (1 Pc)',
-        image: '/images/cat_instruments_1787401955005.jpg',
-        price: Math.round(base * 1.25),
-        old_price: Math.round(base * 1.55),
-        discount: '19% OFF',
-        brightPoints: 30,
+        id: `${prod.id}-512gb-gray`,
+        sku: `BB-ELC-512-GRY-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (512 GB - Space Gray)`,
+        variantLabel: '512 GB • Space Gray Pro',
+        image: baseImg,
+        price: Math.round(base * 1.35),
+        old_price: Math.round(base * 1.65),
+        discount: '18% OFF',
+        brightPoints: 100,
+        deliveryTime: 'Delivered in 24-48 hrs',
+        inStock: true,
+        stockCount: 4,
+        tag: 'Pro Tier',
+      },
+      {
+        id: `${prod.id}-1tb-gold`,
+        sku: `BB-ELC-1TB-GLD-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (1 TB - Champagne Gold)`,
+        variantLabel: '1 TB • Limited Edition Gold',
+        image: baseImg,
+        price: Math.round(base * 1.6),
+        old_price: Math.round(base * 2.0),
+        discount: '20% OFF',
+        brightPoints: 150,
         deliveryTime: 'Special Order Dispatch',
         inStock: false,
         stockCount: 0,
         tag: 'Out of Stock',
       },
-      {
-        id: `${prod.id}-core-set3`,
-        sku: `PD-INS-SET3-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Core Trio Set of 3)`,
-        variantLabel: 'CoreTrio Set (3 Instruments)',
-        image: baseImg,
-        price: Math.round(base * 2.75),
-        old_price: Math.round(base * 3.6),
-        discount: '23% OFF',
-        brightPoints: 50,
-        deliveryTime: 'Delivered in 24-48 hrs',
-        inStock: true,
-        stockCount: 1,
-        tag: 'Set of 3',
-      },
     ];
   }
 
-  if (cat.includes('equipment') || cat.includes('handpiece') || cat.includes('light')) {
+  if (cat.includes('fash') || cat.includes('apparel') || cat.includes('cloth') || cat.includes('wear')) {
     return [
       {
-        id: `${prod.id}-std-torque`,
-        sku: `PD-EQP-STD-HQ-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Standard Torque Optic LED)`,
-        variantLabel: 'Standard Torque Optic LED (1 Unit)',
+        id: `${prod.id}-m-navy`,
+        sku: `BB-FAS-M-NVY-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (Size M - Classic Navy)`,
+        variantLabel: 'Size M • Classic Navy Blue',
         image: baseImg,
         price: base,
-        old_price: Math.round(base * 1.22),
-        discount: '18% OFF',
-        brightPoints: 50,
-        deliveryTime: 'Delivered by Tomorrow, 2 PM',
-        inStock: true,
-        stockCount: 8,
-        tag: '1-Yr Warranty',
-      },
-      {
-        id: `${prod.id}-mini-head`,
-        sku: `PD-EQP-MINI-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Mini Pediatric Head)`,
-        variantLabel: 'Mini Pediatric 9.8mm Compact Head',
-        image: '/images/cat_equipment_1787401977793.jpg',
-        price: Math.round(base * 1.08),
         old_price: Math.round(base * 1.3),
-        discount: '17% OFF',
-        brightPoints: 50,
-        deliveryTime: 'Delivered in 24-48 hrs',
-        inStock: true,
-        stockCount: 2,
-        tag: 'Pediatric',
-      },
-      {
-        id: `${prod.id}-surg-45`,
-        sku: `PD-EQP-45DEG-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (45° Surgical Impact Air)`,
-        variantLabel: '45° Surgical Impact Air Handpiece',
-        image: '/images/cat_equipment_1787401977793.jpg',
-        price: Math.round(base * 1.2),
-        old_price: Math.round(base * 1.5),
-        discount: '20% OFF',
-        brightPoints: 50,
-        deliveryTime: 'Express Air Dispatch',
-        inStock: false,
-        stockCount: 0,
-        tag: 'Out of Stock',
-      },
-      {
-        id: `${prod.id}-pro-bundle`,
-        sku: `PD-EQP-PRO-2ROT-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Pro Bundle + 2 Ceramic Rotors)`,
-        variantLabel: 'Pro Bundle (+ 2 Ceramic Turbine Rotors)',
-        image: baseImg,
-        price: Math.round(base * 1.45),
-        old_price: Math.round(base * 1.85),
-        discount: '22% OFF',
-        brightPoints: 50,
-        deliveryTime: 'Delivered in 24-48 hrs',
-        inStock: true,
-        stockCount: 3,
-        tag: 'Pro Pack',
-      },
-    ];
-  }
-
-  if (cat.includes('consumable') || cat.includes('hygiene') || cat.includes('steril')) {
-    return [
-      {
-        id: `${prod.id}-teal-100`,
-        sku: `PD-CON-TEAL-100-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Clinic Teal - Box of 100)`,
-        variantLabel: 'Clinic Teal Dispenser (100 Pcs)',
-        image: baseImg,
-        price: base,
-        old_price: Math.round(base * 1.2),
-        discount: '16% OFF',
-        brightPoints: 10,
-        deliveryTime: 'Delivered by Tomorrow, 2 PM',
-        inStock: true,
-        stockCount: 42,
-        tag: 'Popular',
-      },
-      {
-        id: `${prod.id}-mint-100`,
-        sku: `PD-CON-MINT-100-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Cool Mint Scented - 100 Pcs)`,
-        variantLabel: 'Cool Mint Scented Box (100 Pcs)',
-        image: '/images/cat_consumables_1787401910059.jpg',
-        price: Math.round(base * 1.05),
-        old_price: Math.round(base * 1.25),
-        discount: '16% OFF',
-        brightPoints: 10,
-        deliveryTime: 'Delivered in 24-48 hrs',
-        inStock: true,
-        stockCount: 2,
-      },
-      {
-        id: `${prod.id}-blue-heavy-100`,
-        sku: `PD-CON-BLUE-100-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Cobalt Blue Heavy Duty - 100 Pcs)`,
-        variantLabel: 'Cobalt Blue Heavy Duty Box (100 Pcs)',
-        image: '/images/cat_consumables_1787401910059.jpg',
-        price: Math.round(base * 1.1),
-        old_price: Math.round(base * 1.35),
-        discount: '18% OFF',
-        brightPoints: 10,
-        deliveryTime: 'Express Delivery',
-        inStock: false,
-        stockCount: 0,
-        tag: 'Out of Stock',
-      },
-      {
-        id: `${prod.id}-twin-200`,
-        sku: `PD-CON-TWIN-200-${prod.id.slice(0, 4).toUpperCase()}`,
-        name: `${prod.name} (Twin Pack - 2x 100 Pcs)`,
-        variantLabel: 'Twin Pack Dispensers (2x 100 = 200 Pcs)',
-        image: baseImg,
-        price: Math.round(base * 1.9),
-        old_price: Math.round(base * 2.4),
-        discount: '21% OFF',
+        discount: '23% OFF',
         brightPoints: 20,
         deliveryTime: 'Delivered in 24-48 hrs',
         inStock: true,
-        stockCount: 19,
+        stockCount: 25,
+        tag: 'Most Popular',
+      },
+      {
+        id: `${prod.id}-l-black`,
+        sku: `BB-FAS-L-BLK-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (Size L - Onyx Black)`,
+        variantLabel: 'Size L • Onyx Black',
+        image: baseImg,
+        price: base,
+        old_price: Math.round(base * 1.3),
+        discount: '23% OFF',
+        brightPoints: 20,
+        deliveryTime: 'Delivered by Tomorrow, 2 PM',
+        inStock: true,
+        stockCount: 14,
+      },
+      {
+        id: `${prod.id}-xl-gray`,
+        sku: `BB-FAS-XL-GRY-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (Size XL - Heather Gray)`,
+        variantLabel: 'Size XL • Heather Gray',
+        image: baseImg,
+        price: Math.round(base * 1.05),
+        old_price: Math.round(base * 1.35),
+        discount: '22% OFF',
+        brightPoints: 25,
+        deliveryTime: 'Delivered in 24-48 hrs',
+        inStock: true,
+        stockCount: 6,
+      },
+      {
+        id: `${prod.id}-combo-3pk`,
+        sku: `BB-FAS-COMBO-3PK-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (Value Pack of 3 Assorted)`,
+        variantLabel: 'Multi-Pack Bundle (Pack of 3)',
+        image: baseImg,
+        price: Math.round(base * 2.6),
+        old_price: Math.round(base * 3.6),
+        discount: '28% OFF',
+        brightPoints: 60,
+        deliveryTime: 'Delivered in 24-48 hrs',
+        inStock: true,
+        stockCount: 8,
+        tag: 'Value Bundle',
+      },
+    ];
+  }
+
+  if (cat.includes('home') || cat.includes('kitchen') || cat.includes('cook') || cat.includes('appliance')) {
+    return [
+      {
+        id: `${prod.id}-std-single`,
+        sku: `BB-HMK-STD-1PC-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (Standard Unit)`,
+        variantLabel: 'Standard Unit (1 Pc)',
+        image: baseImg,
+        price: base,
+        old_price: Math.round(base * 1.2),
+        discount: '17% OFF',
+        brightPoints: 30,
+        deliveryTime: 'Delivered by Tomorrow, 2 PM',
+        inStock: true,
+        stockCount: 16,
+        tag: 'Standard',
+      },
+      {
+        id: `${prod.id}-deluxe-set`,
+        sku: `BB-HMK-DLX-SET-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (Deluxe Plus Set with Accessories)`,
+        variantLabel: 'Deluxe Set (+ Complete Accessory Kit)',
+        image: baseImg,
+        price: Math.round(base * 1.35),
+        old_price: Math.round(base * 1.7),
+        discount: '21% OFF',
+        brightPoints: 45,
+        deliveryTime: 'Delivered in 24-48 hrs',
+        inStock: true,
+        stockCount: 7,
+        tag: 'Deluxe Edition',
+      },
+      {
+        id: `${prod.id}-family-2pk`,
+        sku: `BB-HMK-FAM-2PK-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (Family Pack of 2)`,
+        variantLabel: 'Family Duo Pack (Set of 2 Units)',
+        image: baseImg,
+        price: Math.round(base * 1.85),
+        old_price: Math.round(base * 2.4),
+        discount: '23% OFF',
+        brightPoints: 60,
+        deliveryTime: 'Delivered in 24-48 hrs',
+        inStock: true,
+        stockCount: 11,
         tag: 'Twin Pack',
       },
     ];
   }
 
-  // Default / Orthodontics & General
+  if (cat.includes('beauty') || cat.includes('care') || cat.includes('wellness') || cat.includes('cosmetic')) {
+    return [
+      {
+        id: `${prod.id}-50ml-daily`,
+        sku: `BB-BTY-50ML-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (50 ml Essential)`,
+        variantLabel: '50 ml • Daily Essential Care',
+        image: baseImg,
+        price: base,
+        old_price: Math.round(base * 1.25),
+        discount: '20% OFF',
+        brightPoints: 15,
+        deliveryTime: 'Delivered by Tomorrow, 2 PM',
+        inStock: true,
+        stockCount: 30,
+        tag: 'Best Seller',
+      },
+      {
+        id: `${prod.id}-100ml-pump`,
+        sku: `BB-BTY-100ML-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (100 ml Economy Pump)`,
+        variantLabel: '100 ml • Value Dispenser Pump',
+        image: baseImg,
+        price: Math.round(base * 1.65),
+        old_price: Math.round(base * 2.1),
+        discount: '21% OFF',
+        brightPoints: 30,
+        deliveryTime: 'Delivered in 24-48 hrs',
+        inStock: true,
+        stockCount: 12,
+        tag: 'Value Size',
+      },
+      {
+        id: `${prod.id}-gift-trio`,
+        sku: `BB-BTY-TRIO-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (Luxury Gift Set of 3)`,
+        variantLabel: 'Gift Box Collection (3 Items)',
+        image: baseImg,
+        price: Math.round(base * 2.5),
+        old_price: Math.round(base * 3.3),
+        discount: '24% OFF',
+        brightPoints: 50,
+        deliveryTime: 'Delivered in 24-48 hrs',
+        inStock: true,
+        stockCount: 5,
+        tag: 'Gift Pack',
+      },
+    ];
+  }
+
+  if (cat.includes('sport') || cat.includes('fit') || cat.includes('gym') || cat.includes('outdoor')) {
+    return [
+      {
+        id: `${prod.id}-std-edition`,
+        sku: `BB-SPT-STD-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (Standard Athletic Edition)`,
+        variantLabel: 'Standard Athletic Edition',
+        image: baseImg,
+        price: base,
+        old_price: Math.round(base * 1.25),
+        discount: '20% OFF',
+        brightPoints: 25,
+        deliveryTime: 'Delivered in 24-48 hrs',
+        inStock: true,
+        stockCount: 20,
+        tag: 'Top Rated',
+      },
+      {
+        id: `${prod.id}-pro-heavy`,
+        sku: `BB-SPT-PRO-${prod.id.slice(0, 4).toUpperCase()}`,
+        name: `${prod.name} (Pro Heavy Duty Training)`,
+        variantLabel: 'Pro Performance Heavy Duty',
+        image: baseImg,
+        price: Math.round(base * 1.3),
+        old_price: Math.round(base * 1.65),
+        discount: '21% OFF',
+        brightPoints: 40,
+        deliveryTime: 'Delivered by Tomorrow, 2 PM',
+        inStock: true,
+        stockCount: 9,
+        tag: 'Pro Grade',
+      },
+    ];
+  }
+
+  // Default / Books & Stationery & General Marketplace
   return [
     {
-      id: `${prod.id}-mbt-22`,
-      sku: `PD-ORTHO-MBT22-${prod.id.slice(0, 4).toUpperCase()}`,
-      name: `${prod.name} (MBT .022" Slot - Single Arch)`,
-      variantLabel: 'MBT .022" Slot Single Arch (10 Pcs)',
+      id: `${prod.id}-std-ed`,
+      sku: `BB-BKS-STD-${prod.id.slice(0, 4).toUpperCase()}`,
+      name: `${prod.name} (Standard Edition)`,
+      variantLabel: 'Standard Paperback / Single Unit',
       image: baseImg,
       price: base,
-      old_price: Math.round(base * 1.22),
-      discount: '18% OFF',
-      brightPoints: 20,
-      deliveryTime: 'Delivered in 24-48 hrs',
-      inStock: true,
-      stockCount: 15,
-      tag: 'Standard',
-    },
-    {
-      id: `${prod.id}-roth-22`,
-      sku: `PD-ORTHO-ROTH22-${prod.id.slice(0, 4).toUpperCase()}`,
-      name: `${prod.name} (Roth .022" Slot - Single Arch)`,
-      variantLabel: 'Roth .022" Slot Single Arch (10 Pcs)',
-      image: baseImg,
-      price: base,
-      old_price: Math.round(base * 1.22),
-      discount: '18% OFF',
-      brightPoints: 20,
+      old_price: Math.round(base * 1.2),
+      discount: '17% OFF',
+      brightPoints: 15,
       deliveryTime: 'Delivered by Tomorrow, 2 PM',
       inStock: true,
-      stockCount: 2,
+      stockCount: 22,
+      tag: 'Bestseller',
     },
     {
-      id: `${prod.id}-roth-18`,
-      sku: `PD-ORTHO-ROTH18-${prod.id.slice(0, 4).toUpperCase()}`,
-      name: `${prod.name} (Roth .018" Light Wire)`,
-      variantLabel: 'Roth .018" Slot Single Arch (10 Pcs)',
+      id: `${prod.id}-hardcover`,
+      sku: `BB-BKS-HC-${prod.id.slice(0, 4).toUpperCase()}`,
+      name: `${prod.name} (Deluxe Hardcover / Premium Edition)`,
+      variantLabel: 'Deluxe Hardcover / Collector Edition',
       image: baseImg,
-      price: Math.round(base * 1.05),
-      old_price: Math.round(base * 1.28),
-      discount: '18% OFF',
-      brightPoints: 20,
-      deliveryTime: 'Special Order',
-      inStock: false,
-      stockCount: 0,
-      tag: 'Out of Stock',
-    },
-    {
-      id: `${prod.id}-full-patient-20`,
-      sku: `PD-ORTHO-FULL20-${prod.id.slice(0, 4).toUpperCase()}`,
-      name: `${prod.name} (Full Patient Set - Upper & Lower 20 Pcs)`,
-      variantLabel: 'Full Patient Set Upper & Lower (20 Pcs)',
-      image: baseImg,
-      price: Math.round(base * 1.85),
-      old_price: Math.round(base * 2.4),
-      discount: '23% OFF',
-      brightPoints: 40,
+      price: Math.round(base * 1.35),
+      old_price: Math.round(base * 1.7),
+      discount: '21% OFF',
+      brightPoints: 30,
       deliveryTime: 'Delivered in 24-48 hrs',
       inStock: true,
-      stockCount: 6,
-      tag: 'Complete Set',
+      stockCount: 7,
+      tag: 'Collector',
+    },
+    {
+      id: `${prod.id}-bundle-box`,
+      sku: `BB-BKS-BOX-${prod.id.slice(0, 4).toUpperCase()}`,
+      name: `${prod.name} (Collector Box Set)`,
+      variantLabel: 'Complete Collection Box Set',
+      image: baseImg,
+      price: Math.round(base * 2.2),
+      old_price: Math.round(base * 2.9),
+      discount: '24% OFF',
+      brightPoints: 50,
+      deliveryTime: 'Delivered in 24-48 hrs',
+      inStock: true,
+      stockCount: 4,
+      tag: 'Complete Box Set',
     },
   ];
 };
@@ -502,7 +400,7 @@ BT
 /F1 18 Tf
 0 0.35 0.35 rg
 50 805 Td
-(PRESTODENTAL DENTAL PROCUREMENT) Tj
+(BUYBRIGHT MULTI-SELLER MARKETPLACE) Tj
 /F2 9 Tf
 0.4 0.45 0.5 rg
 330 805 Td
@@ -516,9 +414,9 @@ BT
 /F2 9.5 Tf
 0.3 0.35 0.4 rg
 65 738 Td
-(Catalog Ref: PD-CAT-${sanitize(prod.id.toUpperCase())}   |   Issued: ${sanitize(dateStr)}   |   Standard: ISO 13485) Tj
+(Catalog Ref: BB-CAT-${sanitize(prod.id.toUpperCase())}   |   Issued: ${sanitize(dateStr)}   |   Quality: ISO 9001 Certified) Tj
 65 722 Td
-(Status: Active Dental Supply   |   GST Ready: 12% Input Tax Credit Eligible) Tj
+(Status: Verified Marketplace Product   |   GST Compliant: Registered Merchant Invoice) Tj
 ET
 q
 0 0.502 0.502 rg
@@ -546,43 +444,43 @@ BT
 (Brand / Manufacturer:) Tj
 /F2 10 Tf
 170 625 Td
-(${sanitize(prod.brand)} - Authorized Brand Partner) Tj
+(${sanitize(prod.brand)} - Verified Marketplace Merchant) Tj
 ET
 BT
 /F1 10 Tf
 0.1 0.15 0.2 rg
 55 605 Td
-( Category:) Tj
+(Category:) Tj
 /F2 10 Tf
 170 605 Td
-(${sanitize((prod.category || 'Materials').toUpperCase())}) Tj
+(${sanitize((prod.category || 'General').toUpperCase())}) Tj
 ET
 BT
 /F1 10 Tf
 0.1 0.15 0.2 rg
 55 585 Td
-(Procurement Base Price:) Tj
+(Listed Marketplace Price:) Tj
 /F2 10 Tf
 170 585 Td
-(INR ${prod.price.toLocaleString('en-IN')} ( )) Tj
+(INR ${prod.price.toLocaleString('en-IN')}) Tj
 ET
 BT
 /F1 10 Tf
 0.1 0.15 0.2 rg
 55 565 Td
-(Medical Certification:) Tj
+(Quality Assurance:) Tj
 /F2 10 Tf
 170 565 Td
-(ISO 13485:2016 Certified / CE Class IIa Medical Device) Tj
+(ISO 9001:2015 Certified / 100% Genuine Direct Merchant Warranty) Tj
 ET
 BT
 /F1 10 Tf
 0.1 0.15 0.2 rg
 55 545 Td
-(Supply Chain Protocol:) Tj
+(Fulfillment Protocol:) Tj
 /F2 10 Tf
 170 545 Td
-(Cold-Chain Inspected & Thermal Logged Express Air Dispatch) Tj
+(Barcoded Warehouse Intake & Fast Track Express Delivery) Tj
 ET
 q
 0 0.502 0.502 rg
@@ -598,13 +496,13 @@ BT
 /F2 9.5 Tf
 0.2 0.25 0.3 rg
 55 480 Td
-(100% Genuine Warranty: Sourced directly through verified OEM distributor channels.) Tj
+(100% Genuine Guarantee: Sourced directly through verified brand partners & authorized sellers.) Tj
 55 460 Td
-(Cold-Chain Traceability: Packaged in insulated thermal shippers for temperature-critical dental compounds.) Tj
+(Tamper-Proof Packaging: Quality-checked and barcode-sealed at fulfillment centers.) Tj
 55 440 Td
-(Compliant Tax Invoice: Complete GST B2B invoice with registered HSN classification for full ITC.) Tj
+(Compliant Tax Invoice: Complete GST B2C/B2B invoice with registered HSN classification.) Tj
 55 420 Td
-(Logistics Hub: Pan-India Express   via Mumbai Central Logistics Depot.) Tj
+(Logistics Hub: Pan-India Express Delivery via Automated Fulfillment Network.) Tj
 ET
 q
 0.93 0.94 0.96 rg
@@ -617,13 +515,13 @@ BT
 /F1 10 Tf
 0.1 0.15 0.25 rg
 65 375 Td
-(Procurement & Dental Support Assistance) Tj
+(BuyBright Merchant & Customer Support) Tj
 /F2 9 Tf
 0.3 0.35 0.4 rg
 65 358 Td
-(Direct Specialist Support: +91 98765 43210   |   Email: procurement@buybright.com) Tj
+(Customer Helpdesk: +91 98765 43210   |   Email: support@buybright.com) Tj
 65 344 Td
-(Portal: https://buybright.com   |   Depot: Mumbai Central Central Logistics Hub) Tj
+(Platform: https://buybright.com   |   Fulfillment Hub: Automated Logistics Center) Tj
 ET
 q
 0.8 0.85 0.9 RG
@@ -634,9 +532,9 @@ BT
 /F2 8 Tf
 0.5 0.55 0.6 rg
 50 50 Td
-(BuyBright Procurement System | Document ID: SPEC-${sanitize(skuCode)} | Verified: ${sanitize(dateStr)}) Tj
+(BuyBright Marketplace Platform | Document ID: SPEC-${sanitize(skuCode)} | Verified: ${sanitize(dateStr)}) Tj
 50 38 Td
-(Confidential B2B procurement data sheet for registered dental clinics, hospitals, and institutional buyers.) Tj
+(Official product specification sheet generated by BuyBright Multi-Seller Marketplace.) Tj
 ET`;
 
   const streamBytes = new TextEncoder().encode(streamContent);
@@ -757,9 +655,9 @@ export const ProductDetailPage: React.FC = () => {
       <div className="product-detail-not-found">
         <i className="fa-solid fa-triangle-exclamation" />
         <h2>Product Not Found</h2>
-        <p>The dental supply item you are looking for is currently unavailable or has been moved.</p>
+        <p>The product you are looking for is currently unavailable or has been moved.</p>
         <button type="button" className="btn-return-shop" onClick={() => navigate('/shop')}>
-          <i className="fa-solid fa-arrow-left" /> Back to Dental Shop
+          <i className="fa-solid fa-arrow-left" /> Back to Shop
         </button>
       </div>
     );
@@ -978,17 +876,17 @@ export const ProductDetailPage: React.FC = () => {
     <div className="product-detail-page-wrapper">
       <SEO
         title={`${product.name} — Buy Authentic ${product.brand}`}
-        description={`Buy authentic ${product.name} by ${product.brand} (${product.category}) at ₹${product.price}. 100% genuine dental supplies with express cold-chain delivery and GST tax invoice.`}
+        description={`Buy authentic ${product.name} by ${product.brand} (${product.category}) at ₹${product.price}. 100% genuine products with manufacturer warranty and GST tax invoice.`}
         canonicalUrl={`https://buybright.com/shop/${product.id}`}
         ogImage={product.image}
         ogType="product"
-        keywords={`${product.name}, ${product.brand}, ${product.category}, dental supplies india, authentic dental tools`}
+        keywords={`${product.name}, ${product.brand}, ${product.category}, buy online india, authentic marketplace products`}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Product",
           "name": product.name,
           "image": product.image.startsWith('http') ? product.image : `https://buybright.com${product.image}`,
-          "description": `Authentic ${product.name} manufactured by ${product.brand}. Approved medical dental grade.`,
+          "description": `Authentic ${product.name} manufactured by ${product.brand}. Verified genuine marketplace stock.`,
           "sku": `PD-${product.id.toUpperCase()}-2026`,
           "brand": {
             "@type": "Brand",
@@ -1024,7 +922,7 @@ export const ProductDetailPage: React.FC = () => {
             </Link>
             <i className="fa-solid fa-chevron-right breadcrumb-separator" />
             <Link to="/shop" className="breadcrumb-link">
-              <span>Dental Shop</span>
+              <span>Shop All</span>
             </Link>
             <i className="fa-solid fa-chevron-right breadcrumb-separator" />
             <span className="breadcrumb-category-tag">{product.category.toUpperCase()}</span>
@@ -1210,24 +1108,24 @@ export const ProductDetailPage: React.FC = () => {
               </button>
             </div>
 
-            {/* Dental Certification Banner */}
+            {/* Marketplace Certification Banner */}
             <div className="dental-certification-strip">
               <div className="cert-pill">
                 <i className="fa-solid fa-certificate text-teal" />
-                <span>ISO 13485 Medical Device</span>
+                <span>100% Genuine Guaranteed</span>
               </div>
               <div className="cert-pill">
-                <i className="fa-solid fa-temperature-arrow-down text-cyan" />
-                <span>Cold-Chain Inspected</span>
+                <i className="fa-solid fa-shield-halved text-cyan" />
+                <span>Manufacturer Warranty</span>
               </div>
               <div className="cert-pill">
                 <i className="fa-solid fa-file-invoice text-coral" />
-                <span>GST Tax Credit Ready</span>
+                <span>GST Tax Invoice Ready</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Product Info, B2B Pricing, Variants & Purchase Suite */}
+          {/* Right Column: Product Info, Pricing, Variants & Purchase Suite */}
           <div className="product-procurement-column">
             {/* Brand & SKU Header */}
             <div className="procurement-header">
@@ -1256,16 +1154,16 @@ export const ProductDetailPage: React.FC = () => {
                 <Rating rating={product.rating} reviewsCount={product.reviews_count} />
                 <span className="rating-divider">•</span>
                 <span className="clinics-ordered-tag">
-                  <i className="fa-solid fa-hospital-user text-teal" /> 1,420+ Clinics Procured
+                  <i className="fa-solid fa-users text-teal" /> 4,800+ Verified Buyers
                 </span>
                 <span className="rating-divider">•</span>
-                <span className="main-presto-points-tag">
+                <span className="main-bright-points-tag main-presto-points-tag">
                   <i className="fa-solid fa-gem" /> Bright Points {brightPoints}
                 </span>
               </div>
             </div>
 
-            {/* Price Card & GST ITC Breakdown */}
+            {/* Price Card & Tax Summary */}
             <div className="procurement-price-card">
               <div className="price-primary-row">
                 <div className="price-values">
@@ -1276,7 +1174,7 @@ export const ProductDetailPage: React.FC = () => {
                   {discountText && <span className="detail-discount-tag">{discountText}</span>}
                 </div>
                 <div className="price-badges-group">
-                   <span className="presto-points-chip">
+                   <span className="bright-points-chip presto-points-chip">
                     <i className="fa-solid fa-gem" /> Bright Points {brightPoints * quantity}
                   </span>
                 </div>
@@ -1597,12 +1495,12 @@ export const ProductDetailPage: React.FC = () => {
                     <>
                       <h3 className="section-title">About This Product</h3>
                       <p style={{ fontSize: '0.95rem', color: '#334155', lineHeight: 1.8 }}>
-                        The <strong>{product.name}</strong> is a premium dental-grade product manufactured by {product.brand}.
-                        This product adheres to ISO 13485 medical grade certification and guarantees optimal handling,
-                        dimensional stability, and biocompatibility for professional dental use.
+                        The <strong>{product.name}</strong> is a genuine, verified product manufactured by {product.brand}.
+                        This item complies with rigorous quality standards, ensuring optimal durability,
+                        performance, and reliability with full manufacturer warranty.
                       </p>
                       <p style={{ fontSize: '0.95rem', color: '#334155', lineHeight: 1.8 }}>
-                        Suitable for multi-chair dental hospitals and solo practitioners requiring consistent,
+                        Suitable for everyday household or professional use requiring consistent,
                         batch-tested reliability with direct factory warranties.
                       </p>
                     </>
@@ -1632,7 +1530,7 @@ export const ProductDetailPage: React.FC = () => {
                       </tr>
                       <tr>
                         <th>Size / Dimensions</th>
-                        <td>{product.size || product.volume_ml || 'Standard Dental Grade'}</td>
+                        <td>{product.size || product.volume_ml || 'Standard Manufacturer Pack'}</td>
                       </tr>
                       <tr>
                         <th>Available Volume / Packaging</th>
@@ -1736,7 +1634,7 @@ export const ProductDetailPage: React.FC = () => {
                   <div className="score-box">
                     <span className="score-big">{product.rating.toFixed(1)}</span>
                     <Rating rating={product.rating} reviewsCount={product.reviews_count} />
-                    <span className="score-desc">Based on {product.reviews_count} verified dentalreviews</span>
+                    <span className="score-desc">Based on {product.reviews_count} verified buyer ratings</span>
                   </div>
 
                   <div className="rating-bars-box">
@@ -1762,17 +1660,17 @@ export const ProductDetailPage: React.FC = () => {
                   <div className="doctor-review-card">
                     <div className="review-meta-row">
                       <div className="doctor-info">
-                        <strong>  Sameer Deshmukh, MDS (Endodontics)</strong>
-                        <span>Apex Dental Specialty Hospital, Pune</span>
+                        <strong>Sameer Deshmukh</strong>
+                        <span>Verified Buyer • Pune, Maharashtra</span>
                       </div>
                       <span className="verified-badge">
-                        <i className="fa-solid fa-circle-check" /> VerifiedProcurement
+                        <i className="fa-solid fa-circle-check" /> Verified Purchase
                       </span>
                     </div>
                     <Rating rating={5} />
                     <h5 className="review-heading">Outstanding product precision and consistent batch quality!</h5>
                     <p className="review-text">
-                      We ordered 10 boxes for our multispecialty hospital. The cutting efficiency and fatigue resistance are on par with international standards. Prompt delivery within 36 hours with pristine packaging.
+                      We ordered multiple units for our office. The efficiency and build quality are on par with international standards. Prompt delivery within 36 hours with pristine packaging.
                     </p>
                     <span className="review-date">Reviewed 4 days ago</span>
                   </div>
@@ -1780,17 +1678,17 @@ export const ProductDetailPage: React.FC = () => {
                   <div className="doctor-review-card">
                     <div className="review-meta-row">
                       <div className="doctor-info">
-                        <strong>  Ananya Kulkarni, BDS</strong>
-                        <span>Smile Craft Dental Clinic, Mumbai</span>
+                        <strong>Ananya Kulkarni</strong>
+                        <span>Verified Buyer • Mumbai, Maharashtra</span>
                       </div>
                       <span className="verified-badge">
-                        <i className="fa-solid fa-circle-check" /> VerifiedProcurement
+                        <i className="fa-solid fa-circle-check" /> Verified Purchase
                       </span>
                     </div>
                     <Rating rating={5} />
                     <h5 className="review-heading">Genuine stock with valid GST invoicing</h5>
                     <p className="review-text">
-                      Excellent pricing compared to local suppliers, and we claimed full GST ITC input tax credit. Highly recommended for regularstock replenishment.
+                      Excellent pricing compared to local retail, and we received a valid GST tax invoice. Highly recommended for regular orders.
                     </p>
                     <span className="review-date">Reviewed 1 week ago</span>
                   </div>
@@ -1805,8 +1703,8 @@ export const ProductDetailPage: React.FC = () => {
           <div className="detail-related-section">
             <div className="related-section-header">
               <div>
-                <span className="section-pill">COMPLEMENTARY DENTAL SUPPLIES</span>
-                <h3 className="section-heading">Frequently Procured Together</h3>
+                <span className="section-pill">COMPLEMENTARY PRODUCTS</span>
+                <h3 className="section-heading">Frequently Bought Together</h3>
               </div>
               <Link to="/shop" className="btn-view-all-shop">
                 <span>View Full Catalog</span>

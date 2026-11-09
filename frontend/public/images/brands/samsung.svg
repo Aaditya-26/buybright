@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <rect width="100%" height="100%" fill="transparent"/>
+  <g transform="translate(15, 14)">
+    <ellipse cx="90" cy="21" rx="82" ry="20" fill="none" stroke="#034ea2" stroke-width="2.5" transform="rotate(-6 90 21)"/>
+    <text x="90" y="28" font-family="'Inter', sans-serif" font-weight="900" font-size="18" fill="#034ea2" letter-spacing="3" text-anchor="middle">SAMSUNG</text>
+  </g>
+</svg>

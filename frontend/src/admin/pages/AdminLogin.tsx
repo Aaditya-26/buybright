@@ -59,13 +59,13 @@ export const AdminLogin: React.FC = () => {
         <div className="login-brand-header">
           <div className="login-icon-box">
              <img
-              src="/images/logo.webp"
+              src="/images/logo.svg"
               alt="BuyBright Official Logo"
               className=" brand-logo"
             />
           </div>
           <h1>BuyBright Admin</h1>
-          <p>Dental Supply &amp; Operations Management Portal</p>
+          <p>Multi-Seller Marketplace Operations Portal</p>
         </div>
 
         {/* Authentication Form */}

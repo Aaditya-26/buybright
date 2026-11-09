@@ -26,12 +26,12 @@ interface ShopHeaderBannerProps {
 
 export const ShopHeaderBanner: React.FC<ShopHeaderBannerProps> = ({
   totalProductsCount,
-  badgeText = '100% FACTORY DIRECT • AUTHORIZED DENTAL DISTRIBUTOR',
+  badgeText = '100% VERIFIED AUTHENTIC • AUTHORIZED MARKETPLACE PARTNERS',
   badgeIcon = 'fa-solid fa-shield-halved',
-  title = 'Premium Dental ',
-  highlightText = 'Supplies & Equipment',
+  title = 'Explore Marketplace ',
+  highlightText = 'Products & Deals',
   description,
-  breadcrumbLabel = 'Dental Shop',
+  breadcrumbLabel = 'Shop All',
   metrics,
 }) => {
   const defaultMetrics = [
@@ -45,14 +45,14 @@ export const ShopHeaderBanner: React.FC<ShopHeaderBannerProps> = ({
       icon: 'fa-solid fa-file-invoice-dollar',
       iconColorClass: 'text-coral',
       title: 'GST Invoiced',
-      subtitle: 'Input Tax Credit',
+      subtitle: 'Official Tax Invoices',
     },
   ];
 
   const activeMetrics = metrics && metrics.length > 0 ? metrics : defaultMetrics;
   const activeDescription =
     description ||
-    `Explore ${totalProductsCount}+ dentist-approved consumables, instruments, bioceramics, and digital devices with cold-chain shipping and direct brand warranties.`;
+    `Explore ${totalProductsCount}+ verified consumer electronics, apparel, home essentials, beauty, and books with doorstep delivery and direct manufacturer warranties.`;
 
   return (
     <div className="shop-header-banner">

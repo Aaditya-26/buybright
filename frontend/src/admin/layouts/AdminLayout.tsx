@@ -26,7 +26,10 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
 
   const [collapsed, setCollapsed] = useState<boolean>(() => {
     try {
-      return localStorage.getItem('prestodental_admin_sidebar_collapsed') === 'true';
+      return (
+        localStorage.getItem('buybright_admin_sidebar_collapsed') === 'true' ||
+        localStorage.getItem('prestodental_admin_sidebar_collapsed') === 'true'
+      );
     } catch {
       return false;
     }
@@ -58,6 +61,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
       setCollapsed((prev) => {
         const next = !prev;
         try {
+          localStorage.setItem('buybright_admin_sidebar_collapsed', String(next));
           localStorage.setItem('prestodental_admin_sidebar_collapsed', String(next));
         } catch {}
         return next;

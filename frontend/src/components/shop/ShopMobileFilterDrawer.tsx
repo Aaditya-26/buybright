@@ -95,14 +95,14 @@ export const ShopMobileFilterDrawer: React.FC<ShopMobileFilterDrawerProps> = ({
     <div className="shop-mobile-drawer-overlay">
       <div className="shop-mobile-drawer-backdrop" onClick={onClose} aria-hidden="true" />
 
-      <div className="shop-mobile-drawer-content" role="dialog" aria-modal="true" aria-label="Filter Dental Supplies">
+      <div className="shop-mobile-drawer-content" role="dialog" aria-modal="true" aria-label="Filter Marketplace Products">
         <div className="drawer-header">
           <div className="drawer-title-group">
             <div className="drawer-icon-box">
               <i className="fa-solid fa-sliders" />
             </div>
             <div>
-              <h3 className="drawer-main-heading">Filter Supplies</h3>
+              <h3 className="drawer-main-heading">Filter Products</h3>
               <span className="drawer-subtitle">
                 {totalFilteredCount} products found
               </span>
@@ -148,7 +148,7 @@ export const ShopMobileFilterDrawer: React.FC<ShopMobileFilterDrawerProps> = ({
             <span>Reset All</span>
           </button>
           <button type="button" className="btn-drawer-apply" onClick={onClose}>
-            <span>View {totalFilteredCount} Supplies</span>
+            <span>View {totalFilteredCount} Products</span>
             <i className="fa-solid fa-arrow-right" />
           </button>
         </div>

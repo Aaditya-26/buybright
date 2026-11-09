@@ -213,7 +213,7 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
         <Link to="/admin/dashboard" className="sidebar-brand" onClick={handleLinkClick}>
           <div className="brand-logo-container">
             <img
-              src="/images/logo.webp"
+              src="/images/logo-icon.svg"
               alt="BuyBright Official Logo"
               className="sidebar-brand-logo"
             />

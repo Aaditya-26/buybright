@@ -54,7 +54,7 @@ export const NewArrivalsPage: React.FC = () => {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.title = 'New Arrivals & Latest Dental Innovations | BuyBright';
+    document.title = 'New Arrivals & Latest Marketplace Launches | BuyBright';
   }, []);
 
   // Open Drawer with optional jump to specific section
@@ -298,16 +298,16 @@ export const NewArrivalsPage: React.FC = () => {
   return (
     <div className="shop-page-wrapper">
       <SEO
-        title="New Arrivals & Latest Dental Innovations"
-        description="Explore latest dental supplies, newly launched rotary endodontic files, high-precision instruments, and 2026 dental equipment on BuyBright."
+        title="New Arrivals & Latest Marketplace Launches"
+        description="Explore the latest consumer electronics, smart gadgets, seasonal fashion, and home products launched on BuyBright."
         canonicalUrl="https://buybright.com/new-arrivals"
-        keywords="new dental products, latest dental supplies india, 2026 dental instruments, new endodontic files"
+        keywords="new product arrivals, latest gadgets india, new fashion arrivals, latest products 2026"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "New Arrivals & Latest Dental Innovations",
+          "name": "New Arrivals & Latest Marketplace Launches",
           "url": "https://buybright.com/new-arrivals",
-          "description": "BuyBright New Arrivals featuring the latest 2026 dental supplies and equipment.",
+          "description": "BuyBright New Arrivals featuring the latest 2026 consumer products and gadgets.",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -332,11 +332,11 @@ export const NewArrivalsPage: React.FC = () => {
       <ShopHeaderBanner
         totalProductsCount={allProducts.length}
         breadcrumbLabel="New Arrivals"
-        badgeText="2026 NEW ARRIVALS &amp; DENTAL INNOVATIONS"
+        badgeText="2026 NEW ARRIVALS &amp; PRODUCT LAUNCHES"
         badgeIcon="fa-solid fa-sparkles"
-        title="Latest Dental "
+        title="Latest Marketplace "
         highlightText="Innovations & New Launches"
-        description="Discover newly engineered rotary NiTi files, 5th-gen bioceramics, wireless LED curing lights, and smart autoclaves with direct factory warranties and express dispatch."
+        description="Discover newly launched smartphones, wireless audio, smart home devices, and apparel from verified brands with direct manufacturer warranties and express dispatch."
         metrics={[
           {
             icon: 'fa-solid fa-certificate',

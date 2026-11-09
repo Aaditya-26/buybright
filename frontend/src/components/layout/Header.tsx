@@ -44,214 +44,216 @@ interface CategoryMegaData {
 
 const CATEGORIES_DATA: CategoryMegaData[] = [
   {
-    id: 'diag',
-    name: 'Diagnostic Products',
-    slug: 'diagnostic',
-    icon: 'fa-solid fa-stethoscope',
-    itemCount: '120+ Products',
-    image: '/images/cat_diagnostic_1787401889850.jpg',
-    description: 'High-precision diagnostic tools, HD mouth mirrors, explorers and digital imaging positioners.',
+    id: 'electronics',
+    name: 'Electronics & Gadgets',
+    slug: 'electronics',
+    icon: 'fa-solid fa-laptop',
+    itemCount: '1,250+ Products',
+    image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&auto=format&fit=crop&q=80',
+    description: 'High-performance laptops, smartphones, noise-cancelling audio, smart wearables, and gaming tech.',
     subcategories: [
       {
-        groupTitle: 'Examination Tools',
+        groupTitle: 'Computers & Mobiles',
         items: [
-          { name: 'Front Surface Mouth Mirrors', isHot: true },
-          { name: 'Double Ended Explorer Probes' },
-          { name: 'College Tweezers & Pliers' },
-          { name: 'Color-Coded Periodontal Probes' },
+          { name: 'Ultra-Thin Laptops & MacBooks', isHot: true },
+          { name: '5G Android & iOS Smartphones' },
+          { name: 'Tablets & Graphic Pads' },
+          { name: 'Mechanical Keyboards & Gaming Mice' },
         ],
       },
       {
-        groupTitle: 'Imaging & Illumination',
+        groupTitle: 'Audio & Smart Wearables',
         items: [
-          { name: 'Intraoral Digital Sensor Positioners' },
-          { name: 'LED Transillumination Lights', isHot: true },
-          { name: 'Diagnostic Headlamp Loupes' },
+          { name: 'Active Noise Cancelling Headphones', isHot: true },
+          { name: 'True Wireless Stereo Earbuds' },
+          { name: 'Fitness Smartwatches & AMOLED Bands' },
+          { name: 'Bluetooth Party Speakers' },
         ],
       },
     ],
     featuredProduct: {
-      name: 'Superendo HD Front Surface Mouth Mirror Kit (Pack of 12)',
-      price: '₹1,250',
-      oldPrice: '₹1,600',
-      image: '/images/cat_diagnostic_1787401889850.jpg',
+      name: 'Sony WH-1000XM5 Wireless Noise Canceling Headphones',
+      price: '₹26,990',
+      oldPrice: '₹34,990',
+      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80',
       tag: 'Bestseller',
     },
   },
   {
-    id: 'consum',
-    name: 'Dental Consumables',
-    slug: 'consumables',
-    icon: 'fa-solid fa-box-tissue',
-    itemCount: '450+ Products',
-    image: '/images/cat_consumables_1787401910059.jpg',
-    description: 'Essential daily disposables, medical nitrile gloves, impression silicones and PPE kits.',
+    id: 'fashion',
+    name: 'Fashion & Apparel',
+    slug: 'fashion',
+    icon: 'fa-solid fa-shirt',
+    itemCount: '3,400+ Products',
+    image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&auto=format&fit=crop&q=80',
+    description: 'Trending ethnic and western wear, sneakers, premium watches, sunglasses, and leather accessories.',
     subcategories: [
       {
-        groupTitle: 'Disposables & Infection Control',
+        groupTitle: "Men's & Women's Clothing",
         items: [
-          { name: 'Latex-Free Nitrile Examination Gloves', isHot: true },
-          { name: '3-Ply High Filtration Face Masks' },
-          { name: 'Absorbent Cotton Rolls & Gauze' },
-          { name: 'Autoclavable Saliva Ejector Tips' },
+          { name: 'Premium Cotton Casual Shirts', isHot: true },
+          { name: 'Designer Kurtis & Ethnic Sets' },
+          { name: 'Denim Jeans & Slim Trousers' },
+          { name: 'Athleisure Hoodies & Sweatshirts' },
         ],
       },
       {
-        groupTitle: 'Impression Materials',
+        groupTitle: 'Footwear & Accessories',
         items: [
-          { name: 'Chromatic Alginate Regular Set' },
-          { name: 'Addition Silicone Putty & Light Body', isHot: true },
-          { name: 'Bite Registration Paste' },
+          { name: 'Performance Running Sneakers', isHot: true },
+          { name: 'Luxury Chronograph Watches' },
+          { name: 'Polarized UV Sunglasses' },
+          { name: 'Genuine Leather Wallets & Belts' },
         ],
       },
     ],
     featuredProduct: {
-      name: 'Premium Medical Nitrile Exam Gloves Box of 100',
-      price: '₹420',
-      oldPrice: '₹550',
-      image: '/images/cat_consumables_1787401910059.jpg',
-      tag: 'Express Delivery',
+      name: 'Nike Air Max Men Lightweight Running Sneakers',
+      price: '₹7,495',
+      oldPrice: '₹9,995',
+      image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80',
+      tag: 'Trending Deal',
     },
   },
   {
-    id: 'endo',
-    name: 'Endodontic Products',
-    slug: 'endodontics',
-    icon: 'fa-solid fa-tooth',
-    itemCount: '280+ Products',
-    image: '/images/cat_endodontic_1787401934680.jpg',
-    description: 'Gold NiTi rotary files, wireless endo motors, apex locators, obturation systems and sealers.',
+    id: 'home-kitchen',
+    name: 'Home & Kitchen',
+    slug: 'home-kitchen',
+    icon: 'fa-solid fa-kitchen-set',
+    itemCount: '2,100+ Products',
+    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&auto=format&fit=crop&q=80',
+    description: 'Modern cookware, smart kitchen appliances, ergonomic home decor, organizers, and bed linen.',
     subcategories: [
       {
-        groupTitle: 'Rotary & Hand Files',
+        groupTitle: 'Kitchen Appliances',
         items: [
-          { name: 'Superendo Gold NiTi Rotary Files 25mm', isHot: true },
-          { name: 'Stainless Steel K-Files & Hedstrom Files' },
-          { name: 'Glide Path Rotary Starter Files' },
-          { name: 'Barbed Broaches & Gates Glidden Drills' },
+          { name: 'Digital Touch Air Fryer 5.5L', isHot: true },
+          { name: 'High-Torque Mixer Grinder 750W' },
+          { name: 'Automatic Espresso Coffee Maker' },
+          { name: 'Induction Cooktops & Non-Stick Sets' },
         ],
       },
       {
-        groupTitle: 'Obturation & Irrigation',
+        groupTitle: 'Home Decor & Furnishing',
         items: [
-          { name: 'Gutta Percha Points 4% & 6% Taper' },
-          { name: 'Absorbent Paper Points Sterilized', isHot: true },
-          { name: 'Bioceramic Root Canal Sealer' },
-          { name: 'Sodium Hypochlorite 3% & 5%' },
+          { name: 'Minimalist Ceramic Vase Collections', isHot: true },
+          { name: '100% Pure Egyptian Cotton Bed Sheets' },
+          { name: 'Warm LED Floor Lamps' },
+          { name: 'Aroma Diffusers & Scented Candles' },
         ],
       },
     ],
     featuredProduct: {
-      name: 'Superendo Gold Rotary NiTi Files 21mm/25mm (Pack of 6)',
-      price: '₹1,450',
-      oldPrice: '₹1,850',
-      image: '/images/cat_endodontic_1787401934680.jpg',
+      name: 'DeLonghi Dedica Deluxe Espresso Machine with Milk Frother',
+      price: '₹18,499',
+      oldPrice: '₹24,999',
+      image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=600&auto=format&fit=crop&q=80',
       tag: 'Top Rated',
     },
   },
   {
-    id: 'inst',
-    name: 'Dental Instruments',
-    slug: 'instruments',
-    icon: 'fa-solid fa-scissors',
-    itemCount: '320+ Products',
-    image: '/images/cat_instruments_1787401955005.jpg',
-    description: 'Surgical forceps, luxury titanium elevators, scalers, restorative carvers and cassette trays.',
+    id: 'beauty',
+    name: 'Beauty & Personal Care',
+    slug: 'beauty',
+    icon: 'fa-solid fa-wand-magic-sparkles',
+    itemCount: '1,580+ Products',
+    image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&auto=format&fit=crop&q=80',
+    description: 'Dermatologist-tested skincare serums, luxury perfumes, haircare routines, and grooming tools.',
     subcategories: [
       {
-        groupTitle: 'Surgical & Extraction',
+        groupTitle: 'Skincare & Haircare',
         items: [
-          { name: 'German Stainless Extraction Forceps Set', isHot: true },
-          { name: 'Coupland & Warwick James Elevators' },
-          { name: 'Castroviejo Needle Holders TC' },
-          { name: 'Surgical Bone Curettes & Rongeurs' },
+          { name: 'Vitamin C & Hyaluronic Acid Face Serum', isHot: true },
+          { name: 'Broad Spectrum SPF 50 Gel Sunscreen' },
+          { name: 'Argan Oil Repair Hair Mask' },
+          { name: 'Deep Cleansing Foaming Face Wash' },
         ],
       },
       {
-        groupTitle: 'Restorative & Periodontal',
+        groupTitle: 'Fragrances & Grooming',
         items: [
-          { name: 'Gracey Curettes Set 1-14 Autoclavable' },
-          { name: 'Non-Stick Titanium Composite Carvers', isHot: true },
-          { name: 'Complete Rubber Dam Clamps Kit' },
+          { name: 'Luxury Eau De Parfum French Fragrances', isHot: true },
+          { name: 'Cordless Beard Trimmer & Grooming Kit' },
+          { name: 'Sonic Facial Cleansing Brush' },
         ],
       },
     ],
     featuredProduct: {
-      name: 'German Stainless Steel Extraction ForcepsSet',
-      price: '₹3,890',
-      oldPrice: '₹4,900',
-      image: '/images/cat_instruments_1787401955005.jpg',
-      tag: 'Premium Quality',
+      name: 'Forest Essentials Soundarya Radiance Facial Serum with 24K Gold',
+      price: '₹4,250',
+      oldPrice: '₹5,100',
+      image: 'https://images.unsplash.com/photo-1608248597359-009139265f2a?w=600&auto=format&fit=crop&q=80',
+      tag: 'Luxury Pick',
     },
   },
   {
-    id: 'hand',
-    name: 'Handpiece & Burs',
-    slug: 'equipment',
-    icon: 'fa-solid fa-gears',
-    itemCount: '190+ Products',
-    image: '/images/cat_handpieces_1787401976899.jpg',
-    description: 'High-speed fiber-optic LED turbines, contra-angles, micro-motors and diamond carbide burs.',
+    id: 'sports',
+    name: 'Sports & Fitness',
+    slug: 'sports',
+    icon: 'fa-solid fa-dumbbell',
+    itemCount: '890+ Products',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80',
+    description: 'Gym equipment, adjustable dumbells, yoga mats, cycling gear, protein shakers, and outdoor wear.',
     subcategories: [
       {
-        groupTitle: 'Dental Handpieces',
+        groupTitle: 'Home Gym & Workouts',
         items: [
-          { name: 'SuperTorque LED Push Button Turbine', isHot: true },
-          { name: 'Internal Spray Low Speed 1:1 Contra Angle' },
-          { name: 'Straight Surgical Handpiece 40,000 RPM' },
-          { name: 'Portable Brushless Micro-Motor System' },
+          { name: 'Adjustable Rubber Hex Dumbbell Set', isHot: true },
+          { name: 'Extra Thick Eco Yoga Mat 8mm' },
+          { name: 'Heavy Duty Pull-Up Door Bar' },
+          { name: 'Resistance Exercise Bands Loop Kit' },
         ],
       },
       {
-        groupTitle: 'Diamond & Carbide Burs',
+        groupTitle: 'Sports & Outdoor Activities',
         items: [
-          { name: 'FG Round Diamond Burs (Box of 10)' },
-          { name: 'Inverted Cone & Flame Tapered FG Burs', isHot: true },
-          { name: 'Zekrya Surgical Bone Cutting Carbide Burs' },
+          { name: 'Pro Carbon Badminton Rackets', isHot: true },
+          { name: 'Insulated Stainless Steel Gym Flask 1L' },
+          { name: 'Trail Hiking Backpack 45L' },
         ],
       },
     ],
     featuredProduct: {
-      name: 'Superendo LED High Speed Push Button Turbine Handpiece',
-      price: '₹2,850',
-      oldPrice: '₹3,600',
-      image: '/images/cat_handpieces_1787401976899.jpg',
-      tag: 'Warranty Included',
+      name: 'Bowflex SelectTech 552 Adjustable Dumbbells Pair',
+      price: '₹14,990',
+      oldPrice: '₹19,990',
+      image: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80',
+      tag: 'Best for Gym',
     },
   },
   {
-    id: 'mat',
-    name: 'Dental Materials',
-    slug: 'materials',
-    icon: 'fa-solid fa-flask-vial',
-    itemCount: '260+ Products',
-    image: '/images/cat_materials_1787401998270.jpg',
-    description: 'Nano-hybrid light cure composites, glass ionomer cements, bonding agents and bleach kits.',
+    id: 'books',
+    name: 'Books & Stationery',
+    slug: 'books',
+    icon: 'fa-solid fa-book-open',
+    itemCount: '1,450+ Products',
+    image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&auto=format&fit=crop&q=80',
+    description: 'International bestsellers, software development & business books, fine fountain pens, and art supplies.',
     subcategories: [
       {
-        groupTitle: 'Restorative & Cements',
+        groupTitle: 'Books & Learning',
         items: [
-          { name: 'Nano-Hybrid Universal Composite Syringes', isHot: true },
-          { name: 'Type IX Glass Ionomer Restorative Cement' },
-          { name: 'Dual-Cure Resin Luting Cement' },
-          { name: '7th Gen Self-Etch Dental Adhesive 5ml' },
+          { name: 'Bestselling Fiction & Thriller Novels', isHot: true },
+          { name: 'System Design & Computer Science Textbooks' },
+          { name: 'Financial Freedom & Startup Guides' },
+          { name: 'UPSC & Competitive Exam Guides' },
         ],
       },
       {
-        groupTitle: 'Preventive & Whitening',
+        groupTitle: 'Premium Stationery',
         items: [
-          { name: 'In-Office 35% Teeth Whitening Kit', isHot: true },
-          { name: 'Fluoride Cavity Varnish 5% Single Dose' },
-          { name: 'Pit & Fissure Sealant Light Cure' },
+          { name: 'Hardbound Dotted Bullet Journal (160 GSM)', isHot: true },
+          { name: 'German Fine Nib Calligraphy Fountain Pen' },
+          { name: 'Artist Quality Watercolor Paint Tube Set' },
         ],
       },
     ],
     featuredProduct: {
-      name: 'Universal Nano-Hybrid Light Cure Composite Kit',
-      price: '₹2,190',
-      oldPrice: '₹2,750',
-      image: '/images/cat_materials_1787401998270.jpg',
-      tag: 'Dentist Favorite',
+      name: 'Atomic Habits by James Clear (Hardcover Collector Edition)',
+      price: '₹599',
+      oldPrice: '₹899',
+      image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80',
+      tag: 'All-Time Bestseller',
     },
   },
 ];
@@ -272,7 +274,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchSubmit }) => {
   const [isMobileCategoriesOpen, setIsMobileCategoriesOpen] = useState(false);
   const [isLocationModalOpen, setIsLocationModalOpen] = useState(false);
   const [deliveryLocation, setDeliveryLocation] = useState(() => {
-    return localStorage.getItem('prestodental_location') || 'Select Location';
+    return localStorage.getItem('buybright_location') || localStorage.getItem('prestodental_location') || 'Select Location';
   });
 
   const [platformSettings, setPlatformSettings] = useState<PlatformSettings>(() => getPlatformSettings());
@@ -281,8 +283,12 @@ export const Header: React.FC<HeaderProps> = ({ onSearchSubmit }) => {
     const handleSettingsUpdate = () => {
       setPlatformSettings(getPlatformSettings());
     };
+    window.addEventListener('buybright_settings_updated', handleSettingsUpdate);
     window.addEventListener('prestodental_settings_updated', handleSettingsUpdate);
-    return () => window.removeEventListener('prestodental_settings_updated', handleSettingsUpdate);
+    return () => {
+      window.removeEventListener('buybright_settings_updated', handleSettingsUpdate);
+      window.removeEventListener('prestodental_settings_updated', handleSettingsUpdate);
+    };
   }, []);
 
   const categoryDropdownRef = useRef<HTMLDivElement>(null);
@@ -480,7 +486,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchSubmit }) => {
           {/* Official Brand Logo */}
           <Link to="/" className="pd-brand-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img
-              src="/images/logo.webp"
+              src="/images/logo.svg"
               alt="BuyBright Logo"
               className="pd-header-brand-image"
             />
@@ -509,7 +515,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchSubmit }) => {
                     <i className="fa-solid fa-magnifying-glass search-icon" />
                     <input
                       type="text"
-                      placeholder="Filter categories, subcategories or dental supplies..."
+                      placeholder="Filter categories, products or brands..."
                       value={megaSearchQuery}
                       onChange={(e) => setMegaSearchQuery(e.target.value)}
                       autoFocus
@@ -689,10 +695,10 @@ export const Header: React.FC<HeaderProps> = ({ onSearchSubmit }) => {
           <form className="pd-search-form" onSubmit={handleSearchSubmit}>
             <input
               type="text"
-              placeholder="Search for dental products..."
+              placeholder="Search products, brands and deals..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              aria-label="Search for dental products"
+              aria-label="Search products"
             />
             <button type="submit" className="btn-search-submit" aria-label="Search">
               <i className="fa-solid fa-magnifying-glass" />
@@ -826,10 +832,10 @@ export const Header: React.FC<HeaderProps> = ({ onSearchSubmit }) => {
             <i className="fa-solid fa-magnifying-glass search-icon" />
             <input
               type="text"
-              placeholder="Search dental supplies, instruments, materials..."
+              placeholder="Search electronics, fashion, home, beauty, books..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              aria-label="Search dental catalog"
+              aria-label="Search marketplace catalog"
             />
             {searchQuery && (
               <button
@@ -961,7 +967,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchSubmit }) => {
         <div className="mobile-drawer-header">
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="mobile-drawer-logo">
             <img
-              src="/images/logo.webp"
+              src="/images/logo.svg"
               alt="BuyBright"
               className="pd-header-brand-image"
             />

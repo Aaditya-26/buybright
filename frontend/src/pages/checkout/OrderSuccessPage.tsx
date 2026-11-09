@@ -18,7 +18,7 @@ export const OrderSuccessPage: React.FC = () => {
 
   useEffect(() => {
     try {
-      const saved = sessionStorage.getItem('prestodental_last_order');
+      const saved = sessionStorage.getItem('buybright_last_order') || sessionStorage.getItem('prestodental_last_order');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (
@@ -27,17 +27,17 @@ export const OrderSuccessPage: React.FC = () => {
             parsed.sessionData.formData.doctorName.toLowerCase().includes('potghan') ||
             parsed.sessionData.formData.doctorName.toLowerCase().includes('rajesh'))
         ) {
-          parsed.sessionData.formData.doctorName = '  John Doe';
-          parsed.sessionData.formData.email = ' johndoe@buybright.com';
+          parsed.sessionData.formData.doctorName = 'John Doe';
+          parsed.sessionData.formData.email = 'johndoe@buybright.com';
         }
         setOrder(parsed);
       } else {
         // Mock fallback if navigated directly with query param
         setOrder({
-          orderId: orderIdParam || 'PD-782910-IN',
+          orderId: orderIdParam || 'BB-782910-IN',
           invoiceNo: 'INV-2026-7829',
           trackingNo: 'BLUEDART-88291029',
-          courier: 'BlueDart Express  ',
+          courier: 'BlueDart Express',
           date: new Date().toLocaleDateString('en-IN', {
             day: 'numeric',
             month: 'short',
@@ -46,15 +46,15 @@ export const OrderSuccessPage: React.FC = () => {
           paymentMethod: 'Instant UPI (BuyBright Online Verified)',
           sessionData: {
             formData: {
-              doctorName: '  John Doe',
-              clinicName: 'Apex Dental Care',
+              doctorName: 'John Doe',
+              clinicName: 'Prime Enterprise',
               mobile: '9820123456',
-              email: ' johndoe@buybright.com',
-              street: 'Shop 4 & 5, Presto Commercial Hub, Central Road',
+              email: 'johndoe@buybright.com',
+              street: 'Flat 402, Skyline Residency, Central Road',
               city: 'Mumbai',
               state: 'Maharashtra',
               pincode: '400069',
-              deliverySpeed: 'Express  ',
+              deliverySpeed: 'Express',
               needGstInvoice: true,
               gstin: '27AAACD9910Q1ZS',
             },
@@ -70,7 +70,7 @@ export const OrderSuccessPage: React.FC = () => {
               {
                 product: {
                   id: 'prod-1',
-                  name: 'Woodpecker LED Curing Light Dental Wireless Lamp',
+                  name: 'Wireless Noise-Canceling Earbuds Pro',
                   image: '/images/cat_instruments_1787401955005.jpg',
                   price: 4500,
                 },
@@ -79,7 +79,7 @@ export const OrderSuccessPage: React.FC = () => {
               {
                 product: {
                   id: 'prod-3',
-                  name: 'Mani Rotary Niti Dental Files (Pack of 6)',
+                  name: 'Stainless Steel Ergonomic Chef Knife Set',
                   image: '/images/cat_endodontic_1787401934680.jpg',
                   price: 1725,
                 },
@@ -117,7 +117,7 @@ export const OrderSuccessPage: React.FC = () => {
               <span className="step-num">
                 <i className="fa-solid fa-check" />
               </span>
-              <span>Clinic &amp; Shipping</span>
+              <span>Delivery &amp; Shipping</span>
             </div>
             <div className="checkout-step-divider active" />
             <div className="checkout-step-item completed">
@@ -144,7 +144,7 @@ export const OrderSuccessPage: React.FC = () => {
 
           <h1 className="success-title">Thank You! Your Order is Confirmed</h1>
           <p className="success-subtitle">
-            We have received your payment and our central warehouse has initiated cold-chain packaging.
+            We have received your payment and our central fulfillment center has initiated packaging and dispatch.
           </p>
 
           <div className="success-meta-chips">
@@ -200,13 +200,15 @@ export const OrderSuccessPage: React.FC = () => {
 
               <div className="checkout-form-grid">
                 <div>
-                  <span style={{ fontSize: '0.78rem', color: '#64748b', fontWeight: 600 }}>Doctor / Attention:</span>
+                  <span style={{ fontSize: '0.78rem', color: '#64748b', fontWeight: 600 }}>Customer / Recipient:</span>
                   <strong style={{ display: 'block', fontSize: '1rem', color: '#1e293b', marginTop: '2px' }}>
                     {order.sessionData?.formData?.doctorName}
                   </strong>
-                  <span style={{ display: 'block', color: '#334155', fontSize: '0.88rem', marginTop: '4px' }}>
-                    {order.sessionData?.formData?.clinicName}
-                  </span>
+                  {order.sessionData?.formData?.clinicName && (
+                    <span style={{ display: 'block', color: '#334155', fontSize: '0.88rem', marginTop: '4px' }}>
+                      {order.sessionData?.formData?.clinicName}
+                    </span>
+                  )}
                   <span style={{ display: 'block', color: '#64748b', fontSize: '0.82rem', marginTop: '4px' }}>
                     <i className="fa-solid fa-phone" style={{ marginRight: '6px' }} />
                     +91 {order.sessionData?.formData?.mobile}
@@ -233,7 +235,7 @@ export const OrderSuccessPage: React.FC = () => {
             <div className="checkout-main-card">
               <div className="checkout-card-header">
                 <h2>
-                  <i className="fa-solid fa-box-open" /> Ordered Dental Products
+                  <i className="fa-solid fa-box-open" /> Ordered Products
                 </h2>
                 <span className="header-badge">Quality Inspected</span>
               </div>
@@ -252,7 +254,7 @@ export const OrderSuccessPage: React.FC = () => {
                     {(order.sessionData?.items?.length ? order.sessionData.items : [
                       {
                         product: {
-                          name: 'Dental Consumables Bundle',
+                          name: 'Marketplace Essentials Bundle',
                           price: order.sessionData?.pricing?.cartTotal || 12450,
                           image: '/images/cat_consumables_1787401910059.jpg',
                         },

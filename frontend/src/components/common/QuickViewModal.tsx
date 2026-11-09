@@ -86,8 +86,8 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, isOpen,
             </div>
 
             <p className="quickview-desc">
-              Authentic, CE/ISO certified dental supply delivered with standard temperature-controlled
-              cold-chain compliance and manufacturer warranty.
+              Authentic, verified marketplace product delivered in tamper-evident packaging with direct
+              manufacturer warranty and official GST tax invoice.
             </p>
 
             <div className="quickview-specs">

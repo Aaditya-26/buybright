@@ -24,12 +24,12 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-const CART_STORAGE_KEY = 'prestodental_cart_v1';
+const CART_STORAGE_KEY = 'buybright_cart_v2';
 
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>(() => {
     try {
-      const saved = localStorage.getItem(CART_STORAGE_KEY);
+      const saved = localStorage.getItem(CART_STORAGE_KEY) || localStorage.getItem('prestodental_cart_v1');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];

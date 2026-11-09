@@ -96,7 +96,7 @@ export const HomePage: React.FC<HomePageProps> = ({ searchQuery }) => {
   const ad1Banners = adSection1?.items?.map((it) => ({
     image: it.image,
     alt: it.altText || it.title || 'BuyBright Promotion',
-    title: it.title || 'Shop Clinical Supplies',
+    title: it.title || 'Shop Marketplace Deals',
     link: it.link || '/shop',
     order: it.order,
   })) || (adSection1?.images.map((img, i) => ({
@@ -110,7 +110,7 @@ export const HomePage: React.FC<HomePageProps> = ({ searchQuery }) => {
   const ad2Banners = adSection2?.items?.map((it) => ({
     image: it.image,
     alt: it.altText || it.title || 'BuyBright Equipment Promo',
-    title: it.title || 'Shop Dental Handpieces & Equipment',
+    title: it.title || 'Shop Verified Electronics & Gadgets',
     link: it.link || '/shop',
     order: it.order,
   })) || (adSection2?.images.map((img, i) => ({
@@ -124,18 +124,18 @@ export const HomePage: React.FC<HomePageProps> = ({ searchQuery }) => {
   return (
     <div className="homepage-wrapper">
       <SEO
-        title="India's Trusted Dental Supply Platform"
-        description="BuyBright provides authentic dental supplies, rotary endodontic files, composite materials, dental equipment, and consumables direct from authorized brand distributors across India."
+        title="BuyBright — Smart Shopping, Brilliant Savings | Multi-Seller Marketplace"
+        description="Shop authentic electronics, fashion, home essentials, and lifestyle products from verified marketplace sellers across India with fast doorstep delivery."
         canonicalUrl="https://buybright.com/"
-        ogImage="/images/logo.webp"
+        ogImage="/images/logo.svg"
         jsonLd={{
           "@context": "https://schema.org",
-          "@type": "MedicalBusiness",
+          "@type": "OnlineStore",
           "name": "BuyBright",
           "url": "https://buybright.com",
-          "logo": "https://buybright.com/images/logo.webp",
+          "logo": "https://buybright.com/images/logo.svg",
           "image": "https://buybright.com/images/f1.png",
-          "description": "BuyBright provides authentic dental supplies, endodontic files, dental equipment, and dental materials direct to clinics across India.",
+          "description": "India's modern multi-seller marketplace for electronics, fashion, home & kitchen, beauty, sports, and books.",
           "telephone": "+91-98765-43210",
           "priceRange": "₹₹",
           "address": {
@@ -163,7 +163,7 @@ export const HomePage: React.FC<HomePageProps> = ({ searchQuery }) => {
       <ProductCatalog
         id="products-set-1"
         eyebrow="FEATURED PRODUCTS"
-        title="Top Selling Dental Supplies"
+        title="Top Selling Marketplace Deals"
         viewAllLink="/shop?sortBy=featured"
         products={set1Products}
         activeCategory={selectedCategory}
@@ -177,7 +177,7 @@ export const HomePage: React.FC<HomePageProps> = ({ searchQuery }) => {
       />
 
       {/* =========================================================================
-          SET 2: Brand Spotlight Superendo (6 Cards) -> Second Advertisement (3 Banners)
+          SET 2: Brand Spotlight (6 Cards) -> Second Advertisement (3 Banners)
           ========================================================================= */}
       <SuperendoBrand products={set2Superendo} />
 
@@ -187,13 +187,13 @@ export const HomePage: React.FC<HomePageProps> = ({ searchQuery }) => {
       />
 
       {/* =========================================================================
-          SET 3: Doctor's Choice Dental Essentials (6 Cards) -> 3-Banner Showcase 2
+          SET 3: Consumer Electronics & Smart Devices (6 Cards) -> 3-Banner Showcase 2
           ========================================================================= */}
       <ProductCatalog
         id="products-set-3"
-        eyebrow="DOCTOR'S CHOICE & DENTAL ESSENTIALS"
-        title="High Demand Restorative & Impression Supplies"
-        viewAllLink="/shop?category=materials"
+        eyebrow="CONSUMER ELECTRONICS &amp; GADGETS"
+        title="Smartphones, Wireless Audio &amp; Wearables"
+        viewAllLink="/shop?category=electronics"
         products={set3Products}
         activeCategory={selectedCategory}
         onCategoryChange={(cat) => setSelectedCategory(cat)}
@@ -203,31 +203,31 @@ export const HomePage: React.FC<HomePageProps> = ({ searchQuery }) => {
         id="showcase-set-3"
         banners={[
           {
-            image: '/images/show.webp',
-            alt: 'Precision Dental Equipment & Diagnostic Tools',
-            title: 'Shop Precision Dental Handpieces & Motors',
+            image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80',
+            alt: 'Premium Noise-Cancelling Audio Gear',
+            title: 'Shop Premium Wireless Headphones & Audio',
           },
           {
-            image: '/images/Dental_supplies_e-commerce_banner_202608211734.jpeg',
-            alt: 'Dental Impression & Consumables Super Deals',
-            title: 'Shop Dental Impression & Consumables',
+            image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
+            alt: 'Smart Wearables & Health Trackers',
+            title: 'Explore Smartwatches & Fitness Bands',
           },
           {
-            image: '/images/banner1.webp',
-            alt: 'Institutional Bulk Volume Pricing & 100% GST Invoicing',
-            title: 'Explore Institutional Wholesale Pricing',
+            image: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800&q=80',
+            alt: 'Verified Authorized Sellers & Official Invoicing',
+            title: 'Shop Direct Brand Warranty Products',
           },
         ]}
       />
 
       {/* =========================================================================
-          SET 4: Precision Endodontics & Rotary Range (6 Cards) -> 2-Banner Promo 2
+          SET 4: Fashion & Apparel Trends (6 Cards) -> 2-Banner Promo 2
           ========================================================================= */}
       <ProductCatalog
         id="products-set-4"
-        eyebrow="ADVANCED ENDODONTICS & SURGICAL"
-        title="Rotary NiTi Files, Apex Locators & Surgical Kits"
-        viewAllLink="/shop?category=endodontics"
+        eyebrow="FASHION &amp; LIFESTYLE APPAREL"
+        title="Trending Activewear, Footwear &amp; Daily Wardrobe"
+        viewAllLink="/shop?category=fashion"
         products={set4Superendo}
         activeCategory={selectedCategory}
         onCategoryChange={(cat) => setSelectedCategory(cat)}
@@ -237,26 +237,26 @@ export const HomePage: React.FC<HomePageProps> = ({ searchQuery }) => {
         id="promo-set-4"
         banners={[
           {
-            image: '/images/f2.png',
-            alt: 'Pan-India Express Safe Dispatch within 24-48 Hours',
-            title: 'Check Temperature-Safe Express Delivery Speeds',
+            image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
+            alt: 'Pan-India Express Delivery within 24-48 Hours',
+            title: 'Enjoy Fast & Reliable Doorstep Delivery',
           },
           {
-            image: '/images/Dental_healthcare_website_banner…_202608211731.webp',
-            alt: 'Direct 40+ Manufacturer Verified Genuine Warranty',
-            title: 'Browse 100% Certified Authentic Dental Brands',
+            image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80',
+            alt: 'Direct Brand Authentic Warranty',
+            title: 'Browse 100% Certified Authentic Brand Partners',
           },
         ]}
       />
 
       {/* =========================================================================
-          SET 5: Diagnostic & Sterilization Care (6 Cards) -> 3-Banner Showcase 3
+          SET 5: Home & Kitchen Appliances (6 Cards) -> 3-Banner Showcase 3
           ========================================================================= */}
       <ProductCatalog
         id="products-set-5"
-        eyebrow="DIAGNOSTICS & STERILIZATION"
-        title="Hospital Grade Diagnostics & Infection Control"
-        viewAllLink="/shop?category=equipment"
+        eyebrow="HOME &amp; KITCHEN APPLIANCES"
+        title="Smart Cooking, Air Purifiers &amp; Home Essentials"
+        viewAllLink="/shop?category=home-kitchen"
         products={set5Products}
         activeCategory={selectedCategory}
         onCategoryChange={(cat) => setSelectedCategory(cat)}
@@ -266,31 +266,31 @@ export const HomePage: React.FC<HomePageProps> = ({ searchQuery }) => {
         id="showcase-set-5"
         banners={[
           {
-            image: '/images/showcase_medicept.png',
-            alt: 'Medicept Extreme Lite High-Accuracy Impression VPS',
-            title: 'Shop Medicept Extreme Lite VPS - ₹1,761/-',
+            image: 'https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=800&q=80',
+            alt: 'Smart Multi-Cookers & Air Fryers',
+            title: 'Explore Smart Instant Pots & Air Fryers',
           },
           {
-            image: '/images/showcase_flufic.png',
-            alt: 'Gufic Pure Flufic-150 Fast Relief Tablets',
-            title: 'Shop Gufic Pure Flufic-150 - ₹255/-',
+            image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800&q=80',
+            alt: 'Modern Kitchen Essentials',
+            title: 'Upgrade Your Home Cookware & Cutlery',
           },
           {
-            image: '/images/showcase_3mespe.png',
-            alt: '3M ESPE Express XT Light Body Precision Margins',
-            title: 'Shop 3M ESPE Express XT Light Body - ₹2,943/-',
+            image: 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=800&q=80',
+            alt: 'Cordless Vacuums & Air Purifiers',
+            title: 'Shop Dyson & Philips Home Tech',
           },
         ]}
       />
 
       {/* =========================================================================
-          SET 6: Bioceramic Sealers & Obturation (6 Cards) -> 2-Banner Promo 3
+          SET 6: Sports, Fitness & Bestselling Books (6 Cards) -> 2-Banner Promo 3
           ========================================================================= */}
       <ProductCatalog
         id="products-set-6"
-        eyebrow="BIOCERAMIC & OBTURATION SYSTEMS"
-        title="Biocompatible Root Repair, Cements & Heated Obturation"
-        viewAllLink="/shop?category=endodontics"
+        eyebrow="SPORTS, FITNESS &amp; BOOKS"
+        title="Gym Equipment, Active Gear &amp; Bestseller Paperbacks"
+        viewAllLink="/shop?category=sports"
         products={set6Superendo}
         activeCategory={selectedCategory}
         onCategoryChange={(cat) => setSelectedCategory(cat)}
@@ -300,14 +300,14 @@ export const HomePage: React.FC<HomePageProps> = ({ searchQuery }) => {
         id="promo-set-6"
         banners={[
           {
-            image: 'https://r2dkmedia.dentalkart.com/backend-media-uploads/HomepageImages/crown%20dt%20(1).jpg',
-            alt: 'Crown & Bridge Restorative Materials',
-            title: 'Shop Restorative & Crown Preparations',
+            image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80',
+            alt: 'Workout Gear & Yoga Essentials',
+            title: 'Decathlon Gym Weights & Yoga Mats',
           },
           {
-            image: '/images/show.webp',
-            alt: 'BuyBright Dental Equipment Showcase',
-            title: 'Shop Dental Equipment & Diagnostic Tools',
+            image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80',
+            alt: 'Bestseller Fiction & Literature',
+            title: 'Penguin & HarperCollins Top Paperbacks',
           },
         ]}
       />

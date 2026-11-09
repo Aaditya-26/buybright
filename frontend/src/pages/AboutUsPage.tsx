@@ -24,33 +24,33 @@ export const AboutUsPage: React.FC = () => {
   // Scroll to top on page mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.title = "About Us | BuyBright - India's Trusted Dental Supply Network";
+    document.title = "About Us | BuyBright - India's Smart Multi-Seller Marketplace";
   }, []);
 
   return (
     <div className="about-us-page-wrapper">
       <SEO
-        title="About Us — India's Premier Dental Supply Network"
-        description="Learn about BuyBright, India's dedicated e-commerce platform for dental surgeons and clinics with 40+ authorized manufacturer tie-ups and cold-chain fulfillment."
+        title="About Us — India's Smart Multi-Seller Marketplace"
+        description="Learn about BuyBright, India's premier multi-seller marketplace empowering independent merchants and modern shoppers with fast fulfillment and genuine products."
         canonicalUrl="https://buybright.com/about"
-        keywords="about prestodental, dental supply company india, authorized dental distributor, dental procurement network"
+        keywords="about buybright, multi seller marketplace india, authorized distributor, ecommerce platform"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
           "name": "About BuyBright",
           "url": "https://buybright.com/about",
           "description":
-            "BuyBright was founded to provide verified, genuine dental supplies and materials to dental clinics across India.",
+            "BuyBright is India's leading multi-seller marketplace providing genuine products and seamless shopping experiences.",
         }}
       />
 
       {/* =========================================================================
-          STEP 1: ABOUT PRESTODENTAL (HERO OVERVIEW & LIVE METRICS)
+          STEP 1: ABOUT BUYBRIGHT (HERO OVERVIEW & LIVE METRICS)
           ========================================================================= */}
       <section className="about-hero-section" id="about-overview">
         <div className="about-hero-container">
           <div className="about-hero-badge">
-            <i className="fa-solid fa-tooth" />
+            <i className="fa-solid fa-store" />
             <span>{hero.badgeText}</span>
           </div>
 
@@ -137,11 +137,11 @@ export const AboutUsPage: React.FC = () => {
             <div className="who-secondary-image-wrap">
               <img
                 src={whoWeAre.secondaryImage}
-                alt="Dental Operatory Precision Supplies"
+                alt="BuyBright Marketplace Products"
                 loading="lazy"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src =
-                    'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=900&auto=format&fit=crop';
+                    'https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=900&auto=format&fit=crop';
                 }}
               />
             </div>
@@ -150,11 +150,11 @@ export const AboutUsPage: React.FC = () => {
           <div className="who-content-col">
             <div className="section-eyebrow">{whoWeAre.eyebrow}</div>
             <h2 className="who-title">
-              {whoWeAre.title.includes('Dental Procurement') ? (
+              {whoWeAre.title.includes('Marketplace') ? (
                 <>
-                  {whoWeAre.title.split('Dental Procurement')[0]}
-                  <span className="highlight">Dental Procurement</span>
-                  {whoWeAre.title.split('Dental Procurement')[1]}
+                  {whoWeAre.title.split('Marketplace')[0]}
+                  <span className="highlight">Marketplace</span>
+                  {whoWeAre.title.split('Marketplace')[1]}
                 </>
               ) : (
                 whoWeAre.title
@@ -318,7 +318,7 @@ export const AboutUsPage: React.FC = () => {
           <div className="about-cta-content">
             <div className="cta-icon-pill">
               <i className="fa-solid fa-sparkles" />
-              <span>{pillars.ctaTag || 'EXPERIENCE THE PRESTODENTAL ADVANTAGE'}</span>
+              <span>{pillars.ctaTag || 'EXPERIENCE THE BUYBRIGHT ADVANTAGE'}</span>
             </div>
             <h2 className="about-cta-title">{pillars.ctaTitle}</h2>
             <p className="about-cta-sub">{pillars.ctaSubtitle}</p>

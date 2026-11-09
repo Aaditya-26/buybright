@@ -25,9 +25,9 @@ export const AdminFooter: React.FC = () => {
         <span>&copy; {new Date().getFullYear()} BuyBright . All rights reserved.</span>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-        <span> Design & Developed BY</span>
+        <span>Designed &amp; Developed by</span>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#16a34a', fontWeight: 600 }}>
-             <a href="https://www.micrrolan.in">Microlan.in</a>
+             <a href="https://buybright.com">BuyBright Team</a>
         </span>
       </div>
     </footer>

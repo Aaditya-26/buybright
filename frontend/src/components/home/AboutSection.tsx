@@ -1,7 +1,7 @@
 /**
- * BuyBright About Us & Dental Offers Component.
+ * BuyBright About Us & Marketplace Value Propositions Component.
  * Left Side: 3-Image Automatic Slider with Dots
- * Right Side: Special Dental Offer Highlights & VerifiedDeals
+ * Right Side: Marketplace Highlights & Verified Deals
  */
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -10,18 +10,18 @@ import { DiwaliDiyaIcon } from './HeroSlider';
 const ABOUT_SLIDES = [
   {
     id: 0,
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=900&auto=format&fit=crop',
-    title: 'Pharmaceutical & Quality Standards',
+    image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=900&auto=format&fit=crop',
+    title: 'Top Consumer Electronics & Tech',
   },
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=900&auto=format&fit=crop',
-    title: 'Precision Dental Instruments',
+    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=900&auto=format&fit=crop',
+    title: 'Trending Fashion & Lifestyle',
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=900&auto=format&fit=crop',
-    title: 'Modern Dental Equipment',
+    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=900&auto=format&fit=crop',
+    title: 'Modern Home & Kitchen Essentials',
   },
 ];
 
@@ -132,7 +132,7 @@ export const AboutSection: React.FC = () => {
                   <i className="fa-solid fa-truck-fast" />
                 </div>
                 <div className="offer-card-info">
-                  <strong className="offer-card-title">Priority Cold-Chain &amp; Express Delivery</strong>
+                  <strong className="offer-card-title">Pan-India Fast Express Delivery</strong>
                   <span className="offer-card-sub">Reliable delivery across 500+ cities with free shipping over ₹499</span>
                 </div>
               </div>
