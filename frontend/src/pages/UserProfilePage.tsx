@@ -3247,7 +3247,7 @@ export const UserProfilePage: React.FC = () => {
             <div className="modal-head">
               <div>
                 <span className="modal-tag">
-                  <i className="fa-solid fa-shield-halved text-teal" /> PRESTODENTAL RETURN POLICY
+                  <i className="fa-solid fa-shield-halved text-teal" /> BUYBRIGHT RETURN POLICY
                 </span>
                 <h3 className="modal-title">Return &amp; Refund Policy</h3>
               </div>

@@ -81,7 +81,7 @@ export const TrackOrderPage: React.FC = () => {
   useEffect(() => {
     // Check if session has a custom order
     try {
-      const last = sessionStorage.getItem('prestodental_last_order');
+      const last = sessionStorage.getItem('buybright_last_order') || sessionStorage.getItem('prestodental_last_order');
       if (last) {
         const parsed = JSON.parse(last);
         if (

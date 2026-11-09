@@ -274,7 +274,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchSubmit }) => {
   const [isMobileCategoriesOpen, setIsMobileCategoriesOpen] = useState(false);
   const [isLocationModalOpen, setIsLocationModalOpen] = useState(false);
   const [deliveryLocation, setDeliveryLocation] = useState(() => {
-    return localStorage.getItem('buybright_location') || localStorage.getItem('prestodental_location') || 'Select Location';
+    return localStorage.getItem('buybright_location') || 'Select Location';
   });
 
   const [platformSettings, setPlatformSettings] = useState<PlatformSettings>(() => getPlatformSettings());
@@ -284,10 +284,9 @@ export const Header: React.FC<HeaderProps> = ({ onSearchSubmit }) => {
       setPlatformSettings(getPlatformSettings());
     };
     window.addEventListener('buybright_settings_updated', handleSettingsUpdate);
-    window.addEventListener('prestodental_settings_updated', handleSettingsUpdate);
+    window.addEventListener('buybright_settings_updated', handleSettingsUpdate);
     return () => {
       window.removeEventListener('buybright_settings_updated', handleSettingsUpdate);
-      window.removeEventListener('prestodental_settings_updated', handleSettingsUpdate);
     };
   }, []);
 

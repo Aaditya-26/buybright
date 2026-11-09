@@ -466,7 +466,7 @@ export const CustomerProfilePage: React.FC = () => {
     const msg = encodeURIComponent(
       `Hello ${customer.name}! We noticed you left ₹${totalAbandonedValue.toLocaleString(
         'en-IN'
-      )} worth of dental equipment in your BuyBright cart. Enjoy an extra 5% instant festive discount with code DOCVIP5! Shop now: https://prestodental.in/cart`
+      )} worth of products in your BuyBright cart. Enjoy an extra 5% instant festive discount with code BBVIP5! Shop now: https://buybright.com/cart`
     );
     window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
     showToast('WhatsApp recovery message link opened.', 'info');

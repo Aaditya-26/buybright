@@ -34,10 +34,8 @@ export const FlashDealsSection: React.FC = () => {
       }
     };
     window.addEventListener('buybright_flash_sales_updated', handleUpdate);
-    window.addEventListener('prestodental_flash_sales_updated', handleUpdate);
     return () => {
       window.removeEventListener('buybright_flash_sales_updated', handleUpdate);
-      window.removeEventListener('prestodental_flash_sales_updated', handleUpdate);
     };
   }, []);
 

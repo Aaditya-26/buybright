@@ -284,7 +284,7 @@ export const AboutUsPage: React.FC = () => {
       </section>
 
       {/* =========================================================================
-          STEP 5: WHY DENTISTS CHOOSE PRESTODENTAL (ADVANTAGES & PILLARS)
+          STEP 5: WHY SELLERS & BUYERS CHOOSE BUYBRIGHT (ADVANTAGES & PILLARS)
           ========================================================================= */}
       <section className="about-pillars-section">
         <div className="pillars-header">
