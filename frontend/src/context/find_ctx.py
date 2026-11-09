@@ -9,3 +9,4 @@ for f in os.listdir(ctx_dir):
             for kw in ['prestodental', 'presto', 'dental']:
                 if kw in c.lower():
                     print(f"{f} -> {kw}")
+

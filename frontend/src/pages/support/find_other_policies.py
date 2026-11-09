@@ -9,3 +9,4 @@ with open(r'C:\dev\buybright\frontend\src\pages\support\PrivacyPolicyPage.tsx', 
 for i, l in enumerate(lines):
     if any(k in l.lower() for k in ['presto', 'dental']):
         print(f"Privacy Line {i+1}: {l.strip()[:100]}")
+

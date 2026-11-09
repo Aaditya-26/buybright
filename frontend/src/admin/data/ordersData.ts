@@ -420,7 +420,7 @@ export const initialOrdersData: AdminOrder[] = [
   },
 ];
 
-const ORDERS_STORAGE_KEY = 'prestodental_admin_orders_v2';
+const ORDERS_STORAGE_KEY = 'buybright_admin_orders_v3';
 
 export function getOrders(): AdminOrder[] {
   try {

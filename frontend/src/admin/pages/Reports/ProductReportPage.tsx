@@ -530,7 +530,7 @@ export const ProductReportPage: React.FC = () => {
   // ── CSV Export ──
   const handleExportCSV = () => {
     exportTableToCSV({
-      filename: `presto_product_report_${Date.now()}`,
+      filename: `buybright_product_report_${Date.now()}`,
       headers: [
         'Product Name',
         'SKU',

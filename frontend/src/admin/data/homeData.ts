@@ -178,7 +178,7 @@ const AD_SECTIONS_STORAGE_KEY = 'buybright_admin_ad_sections_tabs_v1';
 
 export function getHomeBanners(): HomeBanner[] {
   try {
-    const raw = localStorage.getItem(BANNERS_STORAGE_KEY) || localStorage.getItem('prestodental_admin_home_banners');
+    const raw = localStorage.getItem(BANNERS_STORAGE_KEY) || localStorage.getItem('buybright_admin_home_banners');
     if (raw) return JSON.parse(raw);
   } catch {
     // fallback
@@ -196,7 +196,7 @@ export function saveHomeBanners(banners: HomeBanner[]): void {
 
 export function getAdSections(): AdSectionItem[] {
   try {
-    const raw = localStorage.getItem(AD_SECTIONS_STORAGE_KEY) || localStorage.getItem('prestodental_admin_ad_sections_tabs_v1');
+    const raw = localStorage.getItem(AD_SECTIONS_STORAGE_KEY) || localStorage.getItem('buybright_admin_ad_sections_tabs_v1');
     if (raw) {
       const parsed = JSON.parse(raw);
       if (Array.isArray(parsed) && parsed.length > 0) return parsed;
@@ -217,7 +217,7 @@ export function saveAdSections(sections: AdSectionItem[]): void {
 
 export function getHomeAds(): HomeAdvertisement[] {
   try {
-    const raw = localStorage.getItem(ADS_STORAGE_KEY) || localStorage.getItem('prestodental_admin_home_advertisements');
+    const raw = localStorage.getItem(ADS_STORAGE_KEY) || localStorage.getItem('buybright_admin_home_advertisements');
     if (raw) return JSON.parse(raw);
   } catch {
     // fallback

@@ -92,7 +92,7 @@ export const FlashSaleList: React.FC = () => {
   // Export CSV
   const handleExportCSV = () => {
     exportTableToCSV({
-      filename: `presto_flash_sales_${Date.now()}`,
+      filename: `buybright_flash_sales_${Date.now()}`,
       headers: [
         'Product Name',
         'Brand',

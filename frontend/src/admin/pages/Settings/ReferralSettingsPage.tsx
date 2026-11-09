@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import { AdminLayout } from '../../layouts/AdminLayout';
 import { useToast } from '../../../context/ToastContext';
 
-const STORAGE_KEY = 'presto_referral_settings';
+const STORAGE_KEY = 'buybright_referral_settings_v2';
 
 interface ReferralSettings {
   referralPoints: number | '';

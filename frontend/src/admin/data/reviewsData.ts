@@ -4,7 +4,7 @@
 
 import { AdminReview, ReviewStats, ReviewStatus } from '../../types/review';
 
-const STORAGE_KEY = 'prestodental_admin_reviews_v1';
+const STORAGE_KEY = 'buybright_admin_reviews_v2';
 
 export const INITIAL_REVIEWS: AdminReview[] = [
   {

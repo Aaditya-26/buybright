@@ -3,3 +3,4 @@ with open(r'C:\dev\buybright\frontend\src\pages\HomePage.tsx', 'r', encoding='ut
 for i, l in enumerate(lines):
     if 'dental' in l.lower():
         print(f"Line {i+1}: {l.strip()[:120]}")
+

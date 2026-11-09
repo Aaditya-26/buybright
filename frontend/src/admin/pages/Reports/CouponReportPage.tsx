@@ -466,7 +466,7 @@ export const CouponReportPage: React.FC = () => {
   // ── CSV Export ──
   const handleExportCSV = () => {
     exportTableToCSV({
-      filename: `presto_coupon_report_${Date.now()}`,
+      filename: `buybright_coupon_report_${Date.now()}`,
       headers: [
         'Coupon Code',
         'Coupon Type',

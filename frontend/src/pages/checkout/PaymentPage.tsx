@@ -178,10 +178,9 @@ export const PaymentPage: React.FC = () => {
 
       // Save order to session for success page & local history
       sessionStorage.setItem('buybright_last_order', JSON.stringify(completedOrder));
-      sessionStorage.setItem('prestodental_last_order', JSON.stringify(completedOrder));
 
       try {
-        const existingOrders = JSON.parse(localStorage.getItem('buybright_all_orders') || localStorage.getItem('prestodental_all_orders') || '[]');
+        const existingOrders = JSON.parse(localStorage.getItem('buybright_all_orders') || '[]');
         localStorage.setItem(
           'buybright_all_orders',
           JSON.stringify([completedOrder, ...existingOrders])

@@ -58,7 +58,7 @@ export const AdminProfilePage: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const stored = localStorage.getItem('prestodental_admin_user');
+      const stored = localStorage.getItem('buybright_admin_user');
       const currentUser = stored ? JSON.parse(stored) : {};
       const updatedUser = {
         ...currentUser,
@@ -66,7 +66,7 @@ export const AdminProfilePage: React.FC = () => {
         email: email.trim(),
       };
 
-      localStorage.setItem('prestodental_admin_user', JSON.stringify(updatedUser));
+      localStorage.setItem('buybright_admin_user', JSON.stringify(updatedUser));
       setPassword('');
       setConfirmedPassword('');
       showToast('Admin profile updated successfully!', 'success');

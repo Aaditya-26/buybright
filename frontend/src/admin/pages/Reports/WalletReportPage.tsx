@@ -490,7 +490,7 @@ export const WalletReportPage: React.FC = () => {
   // ── CSV Export ──
   const handleExportCSV = () => {
     exportTableToCSV({
-      filename: `presto_wallet_report_${Date.now()}`,
+      filename: `buybright_wallet_report_${Date.now()}`,
       headers: [
         'Transaction ID',
         'Date & Time',

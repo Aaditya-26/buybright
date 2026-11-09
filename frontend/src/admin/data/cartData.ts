@@ -11,7 +11,7 @@ import {
   CartStatus,
 } from '../types/cart';
 
-const STORAGE_KEY = 'prestodental_admin_cart_records_v1';
+const STORAGE_KEY = 'buybright_admin_cart_records_v2';
 
 export const INITIAL_CARTS_DATA: AdminCart[] = [
   {

@@ -100,7 +100,7 @@ export const INITIAL_FLASH_SALE_ITEMS: FlashSaleItem[] = [
 
 export function getFlashSales(): FlashSaleItem[] {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('prestodental_flash_sales_items_v2');
+    const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('buybright_flash_sales_items_v2');
     if (raw) return JSON.parse(raw);
   } catch {
     // fallback
@@ -112,7 +112,6 @@ export function saveFlashSales(items: FlashSaleItem[]): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     window.dispatchEvent(new Event('buybright_flash_sales_updated'));
-    window.dispatchEvent(new Event('prestodental_flash_sales_updated'));
   } catch {
     // fallback
   }

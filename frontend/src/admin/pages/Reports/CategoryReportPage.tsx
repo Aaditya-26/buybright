@@ -506,7 +506,7 @@ export const CategoryReportPage: React.FC = () => {
   // ── CSV Export ──
   const handleExportCSV = () => {
     exportTableToCSV({
-      filename: `presto_category_report_${Date.now()}`,
+      filename: `buybright_category_report_${Date.now()}`,
       headers: [
         'Category Name',
         'Products Count',

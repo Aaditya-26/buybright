@@ -6,7 +6,7 @@
 
 import { FestivalTheme, FESTIVAL_PRESETS } from '../../types/festival';
 
-const STORAGE_KEY = 'prestodental_festival_themes_v1';
+const STORAGE_KEY = 'buybright_festival_themes_v2';
 
 export const INITIAL_FESTIVALS: FestivalTheme[] = [
   {
@@ -221,7 +221,7 @@ export const getStoredFestivalThemes = (): FestivalTheme[] => {
 export const saveStoredFestivalThemes = (themes: FestivalTheme[]): void => {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(themes));
-    window.dispatchEvent(new Event('prestodental_festival_update'));
+    window.dispatchEvent(new Event('buybright_festival_update'));
   } catch (err) {
     console.error('Error saving festival themes to storage:', err);
   }

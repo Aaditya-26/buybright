@@ -90,7 +90,7 @@ export const initialProductBannersData: AdminProductBanner[] = [
   },
 ];
 
-const PRODUCT_BANNERS_STORAGE_KEY = 'prestodental_admin_product_banners_v2';
+const PRODUCT_BANNERS_STORAGE_KEY = 'buybright_admin_product_banners_v3';
 
 export function getProductBanners(): AdminProductBanner[] {
   try {

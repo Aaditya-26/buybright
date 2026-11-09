@@ -19,7 +19,7 @@ export interface ShippingChargeRule {
   updatedAt: string;
 }
 
-const STORAGE_KEY = 'prestodental_shipping_charges';
+const STORAGE_KEY = 'buybright_shipping_charges_v2';
 
 export const defaultShippingRules: ShippingChargeRule[] = [
   {
@@ -95,7 +95,7 @@ export const getShippingCharges = (): ShippingChargeRule[] => {
 export const saveShippingChargesList = (list: ShippingChargeRule[]): void => {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
-    window.dispatchEvent(new CustomEvent('prestodental_shipping_updated', { detail: list }));
+    window.dispatchEvent(new CustomEvent('buybright_shipping_updated', { detail: list }));
   } catch (err) {
     console.error('Error persisting shipping charges to localStorage:', err);
   }

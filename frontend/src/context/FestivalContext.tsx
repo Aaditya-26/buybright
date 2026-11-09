@@ -37,7 +37,7 @@ export const FestivalProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [activeFestival, setActiveFestival] = useState<FestivalTheme | null>(() => getActiveFestivalTheme());
   const [isFestivalBannerDismissed, setIsFestivalBannerDismissed] = useState<boolean>(() => {
     try {
-      return sessionStorage.getItem('prestodental_fest_banner_dismissed') === 'true';
+      return sessionStorage.getItem('buybright_fest_banner_dismissed') === 'true';
     } catch {
       return false;
     }
@@ -55,10 +55,10 @@ export const FestivalProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const handleStorageUpdate = () => {
       refreshFestivals();
     };
-    window.addEventListener('prestodental_festival_update', handleStorageUpdate);
+    window.addEventListener('buybright_festival_update', handleStorageUpdate);
     window.addEventListener('storage', handleStorageUpdate);
     return () => {
-      window.removeEventListener('prestodental_festival_update', handleStorageUpdate);
+      window.removeEventListener('buybright_festival_update', handleStorageUpdate);
       window.removeEventListener('storage', handleStorageUpdate);
     };
   }, [refreshFestivals]);
@@ -69,7 +69,7 @@ export const FestivalProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setActiveFestival(updated.find((f) => f.status === 'Active') || null);
     setIsFestivalBannerDismissed(false);
     try {
-      sessionStorage.removeItem('prestodental_fest_banner_dismissed');
+      sessionStorage.removeItem('buybright_fest_banner_dismissed');
     } catch {}
   };
 
@@ -100,7 +100,7 @@ export const FestivalProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const dismissFestivalBanner = () => {
     setIsFestivalBannerDismissed(true);
     try {
-      sessionStorage.setItem('prestodental_fest_banner_dismissed', 'true');
+      sessionStorage.setItem('buybright_fest_banner_dismissed', 'true');
     } catch {}
   };
 

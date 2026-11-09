@@ -55,3 +55,4 @@ priv = priv.replace('dental professionals', 'our valued customers and sellers')
 with open(privacy_path, 'w', encoding='utf-8') as f:
     f.write(priv)
 print("Updated PrivacyPolicyPage.tsx successfully!")
+

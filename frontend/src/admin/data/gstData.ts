@@ -63,7 +63,7 @@ export const initialGSTRatesData: AdminGSTRate[] = [
   },
 ];
 
-const GST_STORAGE_KEY = 'prestodental_admin_gst_rates_v1';
+const GST_STORAGE_KEY = 'buybright_admin_gst_rates_v2';
 
 export function getGSTRates(): AdminGSTRate[] {
   try {

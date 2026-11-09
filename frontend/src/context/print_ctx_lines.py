@@ -9,3 +9,4 @@ for f in os.listdir(ctx_dir):
             for i, l in enumerate(lines):
                 if any(k in l.lower() for k in ['prestodental', 'presto', 'dental']):
                     print(f"{f}:{i+1} -> {l.strip()[:100]}")
+

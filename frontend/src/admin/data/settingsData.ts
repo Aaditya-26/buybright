@@ -73,8 +73,8 @@ export interface PlatformSettings {
   footer: FooterSettings;
 }
 
-const SETTINGS_STORAGE_KEY = 'prestodental_platform_settings';
-const NOTIFICATIONS_STORAGE_KEY = 'prestodental_notification_history';
+const SETTINGS_STORAGE_KEY = 'buybright_platform_settings_v2';
+const NOTIFICATIONS_STORAGE_KEY = 'buybright_notification_history_v2';
 
 export const defaultGeneralSettings: GeneralSettings = {
   websiteName: 'BuyBright',
@@ -84,7 +84,7 @@ export const defaultGeneralSettings: GeneralSettings = {
   gstNumber: '27AAECP1234F1Z5',
   timezone: 'Asia/Kolkata (IST, GMT+05:30)',
   currency: 'INR - ₹ (Indian Rupee)',
-  companyAddress: 'Presto Commercial Towers, 4th Floor, Andheri East, Mumbai, Maharashtra 400069',
+  companyAddress: 'BuyBright Towers, 4th Floor, Andheri East, Mumbai, Maharashtra 400069',
   websiteLogo: '/images/logo.png',
   favicon: '/favicon.ico',
 };
@@ -116,11 +116,11 @@ export const defaultFooterSettings: FooterSettings = {
   helplinePhone: '+91 98201 23456',
   supportEmail: 'support@buybright.com',
   warehouseAddress: 'Bhiwandi Central Fulfillment Centre, Gala #14-18, Logistics Park, Mumbai 421302',
-  facebookUrl: 'https://facebook.com/prestodental',
-  instagramUrl: 'https://instagram.com/prestodental',
-  linkedinUrl: 'https://linkedin.com/company/prestodental',
-  youtubeUrl: 'https://youtube.com/prestodental',
-  twitterUrl: 'https://twitter.com/prestodental',
+  facebookUrl: 'https://facebook.com/buybright',
+  instagramUrl: 'https://instagram.com/buybright',
+  linkedinUrl: 'https://linkedin.com/company/buybright',
+  youtubeUrl: 'https://youtube.com/buybright',
+  twitterUrl: 'https://twitter.com/buybright',
 };
 
 export const defaultNotifications: AnnouncementNotification[] = [
@@ -185,7 +185,7 @@ export const getPlatformSettings = (): PlatformSettings => {
 export const savePlatformSettings = (settings: PlatformSettings): void => {
   try {
     localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(settings));
-    window.dispatchEvent(new CustomEvent('prestodental_settings_updated', { detail: settings }));
+    window.dispatchEvent(new CustomEvent('buybright_settings_updated', { detail: settings }));
   } catch (err) {
     console.error('Failed to save platform settings to localStorage:', err);
   }

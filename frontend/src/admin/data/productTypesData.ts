@@ -79,7 +79,7 @@ export const initialProductTypesData: AdminProductTypeItem[] = [
   },
 ];
 
-const PRODUCT_TYPES_STORAGE_KEY = 'prestodental_admin_product_types_v2';
+const PRODUCT_TYPES_STORAGE_KEY = 'buybright_admin_product_types_v3';
 
 export function getProductTypes(): AdminProductTypeItem[] {
   try {

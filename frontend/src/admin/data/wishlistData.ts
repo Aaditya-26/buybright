@@ -5,7 +5,7 @@
 
 import { AdminWishlistItem, WishlistStats, WishlistConversionStatus, WishlistNotificationStatus } from '../../types/wishlist';
 
-const STORAGE_KEY = 'prestodental_admin_wishlist_records_v1';
+const STORAGE_KEY = 'buybright_admin_wishlist_records_v2';
 
 export const INITIAL_WISHLIST_DATA: AdminWishlistItem[] = [
   {

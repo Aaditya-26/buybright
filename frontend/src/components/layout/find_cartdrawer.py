@@ -3,3 +3,4 @@ with open(r'C:\dev\buybright\frontend\src\components\layout\CartDrawer.tsx', 'r'
 for i, l in enumerate(lines):
     if any(k in l.lower() for k in ['presto', 'dental']):
         print(f"CartDrawer Line {i+1}: {l.strip()[:100]}")
+

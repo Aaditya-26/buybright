@@ -87,7 +87,7 @@ export const initialHSNCodesData: AdminHSNCode[] = [
   },
 ];
 
-const HSN_STORAGE_KEY = 'prestodental_admin_hsn_codes_v1';
+const HSN_STORAGE_KEY = 'buybright_admin_hsn_codes_v2';
 
 export function getHSNCodes(): AdminHSNCode[] {
   try {

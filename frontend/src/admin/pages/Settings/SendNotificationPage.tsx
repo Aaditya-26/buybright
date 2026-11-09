@@ -639,7 +639,7 @@ export const SendNotificationPage: React.FC = () => {
                       type="button"
                       title="Insert Link"
                       onClick={() => {
-                        const url = prompt('Enter link URL (e.g. https://prestodental.in/cart):', 'https://prestodental.in');
+                        const url = prompt('Enter link URL (e.g. https://buybright.com/shop):', 'https://buybright.com');
                         if (url) executeCommand('createLink', url);
                       }}
                       style={toolbarBtnStyle}
@@ -813,7 +813,7 @@ export const SendNotificationPage: React.FC = () => {
                     type="text"
                     value={actionUrl}
                     onChange={(e) => setActionUrl(e.target.value)}
-                    placeholder="e.g. /shop?category=endodontics or https://prestodental.in/..."
+                    placeholder="e.g. /shop?category=electronics or https://buybright.com/..."
                     style={{
                       width: '100%',
                       padding: '10px 12px',

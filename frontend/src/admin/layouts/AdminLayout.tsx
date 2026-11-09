@@ -28,7 +28,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
     try {
       return (
         localStorage.getItem('buybright_admin_sidebar_collapsed') === 'true' ||
-        localStorage.getItem('prestodental_admin_sidebar_collapsed') === 'true'
+        localStorage.getItem('buybright_admin_sidebar_collapsed') === 'true'
       );
     } catch {
       return false;
@@ -62,7 +62,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
         const next = !prev;
         try {
           localStorage.setItem('buybright_admin_sidebar_collapsed', String(next));
-          localStorage.setItem('prestodental_admin_sidebar_collapsed', String(next));
+          localStorage.setItem('buybright_admin_sidebar_collapsed', String(next));
         } catch {}
         return next;
       });

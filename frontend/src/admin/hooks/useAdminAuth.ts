@@ -25,8 +25,8 @@ const DEFAULT_ADMIN: AdminUserSession = {
   }),
 };
 
-const AUTH_STORAGE_KEY = 'prestodental_admin_authenticated';
-const USER_STORAGE_KEY = 'prestodental_admin_user';
+const AUTH_STORAGE_KEY = 'buybright_admin_authenticated';
+const USER_STORAGE_KEY = 'buybright_admin_user';
 
 export const useAdminAuth = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {

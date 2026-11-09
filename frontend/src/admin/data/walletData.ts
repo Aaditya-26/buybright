@@ -222,7 +222,7 @@ export const initialWalletsData: AdminCustomerWallet[] = [
   },
 ];
 
-const WALLET_STORAGE_KEY = 'prestodental_admin_wallets_v1';
+const WALLET_STORAGE_KEY = 'buybright_admin_wallets_v2';
 
 export function getWallets(): AdminCustomerWallet[] {
   try {

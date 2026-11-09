@@ -290,8 +290,8 @@ export const initialUsersData: AdminUser[] = [
 ];
 
 // LocalStorage helpers for persistence across form navigation
-const USERS_STORAGE_KEY = 'prestodental_admin_system_users';
-const ROLES_STORAGE_KEY = 'prestodental_admin_roles';
+const USERS_STORAGE_KEY = 'buybright_admin_system_users_v2';
+const ROLES_STORAGE_KEY = 'buybright_admin_roles_v2';
 
 export function getSystemUsers(): SystemUser[] {
   try {

@@ -176,7 +176,7 @@ export const initialCustomersData: AdminCustomer[] = [
   },
 ];
 
-const CUSTOMERS_STORAGE_KEY = 'prestodental_admin_customers_v1';
+const CUSTOMERS_STORAGE_KEY = 'buybright_admin_customers_v2';
 
 export function getCustomers(): AdminCustomer[] {
   try {

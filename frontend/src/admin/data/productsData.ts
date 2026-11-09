@@ -372,7 +372,7 @@ export const initialCategoriesData: AdminCategory[] = [
 // LocalStorage persistence helpers
 // ──────────────────────────────────────────────
 
-const PRODUCTS_STORAGE_KEY = 'prestodental_admin_products_v1';
+const PRODUCTS_STORAGE_KEY = 'buybright_admin_products_v2';
 
 export function getProducts(): AdminProduct[] {
   try {
@@ -396,7 +396,7 @@ export function getProductById(id: string): AdminProduct | null {
   return getProducts().find((p) => p.id === id) ?? null;
 }
 
-const CATEGORIES_STORAGE_KEY = 'prestodental_admin_categories_v1';
+const CATEGORIES_STORAGE_KEY = 'buybright_admin_categories_v2';
 
 export function getCategories(): AdminCategory[] {
   try {

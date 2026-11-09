@@ -565,7 +565,7 @@ export const SalesReportPage: React.FC = () => {
   // ── CSV Export Handler ──
   const handleExportCSV = () => {
     exportTableToCSV({
-      filename: `presto_sales_report_${Date.now()}`,
+      filename: `buybright_sales_report_${Date.now()}`,
       headers: ['Date', 'Orders', 'Gross Sales (₹)', 'Discount (₹)', 'GST (₹)', 'Shipping (₹)', 'Refund (₹)', 'Net Sales (₹)', 'Category', 'Payment Method'],
       rows: filteredData.map((d) => [
         d.date,

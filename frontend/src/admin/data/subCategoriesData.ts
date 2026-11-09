@@ -178,7 +178,7 @@ export const initialSubCategoriesData: AdminSubCategory[] = [
   },
 ];
 
-const SUBCATEGORIES_STORAGE_KEY = 'prestodental_admin_subcategories_v1';
+const SUBCATEGORIES_STORAGE_KEY = 'buybright_admin_subcategories_v2';
 
 export function getSubCategories(): AdminSubCategory[] {
   try {

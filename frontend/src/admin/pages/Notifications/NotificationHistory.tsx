@@ -79,7 +79,7 @@ export const NotificationHistory: React.FC = () => {
   // Export CSV
   const handleExportCSV = () => {
     exportTableToCSV({
-      filename: `presto_notification_history_${Date.now()}`,
+      filename: `buybright_notification_history_${Date.now()}`,
       headers: ['Announcement Title', 'Message', 'Target Audience', 'Priority', 'Recipients', 'Sent Date', 'Status'],
       rows: filteredNotifications.map((i) => [
         i.title,
