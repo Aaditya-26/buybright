@@ -18,7 +18,7 @@ export const OrderSuccessPage: React.FC = () => {
 
   useEffect(() => {
     try {
-      const saved = sessionStorage.getItem('buybright_last_order') || sessionStorage.getItem('prestodental_last_order');
+      const saved = sessionStorage.getItem('buybright_last_order');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (

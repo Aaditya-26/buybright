@@ -50,7 +50,8 @@ export interface ContactFaqItem {
  * Configurable website sections matching ContactPage.tsx.
  */
 export interface ContactCustomizerSettings {
-  // 1. Hero Section
+  // 1. Hero Section & Breadcrumb
+  breadcrumbCurrent?: string;
   heroBadge: string;
   heroTitle: string;
   heroSubtitle: string;

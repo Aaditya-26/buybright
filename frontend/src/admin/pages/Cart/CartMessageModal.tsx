@@ -38,22 +38,21 @@ export const CartMessageModal: React.FC<CartMessageModalProps> = ({
   useEffect(() => {
     if (!isOpen) return;
 
-    const customerName = singleTarget ? singleTarget.customerName : 'Doctor / Clinic Partner';
-    const clinicName = singleTarget ? singleTarget.clinicName : 'your dental clinic';
-    const firstProduct = singleTarget?.items[0]?.productName || 'your selected dental supplies';
+    const customerName = singleTarget ? singleTarget.customerName : 'Valued Customer';
+    const firstProduct = singleTarget?.items[0]?.productName || 'your selected products';
     const cartId = singleTarget ? singleTarget.id : 'your BuyBright Cart';
 
     if (templateType === 'discount') {
       setCustomMessage(
-        `Dear ${customerName},\n\nWe noticed you left ${firstProduct} and other items in ${cartId} for ${clinicName}.\n\nComplete your order today and get an extra ${discountPercent}% OFF using promo code: *${discountCode}* at checkout!\n\n🛒 Click to complete checkout: https://prestodental.in/cart?resume=${singleTarget?.id || 'recovery'}\n\nBuyBright Support Team`
+        `Dear ${customerName},\n\nWe noticed you left ${firstProduct} and other items in ${cartId}.\n\nComplete your order today and get an extra ${discountPercent}% OFF using promo code: *${discountCode}* at checkout!\n\n🛒 Click to complete checkout: https://buybright.com/cart?resume=${singleTarget?.id || 'recovery'}\n\nBuyBright Support Team`
       );
     } else if (templateType === 'reminder') {
       setCustomMessage(
-        `Hello ${customerName},\n\nYour dental supply order for ${clinicName} is saved in ${cartId}. Need any assistance with GST invoicing, product variants, or bulk shipping?\n\nOur dental supply specialist is available to help you right now.\n\nBuyBright Customer Care`
+        `Hello ${customerName},\n\nYour cart ${cartId} is saved in BuyBright. Need any assistance with order tracking, product variants, or delivery?\n\nOur customer specialist is available to help you right now.\n\nBuyBright Customer Care`
       );
     } else if (templateType === 'stock') {
       setCustomMessage(
-        `⚠️ Urgent Stock Alert for ${customerName}:\n\nItems in ${cartId} (${firstProduct}) are running low on warehouse stock due to heavy festival demand.\n\nReserve your stock by completing your order now:\nhttps://prestodental.in/cart\n\nBuyBright Warehouse Logistics`
+        `⚠️ Urgent Stock Alert for ${customerName}:\n\nItems in ${cartId} (${firstProduct}) are running low on warehouse stock due to heavy demand.\n\nReserve your stock by completing your order now:\nhttps://buybright.com/cart\n\nBuyBright Warehouse Logistics`
       );
     }
   }, [templateType, discountCode, discountPercent, singleTarget, isOpen]);

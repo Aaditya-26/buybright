@@ -30,7 +30,7 @@ export const PaymentPage: React.FC = () => {
 
   useEffect(() => {
     try {
-      const saved = sessionStorage.getItem('buybright_checkout_session') || sessionStorage.getItem('prestodental_checkout_session');
+      const saved = sessionStorage.getItem('buybright_checkout_session');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (

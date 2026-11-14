@@ -208,7 +208,7 @@ const ABOUT_STORAGE_KEY = 'buybright_admin_about_data_v1';
 
 export function getAboutData(): AboutPageData {
   try {
-    const raw = localStorage.getItem(ABOUT_STORAGE_KEY) || localStorage.getItem('prestodental_admin_about_data_v1');
+    const raw = localStorage.getItem(ABOUT_STORAGE_KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
       if (parsed && parsed.hero && parsed.whoWeAre && parsed.missionVision && parsed.journey && parsed.pillars) {

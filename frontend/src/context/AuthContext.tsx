@@ -229,7 +229,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       localStorage.removeItem(STORAGE_KEY);
       localStorage.removeItem('buybright_token');
       localStorage.removeItem('buybright_admin_authenticated');
-      localStorage.removeItem('prestodental_admin_authenticated');
     } catch {
       // Ignore storage errors
     }

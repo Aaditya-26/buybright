@@ -1,12 +1,12 @@
 /* ==========================================================================
-   PRESTODENTAL MASTER SCSS DESIGN SYSTEM
-   Combines Bootstrap 5.3 + FontAwesome 6 + PrestoDental Curated Design Tokens
+   BUYBRIGHT MASTER SCSS DESIGN SYSTEM
+   Combines Bootstrap 5.3 + FontAwesome 6 + BuyBright Curated Design Tokens
    ========================================================================== */
 
-// 1. FontAwesome Icons
-@import '@fortawesome/fontawesome-free/css/all.min.css';
+// 1. FontAwesome Icons (imported directly in main.tsx for instant Vite static caching)
 
-// 2. PrestoDental Theme Variables & Design Tokens
+
+// 2. BuyBright Theme Variables & Design Tokens
 :root {
   --color-coral-red: #cf4032;
   --color-golden-yellow: #edb13f;
@@ -2334,7 +2334,7 @@ a {
    MODERN FOOTER STYLING
 =========================================== */
 /* ==========================================================================
-   PRODUCTION-READY PRESTODENTAL DUSSEHRA-THEMED FOOTER STYLING
+   PRODUCTION-READY BUYBRIGHT FESTIVE FOOTER STYLING
    Pixel-perfect match to reference image with double-wave ribbon,
    golden corner mandalas, 5-column layout with vertical dividers,
    authentic payment pills, and center lotus/diya divider.
@@ -8887,7 +8887,7 @@ a {
 }
 
 /* ==========================================================================
-   PRESTODENTAL NEWSLETTER SUBSCRIPTION SECTION
+   BUYBRIGHT NEWSLETTER SUBSCRIPTION SECTION
    ========================================================================== */
 .pd-newsletter-section {
   padding: 36px 24px 72px;
@@ -12879,7 +12879,7 @@ a {
 }
 
 /* =============================================================================
-   PRESTODENTAL MASTER PRODUCT DETAIL PAGE STYLING
+   BUYBRIGHT MASTER PRODUCT DETAIL PAGE STYLING
    ============================================================================= */
 .product-detail-page-wrapper {
   background: #f8fafc;
@@ -16010,7 +16010,7 @@ a {
 }
 
 /* =============================================================================
-   PRESTODENTAL MODERN CONTACT & DENTAL SUPPORT PAGE STYLING
+   BUYBRIGHT MODERN CONTACT & SUPPORT PAGE STYLING
    ============================================================================= */
 .contact-page-wrapper {
   background: #f8fafc;
@@ -17696,7 +17696,7 @@ a {
 }
 
 /* =============================================================================
-   PRESTODENTAL USER & DOCTOR PROFILE DASHBOARD STYLING
+   BUYBRIGHT USER PROFILE DASHBOARD STYLING
    ============================================================================= */
 .user-profile-page-wrapper {
   background: #f8fafc;
@@ -20680,7 +20680,7 @@ a {
   }
 
   /* =============================================================================
-   PRESTODENTAL USER PROFILE MODALS & INTERACTIVE OVERLAYS
+   BUYBRIGHT USER PROFILE MODALS & INTERACTIVE OVERLAYS
    (Live Shipment Tracking, GST Tax Invoice, Invoices Hub & Rate/Review Dialogs)
    ============================================================================= */
 

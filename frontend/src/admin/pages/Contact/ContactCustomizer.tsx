@@ -63,7 +63,7 @@ export const ContactCustomizer: React.FC = () => {
       state: '',
       address: '',
       phone: settings.phoneNumber || '+91 88064 88054',
-      email: settings.emailAddress || 'support@prestodental.in',
+      email: settings.emailAddress || 'support@buybright.com',
       timing: 'Mon – Sat: 9:00 AM – 7:30 PM',
       tag: 'Express Distribution Depot',
       mapLink: '',
@@ -349,7 +349,7 @@ export const ContactCustomizer: React.FC = () => {
                     className="form-input-text"
                     value={settings.heroBadge}
                     onChange={(e) => handleChange('heroBadge', e.target.value)}
-                    placeholder="e.g. PRESTODENTAL DENTAL CONCIERGE • RESPONSE TIME < 15 MINS"
+                    placeholder="e.g. BUYBRIGHT SUPPORT CONCIERGE • RESPONSE TIME < 15 MINS"
                     required
                   />
                   <span className="form-field-hint">
@@ -558,7 +558,7 @@ export const ContactCustomizer: React.FC = () => {
                       className="form-input-text"
                       value={settings.emailAddress}
                       onChange={(e) => handleChange('emailAddress', e.target.value)}
-                      placeholder="e.g. support@prestodental.in"
+                      placeholder="e.g. support@buybright.com"
                       required
                     />
                   </div>
@@ -1080,7 +1080,7 @@ export const ContactCustomizer: React.FC = () => {
                           className="form-input-text"
                           value={hub.email}
                           onChange={(e) => handleHubChange(idx, 'email', e.target.value)}
-                          placeholder="e.g. mumbai.hub@prestodental.in"
+                          placeholder="e.g. mumbai.hub@buybright.com"
                           style={{ padding: '6px 10px', fontSize: '0.82rem' }}
                         />
                       </div>

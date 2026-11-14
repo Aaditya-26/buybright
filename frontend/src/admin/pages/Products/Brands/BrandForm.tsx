@@ -216,10 +216,10 @@ export const BrandForm: React.FC = () => {
       brandCategoryName: form.brandCategoryName,
       categorySlug: cleanSlug,
       categoryName: form.brandCategoryName,
-      logoUrl: form.logoUrl || '/images/brands/superendo.svg',
+      logoUrl: form.logoUrl || '/images/logo-icon.svg',
       country: form.country,
       countryFlag: form.countryFlag,
-      specialty: form.specialty || form.brandCategoryName || 'Dental Consumables',
+      specialty: form.specialty || form.brandCategoryName || 'Consumer Products',
       brandColor: form.brandColor,
       website: form.website,
       description: form.description?.trim() || '',
@@ -230,7 +230,7 @@ export const BrandForm: React.FC = () => {
       sortOrder: form.sortOrder ?? 0,
       seoTitle: form.seoTitle || `${form.name.trim()} Official Brand Products | BuyBright`,
       seoDescription: form.seoDescription || (form.description || '').slice(0, 160),
-      seoKeywords: form.seoKeywords || `${form.name.toLowerCase()}, dental products, catalog`,
+      seoKeywords: form.seoKeywords || `${form.name.toLowerCase()}, official products, marketplace brands`,
     };
 
     if (isEdit && id) {
@@ -249,7 +249,7 @@ export const BrandForm: React.FC = () => {
   return (
     <AdminLayout
       title={isEdit ? `Edit Brand: ${form.name}` : 'Add Brand'}
-      subtitle="Complete dental manufacturer profile, logo asset, sort order, and SEO fields"
+      subtitle="Complete brand profile, logo asset, sort order, and SEO fields"
     >
       {/* ── Breadcrumb Bar ── */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '18px' }}>
@@ -467,7 +467,7 @@ export const BrandForm: React.FC = () => {
                     name="seoKeywords"
                     value={form.seoKeywords}
                     onChange={handleChange}
-                    placeholder="e.g. cycle pure, dental instruments, certified dental catalog"
+                    placeholder="e.g. electronics, smartphones, fashion, lifestyle"
                     className="form-control"
                     style={{ width: '100%' }}
                   />
@@ -528,7 +528,7 @@ export const BrandForm: React.FC = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
                   <div>
                     <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '4px' }}>
-                      Dental Specialty
+                      Marketplace Category / Specialty
                     </label>
                     <input
                       type="text"
@@ -648,11 +648,11 @@ export const BrandForm: React.FC = () => {
                 }}
               >
                 <img
-                  src={form.logoUrl || '/images/brands/superendo.svg'}
+                  src={form.logoUrl || '/images/logo-icon.svg'}
                   alt={form.name || 'Brand Logo'}
                   style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/images/brands/superendo.svg';
+                    (e.target as HTMLImageElement).src = '/images/logo-icon.svg';
                   }}
                 />
               </div>

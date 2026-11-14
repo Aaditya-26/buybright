@@ -245,21 +245,21 @@ export const BrandList: React.FC = () => {
       brandCategoryName: form.brandCategoryName,
       categorySlug: cleanSlug,
       categoryName: form.brandCategoryName,
-      logoUrl: form.logoUrl || '/images/brands/superendo.svg',
+      logoUrl: form.logoUrl || '/images/logo-icon.svg',
       description: form.description.trim(),
       sortOrder: Number(form.sortOrder) || 0,
       displayOrder: Number(form.sortOrder) || 0,
       status: form.isActive ? 'Active' : 'Inactive',
       isFeatured: form.isFeatured,
-      specialty: form.specialty || form.brandCategoryName || 'Dental Consumables',
+      specialty: form.specialty || form.brandCategoryName || 'Consumer Products',
       country: form.country,
       countryFlag: form.countryFlag,
       brandColor: form.brandColor,
       website: form.website,
       totalProducts: isEditing && form.id ? (brands.find((b) => b.id === form.id)?.totalProducts ?? 0) : 0,
-      seoTitle: form.seoTitle || `${form.name.trim()} Official Dental Products | BuyBright`,
+      seoTitle: form.seoTitle || `${form.name.trim()} Official Products | BuyBright`,
       seoDescription: form.seoDescription || form.description.slice(0, 160),
-      seoKeywords: form.seoKeywords || `${form.name.toLowerCase()}, dental products, dental supplies`,
+      seoKeywords: form.seoKeywords || `${form.name.toLowerCase()}, genuine products, marketplace brands`,
     };
 
     if (isEditing && form.id) {
@@ -334,7 +334,7 @@ export const BrandList: React.FC = () => {
   const handleExportPDF = () => {
     exportTableToPDF({
       title: 'BuyBright Brands Directory',
-      subtitle: `Authorized dental manufacturers & partners (${filteredBrands.length} brands)`,
+      subtitle: `Authorized marketplace brand partners (${filteredBrands.length} brands)`,
       headers: ['Sr.No.', 'Brand Name', 'URL Slug', 'Category', 'Sort Order', 'Status'],
       rows: filteredBrands.map((b, idx) => [
         idx + 1,
@@ -437,11 +437,11 @@ export const BrandList: React.FC = () => {
             }}
           >
             <img
-              src={b.logoUrl || '/images/brands/superendo.svg'}
+              src={b.logoUrl || '/images/logo-icon.svg'}
               alt={b.name}
               style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
               onError={(e) => {
-                (e.target as HTMLImageElement).src = '/images/brands/superendo.svg';
+                (e.target as HTMLImageElement).src = '/images/logo-icon.svg';
               }}
             />
           </div>
@@ -648,7 +648,7 @@ export const BrandList: React.FC = () => {
                 <p style={{ margin: 0, fontSize: '0.78rem', color: '#64748b' }}>
                   {isEditing
                     ? 'Modify manufacturer details, logo asset, sort sequence, SEO meta tags, and status.'
-                    : 'Register an authorized manufacturer or dental supply brand with full catalog SEO.'}
+                    : 'Register an authorized manufacturer or marketplace brand with full catalog SEO.'}
                 </p>
               </div>
             </div>
@@ -880,7 +880,7 @@ export const BrandList: React.FC = () => {
                         alt="Logo Preview"
                         style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
                         onError={(e) => {
-                          (e.target as HTMLImageElement).src = '/images/brands/superendo.svg';
+                          (e.target as HTMLImageElement).src = '/images/logo-icon.svg';
                         }}
                       />
                     </div>
@@ -987,7 +987,7 @@ export const BrandList: React.FC = () => {
                         name="seoKeywords"
                         value={form.seoKeywords}
                         onChange={handleChange}
-                        placeholder="e.g. dental files, dental instruments, equipment"
+                        placeholder="e.g. electronics, smartphones, fashion, home appliances"
                         className="form-control"
                         style={{ width: '100%', padding: '7px 10px', borderRadius: '6px', border: '1px solid #cbd5e1', fontSize: '0.82rem' }}
                       />
@@ -1036,7 +1036,7 @@ export const BrandList: React.FC = () => {
 
                     <div>
                       <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 700, color: '#475569', marginBottom: '4px' }}>
-                        Dental Specialty
+                        Marketplace Category / Specialty
                       </label>
                       <input
                         type="text"

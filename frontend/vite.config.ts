@@ -77,14 +77,32 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
     build: {
       rollupOptions: {
         output: {
-          manualChunks: {
-            vendor: ['react', 'react-dom', 'react-router-dom'],
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('highcharts')) {
+                return 'highcharts-vendor';
+              }
+              if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
+                return 'react-vendor';
+              }
+              if (id.includes('lucide-react')) {
+                return 'icons-vendor';
+              }
+              return 'vendor';
+            }
           },
         },
       },
-      chunkSizeWarningLimit: 1200,
+      chunkSizeWarningLimit: 1500,
       cssCodeSplit: true,
       minify: 'esbuild',
+    },
+    optimizeDeps: {
+      include: [
+        'react',
+        'react-dom',
+        'react-router-dom',
+      ],
     },
     server: {
       port: 5173,

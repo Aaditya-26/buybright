@@ -506,7 +506,7 @@ export const dentalService = {
   },
 
   /** Fetch related products for product details page */
-  async getRelatedProducts(category: string, currentId: string): Promise<Product[]> {
+  async getRelatedProducts(category: string, currentId: string, limit: number = 8): Promise<Product[]> {
     const all = [...FALLBACK_PRODUCTS, ...FALLBACK_SUPERENDO];
     if (!USE_LIVE_API) {
       const related = all.filter(
@@ -514,13 +514,13 @@ export const dentalService = {
       );
       if (related.length < 4) {
         const others = all.filter((p) => p.id !== currentId && !related.some((r) => r.id === p.id));
-        return [...related, ...others].slice(0, 8);
+        return [...related, ...others].slice(0, limit);
       }
-      return related.slice(0, 8);
+      return related.slice(0, limit);
     }
     try {
       const res = await apiClient.get<ApiResponse<Product[]> | Product[]>('/products/', {
-        params: { category, exclude: currentId },
+        params: { category, exclude: currentId, limit },
       });
       const list: Product[] = Array.isArray(res.data)
         ? res.data

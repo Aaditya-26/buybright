@@ -30,7 +30,7 @@ export const CompareProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const { showToast } = useToast();
   const [compareItems, setCompareItems] = useState<Product[]>(() => {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('prestodental_compare_items');
+      const saved = localStorage.getItem(STORAGE_KEY);
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];

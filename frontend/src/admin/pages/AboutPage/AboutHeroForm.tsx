@@ -90,7 +90,7 @@ export const AboutHeroForm: React.FC = () => {
                 id="badgeText"
                 type="text"
                 className="form-input-text"
-                placeholder="e.g. ABOUT PRESTODENTAL • INDIA'S TRUSTED DENTAL NETWORK"
+                placeholder="e.g. ABOUT BUYBRIGHT • INDIA'S TRUSTED MARKETPLACE"
                 value={formData.badgeText}
                 onChange={(e) => setFormData({ ...formData, badgeText: e.target.value })}
                 required

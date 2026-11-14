@@ -88,7 +88,7 @@ export const AboutPillarsForm: React.FC = () => {
                   id="pillarsEyebrow"
                   type="text"
                   className="form-input-text"
-                  placeholder="e.g. THE PRESTODENTAL STANDARD"
+                  placeholder="e.g. THE BUYBRIGHT STANDARD"
                   value={formData.eyebrow}
                   onChange={(e) => setFormData({ ...formData, eyebrow: e.target.value })}
                   required

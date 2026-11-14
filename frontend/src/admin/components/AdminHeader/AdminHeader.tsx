@@ -150,7 +150,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
         <Link to="/admin/dashboard" className="header-mobile-brand">
           <div className="header-mobile-logo-box">
             <img
-              src="/images/logo.webp"
+              src="/images/logo.svg"
               alt="BuyBright Logo"
               className="header-mobile-logo"
             />

@@ -402,7 +402,7 @@ export const BrandCategoryList: React.FC = () => {
   return (
     <AdminLayout
       title="Brand Categories"
-      subtitle="Manage manufacturer classifications, category icons, and linked dental brand hierarchies"
+      subtitle="Manage manufacturer classifications, category icons, and linked brand hierarchies"
     >
       {/* ── Top Navigation Bar ── */}
       <div

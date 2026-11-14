@@ -290,3 +290,45 @@ export function saveContactSettings(settings: ContactCustomizerSettings): void {
     console.error('Error saving contact settings to localStorage', e);
   }
 }
+
+export function resetContactSettings(): ContactCustomizerSettings {
+  try {
+    localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(initialContactSettings));
+    window.dispatchEvent(new Event('buybright_contact_settings_updated'));
+  } catch (e) {
+    console.error('Error resetting contact settings', e);
+  }
+  return initialContactSettings;
+}
+
+export function toggleStarEnquiry(id: string): boolean {
+  const list = getContactEnquiries();
+  const index = list.findIndex((e) => e.id === id);
+  if (index !== -1) {
+    list[index].isStarred = !list[index].isStarred;
+    saveContactEnquiries(list);
+    return Boolean(list[index].isStarred);
+  }
+  return false;
+}
+
+export function addContactEnquiry(
+  enquiry: Omit<ContactEnquiry, 'id' | 'srNo' | 'receivedAt'> & { status?: EnquiryStatus }
+): ContactEnquiry {
+  const list = getContactEnquiries();
+  const newEnquiry: ContactEnquiry = {
+    ...enquiry,
+    id: `enq-${Date.now()}`,
+    srNo: list.length + 1,
+    receivedAt: new Date().toLocaleDateString('en-GB', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+    }),
+    status: enquiry.status || 'New',
+    isStarred: enquiry.isStarred ?? false,
+  };
+  list.unshift(newEnquiry);
+  saveContactEnquiries(list);
+  return newEnquiry;
+}

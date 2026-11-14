@@ -93,7 +93,7 @@ export const defaultWebsiteSettings: WebsiteSettings = {
   topbarEnabled: true,
   firstText: 'Diwali Dhamaka — Flat 20% Off Storewide',
   firstIcon: 'fa-solid fa-fire',
-  secondText: '100% Genuine Certified Dental Supplies',
+  secondText: '100% Genuine Products — Verified Sellers & Secure Payments',
   secondIcon: 'fa-solid fa-shield-halved',
   showAppBadges: true,
   playStoreUrl: 'https://play.google.com',
@@ -102,7 +102,7 @@ export const defaultWebsiteSettings: WebsiteSettings = {
 
 export const defaultHeaderSettings: HeaderSettings = {
   stickyHeader: true,
-  searchPlaceholder: 'Search 15,000+ Dental Products, Instruments, Restoratives...',
+  searchPlaceholder: 'Search products, brands, categories...',
   showHelpSection: true,
   helpPhone: '+91 98201 23456',
   helpText: 'Need Help? Call Us 24/7',
